@@ -76,7 +76,7 @@ function AddProductPage3(props) {
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <input
                   type="checkbox"
-                  value="air-condioner"
+                  value="airConditioner"
                   onChange={handlechange}
                 />
                 <div className="host_add_answer">air-conditioner</div>
