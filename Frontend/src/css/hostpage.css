@@ -1,10 +1,14 @@
 .host_container{
     width: 100vw;
+    height: 235vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 .host_banner{
     width: 100vw;
     height: 68vh;
-
+    background: #EFF0F2;
     display: flex;
     align-items: flex-end;
 }
@@ -30,7 +34,7 @@
     color: #9A9A9A;
 }
 .host_banner_inside{
-    width: 46vw;
+    width: 48vw;
     height: 36vh;
     display: flex;
     flex-direction: column;
@@ -43,6 +47,8 @@
     height: 6vh;
     border-radius: 30px ;
     border: none;
+    background: #484848;
+    border-radius: 30px;
 
 }
 .host_butt{
@@ -56,7 +62,7 @@
     flex-direction: column;
 }
 .host_middle_inside{
-    width: 92vw;
+    width: 90vw;
     height: 80vh;
 }
 .host_card{
@@ -83,7 +89,7 @@
 .host_middle_footer_container{
     display: flex;
     flex-direction: column;
-    width:92vw;
+    width:90vw;
 }
 .host_card_container{
     display: flex;

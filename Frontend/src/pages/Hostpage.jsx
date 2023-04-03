@@ -1,9 +1,11 @@
 import React from 'react'
 import "../css/hostpage.css"
+import {Header} from "../components/header.jsx"
 
 function Hostpage() {
   return (
     <div className="host_container">
+      <Header/>
         <div className='host_banner'>
                  <div className='host_banner_inside'>
                     <div className='Try_host'>Try Hosting With Us</div>
