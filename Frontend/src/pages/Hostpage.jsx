@@ -22,7 +22,28 @@ function Hostpage() {
                     <div className='host_paragh'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.</div>
                   </div>
                 </div>
-                
+            </div>
+            <div className='host_middle_footer_container'>
+                <div className='Try_host'>
+                Hosting Tips & Guides
+                </div>
+                <div className='host_card_container'>
+                  <div className='host_card_father'>
+                    <div className='host_card_small'></div>
+                    <div className='host_card_p'>Choose the right property!</div>
+                    <div className='host_card_variants'>Economy</div>
+                  </div>
+                  <div className='host_card_father'>
+                    <div className='host_card_small'></div>
+                    <div className='host_card_p'>Best environment for rental</div>
+                    <div className='host_card_variants'>Lifestyle</div>
+                  </div>
+                  <div className='host_card_father'>
+                    <div className='host_card_small'></div>
+                    <div className='host_card_p'>Boys Hostel Apartment</div>
+                    <div className='host_card_variants'>Property</div>
+                  </div>
+                </div>
             </div>
         </div>
     </div>
