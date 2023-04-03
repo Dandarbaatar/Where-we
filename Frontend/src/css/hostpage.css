@@ -1,10 +1,14 @@
 .host_container{
     width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 8vh;
 }
 .host_banner{
     width: 100vw;
     height: 68vh;
-
+    background: #EFF0F2;
     display: flex;
     align-items: flex-end;
 }
@@ -30,7 +34,7 @@
     color: #9A9A9A;
 }
 .host_banner_inside{
-    width: 46vw;
+    width: 48vw;
     height: 36vh;
     display: flex;
     flex-direction: column;
@@ -43,6 +47,8 @@
     height: 6vh;
     border-radius: 30px ;
     border: none;
+    background: #484848;
+    border-radius: 30px;
 
 }
 .host_butt{
@@ -56,8 +62,10 @@
     flex-direction: column;
 }
 .host_middle_inside{
-    width: 92vw;
+    width: 90vw;
     height: 80vh;
+    display: flex;
+    
 }
 .host_card{
     width: 42vw;
@@ -83,18 +91,18 @@
 .host_middle_footer_container{
     display: flex;
     flex-direction: column;
-    width:92vw;
+
 }
 .host_card_container{
     display: flex;
     flex-direction: row;
-    width: 92vw; 
+    width: 90vw; 
     justify-content: space-between;
 
 }
 .host_card_small{
-    width: 30vw;
-    height:58vh;
+    width: 28vw;
+    height:56vh;
     border: none ;
     background: #E0E2E6;
 border-radius: 12px;
@@ -107,8 +115,8 @@ border-radius: 12px;
 }
 .host_card_p{
 
-width: 346px;
-height: 22px;
+width: 30vw;
+height: 2vh;
 
 
 font-family: 'Montserrat';
@@ -123,8 +131,8 @@ color: #484848;
 }
 .host_card_variants{
 
-width: 136px;
-height: 24px;
+width: 14vw;
+height: 2.3vh;
 
 
 font-family: 'Montserrat';
