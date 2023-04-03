@@ -18,6 +18,8 @@ export const Search = () => {
       name: "Well Furnished Apartment",
       location: "100 Smart Street, LA, USA",
       number: { bed: 3, bath: 1, car: 2, dog: 0 },
+      rent: "Apartment on Rent",
+      time: "For Long Period: 1 - 2 Years",
     },
   ]);
   return (
@@ -58,6 +60,8 @@ export const Search = () => {
                 name={el.name}
                 location={el.location}
                 number={el.number}
+                rent={el.rent}
+                time={el.time}
               />
             );
           })}
