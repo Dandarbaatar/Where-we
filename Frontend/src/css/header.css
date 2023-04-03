@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   background-image: none;
+  background-color: #c2c6cc;
 }
 .header {
   display: flex;
@@ -61,15 +62,17 @@
   border: none;
 }
 .headerLogo {
-  width: 10vw;
   height: 6vh;
 }
 .headerContent1 {
   display: flex;
+  width: 8vw;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 1vw;
 }
-.headerHaichu {
+.headerhaichu {
   font-family: "Pacifico";
+  font-size: 30px;
 }
