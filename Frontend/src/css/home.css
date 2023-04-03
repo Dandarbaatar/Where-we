@@ -1,5 +1,52 @@
 .homeBig {
   width: 100vw;
   height: 100vh;
-  background-image: url(../assets/homeImg.jpeg);
+  /* background-image: url(../assets/homeImg.jpeg); */
+  background-image: url("");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+.homePage1 {
+  width: 90vw;
+  height: 93vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.homePage1Contents {
+  width: 10vw;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  align-items: center;
+  justify-content: center;
+}
+.homePage1Content {
+  display: flex;
+  flex-direction: row;
+
+  gap: 2vw;
+}
+.homePage1Topic {
+  width: 121px;
+  height: 55px;
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 49px;
+  color: #484848;
+}
+.homePage1Content {
+  width: 43px;
+  height: 20px;
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #484848;
 }
