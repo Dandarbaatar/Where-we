@@ -1,7 +1,8 @@
 import { Header } from "../components/header";
-import { homeCard } from "../components/homeCard";
+import { HomeCard } from "../components/homeCard.jsx";
 import "../css/home.css";
 export const Home = () => {
+  const arr = [1];
   return (
     <div className="Home">
       <div className="homeBig">
@@ -26,7 +27,11 @@ export const Home = () => {
           </div>
           <div className="homePage2Content1Zuras"></div>
         </div>
-        <div className="homePage2Content2Cards"></div>
+        <div className="homePage2Content2Cards">
+          {arr.map((e) => {
+            return <HomeCard />;
+          })}
+        </div>
       </div>
     </div>
   );
