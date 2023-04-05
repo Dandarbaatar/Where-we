@@ -1,6 +1,6 @@
 /** @format */
 import { Button } from "react-bootstrap";
-import Ex from "../assets/Vector (1).svg";
+import Ex from "../assets/Vector.svg";
 
 export const Filter = ({ name }) => {
   return (
