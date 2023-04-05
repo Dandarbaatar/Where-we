@@ -1,15 +1,15 @@
 import React from "react";
-import "../css/header.css";
+import "../App.css";
 import headerImg1 from "../assets/header1.svg";
 import hamburger from "../assets/hamburger.svg";
 import logo from "../assets/Logo.svg";
-export const Header = () => {
+export const Header = (props) => {
   return (
-    <div className="headerBig">
+    <div className={props.headerClass || "headerBig"}>
       <div className="header">
         <div className="headerContent1">
-          <img className="headerLogo" alt="" src={logo} />
-          <div className="headerhaichu">Хайчихуу?</div>
+          <img className="headerLogo" src={logo} />
+          <div className={props.Haichu || "headerhaichu"}>Хайчихуу?</div>
         </div>
         <div className="headerContent">
           <button className="headerHostBtn">Become A Host</button>
