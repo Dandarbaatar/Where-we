@@ -1,7 +1,6 @@
 import { Header } from "../components/header";
 import { homeCard } from "../components/homeCard";
 import "../css/home.css";
-import video from "../assets/video.mp4";
 export const Home = () => {
   return (
     <div className="Home">
