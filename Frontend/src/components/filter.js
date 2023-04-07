@@ -1,6 +1,6 @@
 /** @format */
 import { Button } from "react-bootstrap";
-import Ex from "../assets/Vector.svg";
+import Ex from "../assets/x.svg";
 
 export const Filter = ({ name }) => {
   return (
@@ -12,21 +12,23 @@ export const Filter = ({ name }) => {
         alignItems: "center",
         borderRadius: "5vw",
         paddingLeft: "1vw",
+        height: "2.5vw",
       }}
     >
-      <div>{name}</div>
-      <Button
+      <div style={{ fontSize: "0.9vw" }}>{name}</div>
+      <button
         style={{
           backgroundColor: "transparent",
           border: "none",
           display: "flex",
           alignItems: "center",
-          width: "2.5vw",
-          height: "100%",
+          width: "2.2vw",
+          height: "3vw",
+          marginLeft: "0.3vw",
         }}
       >
-        <img src={Ex}></img>
-      </Button>
+        <img style={{ width: "0.6vw" }} src={Ex}></img>
+      </button>
     </div>
   );
 };
