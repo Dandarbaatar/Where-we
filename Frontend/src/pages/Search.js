@@ -6,6 +6,7 @@ import filter from "../assets/Vector.svg";
 import { Filter } from "../components/filter";
 import { useState } from "react";
 import { SearchCard } from "../components/searchcard";
+import { Header } from "../components/header";
 
 export const Search = () => {
   const [name, setName] = useState([
@@ -21,50 +22,67 @@ export const Search = () => {
       rent: "Apartment on Rent",
       time: "For Long Period: 1 - 2 Years",
     },
+    {
+      name: "Well Furnished Apartment",
+      location: "100 Smart Street, LA, USA",
+      number: { bed: 3, bath: 1, car: 2, dog: 0 },
+      rent: "Apartment on Rent",
+      time: "For Long Period: 1 - 2 Years",
+    },
+    {
+      name: "Well Furnished Apartment",
+      location: "100 Smart Street, LA, USA",
+      number: { bed: 3, bath: 1, car: 2, dog: 0 },
+      rent: "Apartment on Rent",
+      time: "For Long Period: 1 - 2 Years",
+    },
   ]);
   return (
-    <div
-      style={{
-        width: "100vw",
-        display: "flex",
-        justifyContent: "center",
-        backgroundColor: "#F5F5F5",
-      }}
-    >
-      <div style={{ width: "90%" }}>
-        <div>
-          <div>10 Results Found</div>
-          <div style={{ display: "flex", flexDirection: "row", gap: "1vw" }}>
-            {name.map((el, key) => {
-              return <Filter key={key} name={el.fill} />;
-            })}
-            <Button
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                backgroundColor: "white",
-                border: "solid black 1px",
-                borderRadius: "10vw",
-              }}
-            >
-              <img alt="" src={filter}></img>
-              <div style={{ color: "black" }}>Filters</div>
-            </Button>
+    <div>
+      <Header />
+      <div
+        style={{
+          width: "100vw",
+          display: "flex",
+          justifyContent: "center",
+          backgroundColor: "#F5F5F5",
+        }}
+      >
+        <div style={{ width: "90%" }}>
+          <div>
+            <div>10 Results Found</div>
+            <div style={{ display: "flex", flexDirection: "row", gap: "1vw" }}>
+              {name.map((el, key) => {
+                return <Filter key={key} name={el.fill} />;
+              })}
+              <Button
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  backgroundColor: "white",
+                  border: "solid black 1px",
+                  borderRadius: "10vw",
+                }}
+              >
+                <img alt="" src={filter}></img>
+                <div style={{ color: "black" }}>Filters</div>
+              </Button>
+            </div>
           </div>
-        </div>
-        <div>
-          {card.map((el) => {
-            return (
-              <SearchCard
-                name={el.name}
-                location={el.location}
-                number={el.number}
-                rent={el.rent}
-                time={el.time}
-              />
-            );
-          })}
+          <div>
+            {card.map((el) => {
+              return (
+                <SearchCard
+                  name={el.name}
+                  location={el.location}
+                  number={el.number}
+                  rent={el.rent}
+                  time={el.time}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
