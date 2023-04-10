@@ -2,7 +2,7 @@ import { Header } from "../components/header";
 import { HomeCard } from "../components/homeCard.jsx";
 import "../css/home.css";
 export const Home = () => {
-  const arr = [1];
+  const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
   return (
     <div className="Home">
       <div className="homeBig">
