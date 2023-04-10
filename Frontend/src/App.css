@@ -128,3 +128,65 @@
   font-size: 30px;
   color: white;
 }
+.homeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 13vw;
+  height: 30vh;
+  border: 1px solid black;
+  background-color: #efefef;
+  border-radius: 8px;
+  border: none;
+}
+.homeCardContent {
+  display: flex;
+  flex-direction: column;
+  width: 11vw;
+  height: 26vh;
+  justify-content: end;
+}
+.homeCardBtn {
+  border: none;
+}
+.homeCardDiv {
+  width: 3vw;
+  height: 4vh;
+  display: flex;
+  text-align: center;
+  align-items: end;
+  justify-content: center;
+}
+.homeCardContentText1 {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  color: #484848;
+}
+.homeCardContent1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 13vw;
+  height: 24vh;
+}
+.homeCardContentText2 {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  color: #9a9a9a;
+}
+.homeCardImg1 {
+  width: 36px;
+  height: 36px;
+}
+.homeCardContentImg {
+  width: 70px;
+  height: 70px;
+  border-radius: 200px;
+  background-color: #c2c6cc;
+}

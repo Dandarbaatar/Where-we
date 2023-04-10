@@ -65,7 +65,7 @@
   height: 80vh;
   display: flex;
   flex-direction: column;
-
+  gap: 5vh;
   justify-content: center;
 }
 .homePage2Content1 {
@@ -95,8 +95,9 @@
   border-radius: 10px;
   background-color: #484848;
 }
-.homeCard {
-  width: 10vw;
-  height: 25vh;
-  border: 1px solid black;
+.homePage2Content2Cards {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  overflow-x: scroll;
 }
