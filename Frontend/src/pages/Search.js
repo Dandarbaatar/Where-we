@@ -8,8 +8,20 @@ import { useState } from "react";
 import { SearchCard } from "../components/searchcard";
 import { Header } from "../components/header";
 import Map from "../assets/result-map.svg";
+import "../css/filter.css";
 
 export const Search = () => {
+  const [clas, setClas] = useState(0);
+  const Clas = () => {
+    if (clas == 0) {
+      setClas(1);
+    } else {
+      setClas(2);
+      setTimeout(() => {
+        setClas(0);
+      }, 330);
+    }
+  };
   const [name, setName] = useState([
     { fill: "100 Smart Street" },
     { fill: "12 Mar 2021" },
@@ -24,6 +36,7 @@ export const Search = () => {
       number: { bed: 3, bath: 1, car: 2, dog: 0 },
       rent: "Apartment on Rent",
       time: "For Long Period: 1 - 2 Years",
+      liked: false,
     },
     {
       lister: "John Doberman",
@@ -33,6 +46,7 @@ export const Search = () => {
       number: { bed: 3, bath: 1, car: 2, dog: 0 },
       rent: "Apartment on Rent",
       time: "For Long Period: 1 - 2 Years",
+      liked: false,
     },
     {
       lister: "John Doberman",
@@ -42,6 +56,7 @@ export const Search = () => {
       number: { bed: 3, bath: 1, car: 2, dog: 0 },
       rent: "Apartment on Rent",
       time: "For Long Period: 1 - 2 Years",
+      liked: false,
     },
   ]);
   return (
@@ -76,8 +91,15 @@ export const Search = () => {
                   alignItems: "center",
                 }}
               >
-                {name.map((el, key) => {
-                  return <Filter key={key} name={el.fill} />;
+                {name?.map((el, key) => {
+                  return (
+                    <Filter
+                      key={key}
+                      name={el.fill}
+                      setName={setName}
+                      all={name}
+                    />
+                  );
                 })}
                 <Button
                   style={{
@@ -87,11 +109,12 @@ export const Search = () => {
                     backgroundColor: "white",
                     border: "solid black 1px",
                     borderRadius: "10vw",
-                    height: "3.5vw",
-                    width: "9vw",
+                    height: "3.3vw",
+                    width: "8.6vw",
                     justifyContent: "space-evenly",
                     borderColor: "#9A9A9A",
                   }}
+                  onClick={Clas}
                 >
                   <img style={{ width: "1.3vw" }} alt="" src={filter}></img>
                   <div style={{ color: "black", fontSize: "1.1vw" }}>
@@ -100,24 +123,38 @@ export const Search = () => {
                 </Button>
               </div>
             </div>
-            <div>
-              {card.map((el) => {
-                return (
-                  <SearchCard
-                    name={el.name}
-                    location={el.location}
-                    number={el.number}
-                    rent={el.rent}
-                    time={el.time}
-                    lister={el.lister}
-                    price={el.price}
-                  />
-                );
-              })}
+            <div
+              className="search_anim"
+              clas={clas}
+              style={{ display: "flex", flexDirection: "row" }}
+            >
+              <div>
+                {card.map((el) => {
+                  return (
+                    <SearchCard
+                      name={el.name}
+                      location={el.location}
+                      number={el.number}
+                      rent={el.rent}
+                      time={el.time}
+                      lister={el.lister}
+                      price={el.price}
+                      liked={el.liked}
+                    />
+                  );
+                })}
+              </div>
+              <div
+                style={{
+                  width: "50%",
+                  marginTop: "10vw",
+                  marginLeft: "5vw",
+                  marginTop: "3vw",
+                }}
+              >
+                <img alt="" style={{ width: "50vw" }} src={Map}></img>
+              </div>
             </div>
-          </div>
-          <div style={{ width: "50%", marginTop: "10vw" }}>
-            <img style={{ width: "50vw" }} src={Map}></img>
           </div>
         </div>
       </div>

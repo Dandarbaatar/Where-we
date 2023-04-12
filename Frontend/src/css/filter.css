@@ -1,0 +1,21 @@
+@keyframes search_filter {
+    from{margin-top: 0vw;}
+    to{margin-top: 30vw;}
+}
+@keyframes search_filter2 {
+    from{margin-top: 30vw;}
+    to{margin-top: 0vw;}
+}
+.search_anim{
+    margin-top: 0;
+}
+.search_anim[clas='1'] {
+    animation-name: search_filter;
+    animation-duration: 0.4s;
+    margin-top: 30vw;
+}
+.search_anim[clas='2']{
+    animation-name: search_filter2;
+    animation-duration: 0.4s;
+    margin-top: 0;
+}

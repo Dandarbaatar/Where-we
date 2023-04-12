@@ -1,4 +1,5 @@
 /** @format */
+import Like from "../assets/homeCardLike.svg";
 
 export const SearchCard = ({
   name,
@@ -8,6 +9,7 @@ export const SearchCard = ({
   time,
   lister,
   price,
+  liked,
 }) => {
   return (
     <div
@@ -22,53 +24,83 @@ export const SearchCard = ({
       <div
         style={{
           width: "100%",
-          height: "25vw",
+          height: "28vw",
           backgroundColor: "#E0E2E6",
           borderTopLeftRadius: "1vw",
           borderTopRightRadius: "1vw",
-          paddingTop: "42%",
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "column",
           justifyContent: "space-between",
         }}
       >
         <div
           style={{
+            width: "95%",
             display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-evenly",
-            width: "56%",
+            justifyContent: "flex-end",
           }}
         >
-          <img
+          <button
             style={{
-              width: "5.5vw",
-              height: "5.5vw",
-              borderRadius: "10vw",
-              backgroundColor: "white",
+              border: "none",
+              backgroundColor: "transparent",
+              marginTop: "1.7vw",
             }}
-          ></img>
+          >
+            <img style={{ width: "2.5vw" }} src={Like}></img>
+          </button>
+        </div>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            marginBottom: "2vw",
+          }}
+        >
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              width: "56%",
             }}
           >
-            <div style={{ fontSize: "1vw" }}>Listed by:</div>
-            <div style={{ fontSize: "1.5vw", fontWeight: "700" }}>{lister}</div>
-            <div style={{ fontSize: "1.35vw" }}>For: {price}</div>
+            <img
+              alt=""
+              style={{
+                width: "5.5vw",
+                height: "5.5vw",
+                borderRadius: "10vw",
+                backgroundColor: "white",
+              }}
+            ></img>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <div style={{ fontSize: "1vw" }}>Listed by:</div>
+              <div style={{ fontSize: "1.5vw", fontWeight: "700" }}>
+                {lister}
+              </div>
+              <div style={{ fontSize: "1.35vw" }}>For: {price}</div>
+            </div>
           </div>
+          <img
+            alt=""
+            src="slider indicators.svg"
+            style={{ width: "10%", marginRight: "2vw" }}
+          ></img>
         </div>
-        <img
-          src="slider indicators.svg"
-          style={{ width: "10%", marginRight: "2vw" }}
-        ></img>
       </div>
       <div
         style={{
           display: "flex",
           width: "100%",
-          height: "13vw",
+          height: "12vw",
           backgroundColor: "white",
           borderBottomLeftRadius: "1vw",
           borderBottomRightRadius: "1vw",

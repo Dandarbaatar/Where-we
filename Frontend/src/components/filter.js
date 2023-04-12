@@ -1,8 +1,11 @@
 /** @format */
-import { Button } from "react-bootstrap";
 import Ex from "../assets/x.svg";
 
-export const Filter = ({ name }) => {
+export const Filter = ({ name, setName, all }) => {
+  let temp;
+  const Delete = () => {
+    setName(all.filter((e) => e.fill != name));
+  };
   return (
     <div
       style={{
@@ -17,6 +20,7 @@ export const Filter = ({ name }) => {
     >
       <div style={{ fontSize: "0.9vw" }}>{name}</div>
       <button
+        onClick={Delete}
         style={{
           backgroundColor: "transparent",
           border: "none",
