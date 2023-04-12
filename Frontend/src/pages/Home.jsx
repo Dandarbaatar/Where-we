@@ -1,5 +1,6 @@
 import { Header } from "../components/header";
 import { HomeCard } from "../components/homeCard.jsx";
+import { HomeCard2 } from "../components/homeCard2";
 import "../css/home.css";
 export const Home = () => {
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
@@ -56,7 +57,18 @@ export const Home = () => {
           <button className="homePage4ContentBtn">Become A Host</button>
         </div>
       </div>
-      <div className="homePage5"></div>
+      <div className="homePage5">
+        <div className="homePage2Content1">
+          <div className="homePage2Content1Texts">
+            <div className="homePage2Content1Text">Featured Properties</div>
+            <div className="homePage2Content1Text">on our Listing</div>
+          </div>
+          <div className="homePage2Content1Zuras"></div>
+        </div>
+        <div className="homePage5cards">
+          <HomeCard2 />
+        </div>
+      </div>
     </div>
   );
 };
