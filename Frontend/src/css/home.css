@@ -162,3 +162,17 @@
   border-radius: 35px;
   border: none;
 }
+.homePage5 {
+  width: 90vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 7vh;
+  justify-content: start;
+}
+.homePage5cards {
+  flex-direction: row;
+  gap: 3vw;
+  display: flex;
+  overflow-x: scroll;
+}
