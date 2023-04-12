@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 12vh;
 }
 .homePage1 {
   width: 90vw;
@@ -62,7 +63,7 @@
 }
 .homePage2 {
   width: 90vw;
-  height: 80vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   gap: 5vh;
@@ -100,4 +101,64 @@
   flex-direction: row;
   gap: 2vw;
   overflow-x: scroll;
+}
+.homePage3 {
+  width: 90vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  justify-content: center;
+}
+.homePage4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 40vh;
+  background-color: #eff0f2;
+  border-radius: 10px;
+}
+.homePage4Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 80vw;
+  height: 35vh;
+  gap: 3vh;
+}
+.homePage4ContentText1 {
+  width: 18vw;
+  height: 10vh;
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 6vh;
+  color: #484848;
+}
+.homePage4ContentText2 {
+  width: 23vw;
+  height: 4vh;
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 52px;
+  color: #9a9a9a;
+}
+.homePage4ContentBtn {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 17px;
+  width: 14vw;
+  height: 6vh;
+  background-color: #484848;
+  color: #ffffff;
+  border-radius: 35px;
+  border: none;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import Zurh from "../assets/homeCardLike.svg";
-export const HomeCard = (props) => {
+export const HomeCard = () => {
   return (
     <div className="homeCard">
       <div className="homeCardDiv">
