@@ -1,13 +1,21 @@
 import React from "react";
 import "../App.css";
 import Zurh from "../assets/homeCardLike.svg";
-export const HomeCard = (props) => {
+export const HomeCard = () => {
   return (
     <div className="homeCard">
-      <button className="homeCardBtn">
-        <img src={Zurh} />
-      </button>
-      <div>DAD</div>
+      <div className="homeCardDiv">
+        <button className="homeCardBtn">
+          <img className="homeCardImg1" src={Zurh} />
+        </button>
+      </div>
+      <div className="homeCardContent1">
+        <div className="homeCardContent">
+          <img className="homeCardContentImg" />
+          <div className="homeCardContentText1">Well Furnished Apartment</div>
+          <div className="homeCardContentText2">100 Smart Street, LA, USA</div>
+        </div>
+      </div>
     </div>
   );
 };
