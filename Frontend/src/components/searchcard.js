@@ -11,12 +11,14 @@ export const SearchCard = ({ name, location, number }) => {
       }}
     >
       <img
+      alt=""
         style={{
           width: "100%",
           height: "70%",
           backgroundColor: "#E0E2E6",
           borderTopLeftRadius: "1vw",
           borderTopRightRadius: "1vw",
+          
         }}
       ></img>
       <div

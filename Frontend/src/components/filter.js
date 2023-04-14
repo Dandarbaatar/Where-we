@@ -25,7 +25,7 @@ export const Filter = ({ name }) => {
           height: "100%",
         }}
       >
-        <img src={Ex}></img>
+        <img alt="" src={Ex}></img>
       </Button>
     </div>
   );
