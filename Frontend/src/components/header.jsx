@@ -18,9 +18,9 @@ export const Header = (props) => {
           </Link>
           <button className="headerContentRight">
             <button className="headerContentRight1">
-              <img className="headerHamburger" src={hamburger} />
+              <img className="headerHamburger" alt="" src={hamburger} />
             </button>
-            <img className="headerContentRight2" src={headerImg1} />
+            <img className="headerContentRight2" alt="" src={headerImg1} />
           </button>
         </div>
       </div>

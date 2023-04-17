@@ -1,9 +1,11 @@
 import "../App.css";
 import zurh from "../assets/homeCardLike.svg";
+
 import savar from "../assets/pet.svg";
 import usniiOngots from "../assets/usniiOngots.svg";
 import car from "../assets/car.svg";
 import or from "../assets/bed.svg";
+
 export const HomeCard2 = () => {
   return (
     <div className="homeCard2">
@@ -11,6 +13,10 @@ export const HomeCard2 = () => {
         <button>
           <img src={zurh} />
         </button>
+        <div></div>
+      </div>
+      <div className="homeCard2Under"></div>
+
         <div>$ 1000 - 5000 USD</div>
       </div>
       <div className="homeCard2Under">
@@ -23,6 +29,7 @@ export const HomeCard2 = () => {
           <img className="homeCard2UnderImg" src={savar} />
         </div>
       </div>
+
     </div>
   );
 };

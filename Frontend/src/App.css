@@ -190,15 +190,11 @@
   border-radius: 200px;
   background-color: #c2c6cc;
 }
-.homeCard2 {
-  display: flex;
-  flex-direction: column;
-  width: 26vw;
-  height: 52vh;
-}
+
 .homeCard2Top {
   width: 23vw;
   height: 42vh;
   display: flex;
   flex-direction: column;
 }
+
