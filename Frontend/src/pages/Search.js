@@ -11,6 +11,8 @@ import Map from "../assets/result-map.svg";
 import "../css/filter.css";
 
 export const Search = () => {
+  let min = 0;
+  let max = 0;
   const [clas, setClas] = useState(0);
   const Clas = () => {
     if (clas == 0) {
@@ -59,6 +61,10 @@ export const Search = () => {
       liked: false,
     },
   ]);
+  const Valve = (e) => {
+    min = e.target.value;
+    console.log(min);
+  };
   return (
     <div>
       <Header />
@@ -131,6 +137,7 @@ export const Search = () => {
                 overflow: "hidden",
                 display: "flex",
                 flexDirection: "row",
+                paddingTop: "2vw",
               }}
             >
               <div className="search_choise">
@@ -145,7 +152,7 @@ export const Search = () => {
               <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Price</div>
                 <hr style={{ width: "90%", height: "0.1vw" }}></hr>
-                <input type="range" min={1} max={50}></input>
+                <div></div>
               </div>
               <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Rooms</div>
