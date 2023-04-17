@@ -190,3 +190,11 @@
   border-radius: 200px;
   background-color: #c2c6cc;
 }
+
+.homeCard2Top {
+  width: 23vw;
+  height: 42vh;
+  display: flex;
+  flex-direction: column;
+}
+

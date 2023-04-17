@@ -1,6 +1,10 @@
 import { Header } from "../components/header";
 import { HomeCard } from "../components/homeCard.jsx";
 import { HomeCard2 } from "../components/homeCard2";
+
+
+import { Link } from "react-router-dom";
+
 import "../css/home.css";
 export const Home = () => {
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
@@ -54,7 +58,11 @@ export const Home = () => {
           <div className="homePage4ContentText2">
             Earn extra just by renting your property...
           </div>
-          <button className="homePage4ContentBtn">Become A Host</button>
+
+          <Link to={"/hostpage"}>
+            <button className="homePage4ContentBtn">Become A Host</button>
+          </Link>
+
         </div>
       </div>
       <div className="homePage5">
