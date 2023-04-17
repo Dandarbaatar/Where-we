@@ -16,10 +16,10 @@ export const Search = () => {
     if (clas == 0) {
       setClas(1);
     } else {
-      setClas(2);
-      setTimeout(() => {
-        setClas(0);
-      }, 330);
+      setClas(0);
+      // setTimeout(() => {
+      //   setClas(0);
+      // }, 330);
     }
   };
   const [name, setName] = useState([
@@ -124,14 +124,40 @@ export const Search = () => {
               </div>
             </div>
             <div
-              className="search_anim"
+              className="search_transition"
               clas={clas}
-              style={{ display: "flex", flexDirection: "row" }}
+              style={{
+                width: "80vw",
+                overflow: "hidden",
+                display: "flex",
+                flexDirection: "row",
+              }}
             >
+              <div className="search_choise">
+                <div style={{ fontSize: "1.5vw" }}>Location</div>
+                <hr style={{ width: "90%", height: "0.1vw" }}></hr>
+                <input style={{ width: "90%" }}></input>
+              </div>
+              <div className="search_choise">
+                <div style={{ fontSize: "1.5vw" }}>Rent Duration</div>
+                <hr style={{ width: "90%", height: "0.1vw" }}></hr>
+              </div>
+              <div className="search_choise">
+                <div style={{ fontSize: "1.5vw" }}>Price</div>
+                <hr style={{ width: "90%", height: "0.1vw" }}></hr>
+                <input type="range" min={1} max={50}></input>
+              </div>
+              <div className="search_choise">
+                <div style={{ fontSize: "1.5vw" }}>Rooms</div>
+                <hr style={{ width: "90%", height: "0.1vw" }}></hr>
+              </div>
+            </div>
+            <div style={{ display: "flex", flexDirection: "row" }}>
               <div>
-                {card.map((el) => {
+                {card.map((el, key) => {
                   return (
                     <SearchCard
+                      key={key}
                       name={el.name}
                       location={el.location}
                       number={el.number}
@@ -147,7 +173,6 @@ export const Search = () => {
               <div
                 style={{
                   width: "50%",
-                  marginTop: "10vw",
                   marginLeft: "5vw",
                   marginTop: "3vw",
                 }}

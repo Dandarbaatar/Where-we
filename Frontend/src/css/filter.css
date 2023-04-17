@@ -1,21 +1,17 @@
-@keyframes search_filter {
-    from{margin-top: 0vw;}
-    to{margin-top: 30vw;}
+.search_transition{
+    transition-property: height;
+    transition-duration: 0.4s;
+    height: 0px;
 }
-@keyframes search_filter2 {
-    from{margin-top: 30vw;}
-    to{margin-top: 0vw;}
+.search_transition[clas='1']{
+    transition-property: height;
+    transition-duration: 0.4s;
+    height: 30vw;
 }
-.search_anim{
-    margin-top: 0;
-}
-.search_anim[clas='1'] {
-    animation-name: search_filter;
-    animation-duration: 0.4s;
-    margin-top: 30vw;
-}
-.search_anim[clas='2']{
-    animation-name: search_filter2;
-    animation-duration: 0.4s;
-    margin-top: 0;
+.search_choise{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
 }

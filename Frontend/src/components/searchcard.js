@@ -89,11 +89,21 @@ export const SearchCard = ({
               <div style={{ fontSize: "1.35vw" }}>For: {price}</div>
             </div>
           </div>
-          <img
-            alt=""
-            src="slider indicators.svg"
-            style={{ width: "10%", marginRight: "2vw" }}
-          ></img>
+          <button
+            style={{
+              height: "1vw",
+              marginTop: "2.5vw",
+              marginRight: "2vw",
+              border: "none",
+              backgroundColor: "transparent",
+            }}
+          >
+            <img
+              style={{ width: "5vw" }}
+              alt=""
+              src="slider indicators.svg"
+            ></img>
+          </button>
         </div>
       </div>
       <div
