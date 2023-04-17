@@ -20,7 +20,7 @@ function AddProductPage3() {
     const handleSubmit = () => {
         if(checkedList){
             // window.location = "hostpage"
-            localStorage.setItem("checkedItems",checkedList);
+            localStorage.setItem("checked",checkedList);
             console.log(checkedList);
             window.location = "addProducts4"
         }

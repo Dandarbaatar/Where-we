@@ -2,6 +2,7 @@ import React ,{useState}from 'react'
 import "../css/addProduct.css"
 import {Header} from "../components/header.jsx"
 function AddProductPage2() {
+   
       const [bedrooms , setBedrooms] = useState(0)
       const [bathrooms, setBathrooms] = useState(0)
       const [parkings, setParkings] = useState(0)
@@ -9,15 +10,18 @@ function AddProductPage2() {
       const [beds,setBeds] = useState(0)
       const nemeh = () => {
         setBedrooms(prevbedrooms =>prevbedrooms + 1)
+        console.log("bedrooms", bedrooms);
       }
       const hasah = () => {
         setBedrooms(bedrooms - 1)
+        
       }
       if(bedrooms < 0) {
         setBedrooms(0)
       }
       const nemeh1 = () => {
         setBathrooms(bathrooms + 1)
+        console.log("bathrooms", bathrooms);
       }
       const hasah1 = () => {
         setBathrooms(bathrooms - 1)
@@ -50,10 +54,13 @@ function AddProductPage2() {
         setBeds(beds - 1)
       }
       if(beds < 0) {
+        
         setBeds(0)
       }
       const handlesub = () => {
+     
         window.location = "addProducts3"
+        
       }
       
     return (

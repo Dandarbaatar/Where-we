@@ -5,22 +5,22 @@ function AddProductPage4() {
     const [checkedArray, setCheckedArray] = useState([])
 
     const handlechange = (event) => {
-        const { value, checked } = event.target;
+        const { valuew, checked } = event.target;
         if(checked === true ) {
             setCheckedArray([
                 ...checkedArray, // Keep the existing checked items
-                value // Update the checkbox's value
+                valuew // Update the checkbox's value
             ])  
         }
         if (!checked) {
-            setCheckedArray(checkedArray.filter((e)=>(e !== value)))
+            setCheckedArray(checkedArray.filter((e)=>(e !== valuew)))
             // delete checkedItems[value]; // Remove the unchecked item from the object
             }
     }
     const handleSubmit = () => {
         if(checkedArray){
             // window.location = "hostpage"
-            localStorage.setItem("checkedItems",checkedArray);
+            localStorage.setItem("checkedlist",checkedArray);
             console.log(checkedArray);
             window.location = "addProducts6"
         }
