@@ -8,7 +8,8 @@ import or from "../assets/bed.svg";
 
 export const HomeCard2 = () => {
   return (
-    <div className="homeCard2">
+    <div>
+ <div className="homeCard2">
       <div className="homeCard2Top">
         <button>
           <img src={zurh} />
@@ -29,7 +30,8 @@ export const HomeCard2 = () => {
           <img className="homeCard2UnderImg" src={savar} />
         </div>
       </div>
-
     </div>
+   
+      
   );
 };
