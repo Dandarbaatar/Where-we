@@ -1,6 +1,7 @@
 import React from 'react'
 import "../css/hostpage.css"
 import {Header} from "../components/header.jsx"
+import Footer from "../components/footer.jsx"
 
 function Hostpage() {
   const handlesubs = () => {
@@ -54,6 +55,7 @@ function Hostpage() {
             </div>
         </div>
     </div>
+    <Footer/>
     </div>
     
   )
