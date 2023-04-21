@@ -8,10 +8,12 @@ export const HomeCard2 = () => {
   return (
     <div className="homeCard2">
       <div className="homeCard2Top">
-        <button>
-          <img src={zurh} />
-        </button>
-        <div>$ 1000 - 5000 USD</div>
+        <div className="homeCardTopContent">
+          <button className="homeCard2TopBtn">
+            <img src={zurh} />
+          </button>
+          <div className="homeCard2TopPrice">$ 1000 - 5000 USD</div>
+        </div>
       </div>
       <div className="homeCard2Under">
         <div className="homeCard2UnderText1">Well Furnished Apartment</div>
