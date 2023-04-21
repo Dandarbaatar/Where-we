@@ -1,8 +1,12 @@
 import React from 'react'
 import "../css/hostpage.css"
 import {Header} from "../components/header.jsx"
+import Footer from "../components/footer.jsx"
 
 function Hostpage() {
+  const handlesubs = () => {
+        window.location = "addProducts1"
+  }
   return (
     <div>
        <Header/>
@@ -12,7 +16,7 @@ function Hostpage() {
                  <div className='host_banner_inside'>
                     <div className='Try_host'>Try Hosting With Us</div>
                     <div className='host_paragh'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.</div>
-                    <div className='host_butt'><button className='host_button'>Lets Get Started</button></div> 
+                    <div className='host_butt'><button onClick={handlesubs} className='host_button'>Lets Get Started</button></div> 
                  </div>
         </div>
         <div className='host_middle'>
@@ -51,6 +55,7 @@ function Hostpage() {
             </div>
         </div>
     </div>
+    <Footer/>
     </div>
     
   )
