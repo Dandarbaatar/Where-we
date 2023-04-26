@@ -1,4 +1,4 @@
-import React ,{useState,useRef,useEffect}from "react";
+import React ,{useState,useRef}from "react";
 import "../App.css";
 import headerImg1 from "../assets/header1.svg";
 import hamburger from "../assets/hamburger.svg";
@@ -29,7 +29,7 @@ export const Header = (props) => {
    
    <div className="header">
      <div className="headerContent1">
-       <img className="headerLogo" src={logo} />
+       <img className="headerLogo" src={logo} alt="" />
        <div className={props.Haichu || "headerhaichu"}>Хайчихуу?</div>
      </div>
      <div className="headerContent">
