@@ -15,8 +15,8 @@ export const SearchCard = ({
     <div
       style={{
         display: "flex",
-        width: "40vw",
-        height: "42vw",
+        width: "36.5vw",
+        height: "37vw",
         flexDirection: "column",
         marginTop: "3vw",
       }}
@@ -24,7 +24,7 @@ export const SearchCard = ({
       <div
         style={{
           width: "100%",
-          height: "28vw",
+          height: "26vw",
           backgroundColor: "#E0E2E6",
           borderTopLeftRadius: "1vw",
           borderTopRightRadius: "1vw",
@@ -56,7 +56,7 @@ export const SearchCard = ({
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
-            marginBottom: "2vw",
+            marginBottom: "1.7vw",
           }}
         >
           <div
@@ -83,10 +83,10 @@ export const SearchCard = ({
               }}
             >
               <div style={{ fontSize: "1vw" }}>Listed by:</div>
-              <div style={{ fontSize: "1.5vw", fontWeight: "700" }}>
+              <div style={{ fontSize: "1.3vw", fontWeight: "700" }}>
                 {lister}
               </div>
-              <div style={{ fontSize: "1.35vw" }}>For: {price}</div>
+              <div style={{ fontSize: "1.1vw" }}>For: {price}</div>
             </div>
           </div>
           <button
@@ -99,7 +99,7 @@ export const SearchCard = ({
             }}
           >
             <img
-              style={{ width: "5vw" }}
+              style={{ width: "4vw" }}
               alt=""
               src="slider indicators.svg"
             ></img>
@@ -110,7 +110,7 @@ export const SearchCard = ({
         style={{
           display: "flex",
           width: "100%",
-          height: "12vw",
+          height: "10vw",
           backgroundColor: "white",
           borderBottomLeftRadius: "1vw",
           borderBottomRightRadius: "1vw",
@@ -120,8 +120,8 @@ export const SearchCard = ({
         }}
       >
         <div>
-          <div style={{ fontSize: "1.5vw", fontWeight: "700" }}>{name}</div>
-          <div style={{ color: "#9A9A9A", fontSize: "1.1vw" }}>{location}</div>
+          <div style={{ fontSize: "1.2vw", fontWeight: "700" }}>{name}</div>
+          <div style={{ color: "#9A9A9A", fontSize: "0.9vw" }}>{location}</div>
         </div>
         <div
           style={{
@@ -132,19 +132,19 @@ export const SearchCard = ({
           }}
         >
           <div style={{ display: "flex", flexDirection: "row", gap: "0.4vw" }}>
-            <img style={{ width: "1.6vw" }} alt="" src="bed.svg"></img>
+            <img style={{ width: "1.3vw" }} alt="" src="bed.svg"></img>
             <div style={{ fontSize: "1vw" }}>{number.bed}</div>
           </div>
           <div style={{ display: "flex", flexDirection: "row", gap: "0.4vw" }}>
-            <img style={{ width: "1.30vw" }} alt="" src="bath.svg"></img>
+            <img style={{ width: "1.1vw" }} alt="" src="bath.svg"></img>
             <div style={{ fontSize: "1vw" }}>{number.bath}</div>
           </div>
           <div style={{ display: "flex", flexDirection: "row", gap: "0.4vw" }}>
-            <img style={{ width: "1.7vw" }} alt="" src="car.svg"></img>
+            <img style={{ width: "1.5vw" }} alt="" src="car.svg"></img>
             <div style={{ fontSize: "1vw" }}>{number.car}</div>
           </div>
           <div style={{ display: "flex", flexDirection: "row", gap: "0.4vw" }}>
-            <img style={{ width: "1.3vw" }} alt="" src="pet.svg"></img>
+            <img style={{ width: "1.2vw" }} alt="" src="pet.svg"></img>
             <div style={{ fontSize: "1vw" }}>{number.dog}</div>
           </div>
         </div>
@@ -158,7 +158,9 @@ export const SearchCard = ({
             height: "3vw",
           }}
         >
-          <div style={{ color: "#9A9A9A", fontSize: "1vw", fontWeight: "600" }}>
+          <div
+            style={{ color: "#9A9A9A", fontSize: "0.8vw", fontWeight: "600" }}
+          >
             {rent}
           </div>
           <hr
@@ -169,7 +171,9 @@ export const SearchCard = ({
               border: "none",
             }}
           />
-          <div style={{ color: "#9A9A9A", fontSize: "1vw", fontWeight: "600" }}>
+          <div
+            style={{ color: "#9A9A9A", fontSize: "0.8vw", fontWeight: "600" }}
+          >
             {time}
           </div>
         </div>

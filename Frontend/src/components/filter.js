@@ -15,10 +15,10 @@ export const Filter = ({ name, setName, all }) => {
         alignItems: "center",
         borderRadius: "5vw",
         paddingLeft: "1vw",
-        height: "2.5vw",
+        height: "2.2vw",
       }}
     >
-      <div style={{ fontSize: "0.9vw" }}>{name}</div>
+      <div style={{ fontSize: "0.8vw" }}>{name}</div>
       <button
         onClick={Delete}
         style={{
@@ -26,7 +26,7 @@ export const Filter = ({ name, setName, all }) => {
           border: "none",
           display: "flex",
           alignItems: "center",
-          width: "2.2vw",
+          width: "2vw",
           height: "3vw",
           marginLeft: "0.3vw",
         }}

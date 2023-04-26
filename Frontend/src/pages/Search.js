@@ -107,17 +107,15 @@ export const Search = () => {
                     backgroundColor: "white",
                     border: "solid black 1px",
                     borderRadius: "10vw",
-                    height: "3.3vw",
-                    width: "8.6vw",
+                    height: "3vw",
+                    width: "7vw",
                     justifyContent: "space-evenly",
                     borderColor: "#9A9A9A",
                   }}
                   onClick={Clas}
                 >
-                  <img style={{ width: "1.3vw" }} alt="" src={filter}></img>
-                  <div style={{ color: "black", fontSize: "1.1vw" }}>
-                    Filters
-                  </div>
+                  <img style={{ width: "1.1vw" }} alt="" src={filter}></img>
+                  <div style={{ color: "black", fontSize: "1vw" }}>Filters</div>
                 </Button>
               </div>
             </div>
@@ -135,7 +133,16 @@ export const Search = () => {
               <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Location</div>
                 <hr style={{ width: "90%", height: "0.1vw" }}></hr>
-                <input style={{ width: "90%" }}></input>
+                <input
+                  style={{
+                    width: "90%",
+                    height: "2vw",
+                    borderRadius: "2vw",
+                    border: "black solid 1px",
+                    paddingLeft: "4%",
+                  }}
+                  placeholder="Search"
+                ></input>
               </div>
               <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Rent Duration</div>
@@ -154,6 +161,7 @@ export const Search = () => {
             <div
               style={{
                 backgroundColor: "#F5F5F5",
+                marginTop: "-1vw",
                 display: "flex",
                 flexDirection: "row",
                 zIndex: "6",
@@ -180,11 +188,11 @@ export const Search = () => {
               <div
                 style={{
                   width: "50%",
-                  marginLeft: "5vw",
+                  marginLeft: "14vw",
                   marginTop: "3vw",
                 }}
               >
-                <img alt="" style={{ width: "50vw" }} src={Map}></img>
+                <img alt="" style={{ width: "45vw" }} src={Map}></img>
               </div>
             </div>
           </div>
