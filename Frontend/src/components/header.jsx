@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import headerImg1 from "../assets/header1.svg";
 import hamburger from "../assets/hamburger.svg";
+import { Link } from "react-router-dom";
 import logo from "../assets/Logo.svg";
 export const Header = (props) => {
   return (
@@ -12,12 +13,14 @@ export const Header = (props) => {
           <div className={props.Haichu || "headerhaichu"}>Хайчихуу?</div>
         </div>
         <div className="headerContent">
-          <button className="headerHostBtn">Become A Host</button>
+          <Link to={"/hostpage"}>
+            <button className="headerHostBtn">Become A Host</button>
+          </Link>
           <button className="headerContentRight">
             <button className="headerContentRight1">
-              <img className="headerHamburger" src={hamburger} />
+              <img className="headerHamburger" alt="" src={hamburger} />
             </button>
-            <img className="headerContentRight2" src={headerImg1} />
+            <img className="headerContentRight2" alt="" src={headerImg1} />
           </button>
         </div>
       </div>
