@@ -74,7 +74,9 @@ export const Home = () => {
           <div className="homePage2Content1Zuras"></div>
         </div>
         <div className="homePage5cards">
-          <HomeCard2 />
+          {arr.map((e) => {
+            return <HomeCard2 />;
+          })}
         </div>
       </div>
     </div>
