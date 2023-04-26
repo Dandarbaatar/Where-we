@@ -190,104 +190,178 @@
   border-radius: 200px;
   background-color: #c2c6cc;
 }
-
-.homeCard2Top {
-  width: 23vw;
-  border: 1px solid black;
-  height: 42vh;
+.homeCard2 {
+  width: 25vw;
+  height: 45vh;
   display: flex;
   flex-direction: column;
+  gap: 1vh;
+}
+.homeCard2Top {
+  width: 25vw;
+  height: 36vh;
+  background-color: #e0e2e6;
+  display: flex;
   align-items: center;
   justify-content: center;
-}
-.homeCard2TopBtn {
-  width: 2vw;
-  height: 3vh;
+  flex-direction: column;
+  border-radius: 30px;
 }
 .homeCard2TopContent {
-  width: 20vw;
-  height: 39vh;
+  width: 23vw;
+  height: 32vh;
   display: flex;
   flex-direction: column;
+}
+.homeCard2TopContentImg {
+  width: 23vw;
+  height: 3vh;
+  display: flex;
+  justify-content: end;
+}
+.homeCard2TopContentPrice {
+  width: 22vw;
+  height: 29vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+.homeCard2Under {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  height: 9vh;
+  gap: 2vh;
+  justify-content: center;
+}
+.homeCard2UnderText1 {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 22px;
+  color: #484848;
+}
+.homeCard2UnderText2 {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 17px;
+  color: #9a9a9a;
+}
+.zurh {
+  width: 3vw;
+  height: 3vh;
+}
+.homeCard2Tsegnud {
+  width: 4vw;
+  height: 3vh;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+.homeCard2Tseg {
+  text-align: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+  background-color: white;
+}
+.homeCard2TopContentPrices {
+  font-family: "arial";
+  text-align: center;
+  width: 10vw;
+  height: 2vh;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 22px;
+  color: #9a9a9a;
 }
 /* Footer css */ 
 
 .Footer_container{
-width: 100vw;
-height: 52vh;
-
-background-color: #EFF0F2;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.Footer_container_small{
-  width: 90vw;
-  height: 40vh;
- 
+  width: 100vw;
+  height: 52vh;
+  background-color: #EFF0F2;
   display: flex;
-  flex-direction: row;
-}
-.Footer_titles{
-width: 12vw;
-height: 3vh;
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 800;
-font-size: 30px;
-line-height: 10px;
-/* or 111% */
-color: #484848;
-
-}
-.Footer_informations{
-
-width: 6vw;
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 22px;
-line-height: 46px;
-/* or 133% */
-color: #484848;
-}
-.Footer_first{
-  width: 24vw;
-  height: 32vh;
- 
-  display: flex;
-  flex-direction: column;
-justify-content: space-between;
-}
-.Footer_buttons{
-
-  width: 7.5vw;
-  height: 5vh;
-  border: none;
-  background: #E0E2E6;
-  border-radius: 6px;
-}
-.Footer_second{
-  width: 16vw;
-  height: 40vh;
-
-  display: flex;
-  flex-direction: column;
-
-}
-.Footer_third{
-  width: 16vw;
-  height: 32vh;
-
-  display: flex;
-  flex-direction: column;
-
-}
-.Footer_four{
-  width: 16vw;
-  height: 32vh;
+  align-items: center;
+  justify-content: center;
+  }
+  .Footer_container_small{
+    width: 90vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+  }
+  .Footer_titles{
+  width: 12vw;
+  height: 3vh;
+  font-family: 'arial';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 10px;
+  /* or 111% */
+  color: #484848;
   
-  display: flex;
-  flex-direction: column;
-
-}
+  }
+  .Footer_informations{
+  width: 6vw;
+  font-family: 'arial';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 46px;
+  /* or 133% */
+  color: #484848;
+  }
+  .Footer_first{
+    width: 24vw;
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+  justify-content: space-between;
+  }
+  .Footer_buttons{
+    width: 7.5vw;
+    height: 5vh;
+    border: none;
+    background: #E0E2E6;
+    border-radius: 6px;
+  }
+  .Footer_second{
+    width: 16vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .Footer_third{
+    width: 16vw;
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .Footer_four{
+    width: 16vw;
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+  }
+  /* header login sign up navbar sukhbat css */
+  li{
+    display: flex; 
+  padding: 0.5rem; 
+  font-size: 1.125rem;
+  line-height: 1.75rem; 
+  flex-direction: column; 
+  border-radius: 0.25rem; 
+  cursor: pointer; 
+  }
+  li:hover {
+    background: #9A9A9A;
+    } 
