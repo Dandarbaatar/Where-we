@@ -9,19 +9,15 @@ import { SearchCard } from "../components/searchcard";
 import { Header } from "../components/header";
 import Map from "../assets/result-map.svg";
 import "../css/filter.css";
+import { DualRange } from "../components/dualrangeslider";
 
 export const Search = () => {
-  let min = 0;
-  let max = 0;
   const [clas, setClas] = useState(0);
   const Clas = () => {
     if (clas == 0) {
       setClas(1);
     } else {
       setClas(0);
-      // setTimeout(() => {
-      //   setClas(0);
-      // }, 330);
     }
   };
   const [name, setName] = useState([
@@ -61,10 +57,6 @@ export const Search = () => {
       liked: false,
     },
   ]);
-  const Valve = (e) => {
-    min = e.target.value;
-    console.log(min);
-  };
   return (
     <div>
       <Header />
@@ -152,14 +144,22 @@ export const Search = () => {
               <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Price</div>
                 <hr style={{ width: "90%", height: "0.1vw" }}></hr>
-                <div></div>
+                <DualRange />
               </div>
               <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Rooms</div>
                 <hr style={{ width: "90%", height: "0.1vw" }}></hr>
               </div>
             </div>
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            <div
+              style={{
+                backgroundColor: "#F5F5F5",
+                display: "flex",
+                flexDirection: "row",
+                zIndex: "6",
+                position: "relative",
+              }}
+            >
               <div>
                 {card.map((el, key) => {
                   return (

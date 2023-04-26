@@ -14,3 +14,28 @@
     flex-direction: column;
     align-items: start;
 }
+.search_slider{
+    pointer-events: none;
+    outline: none;
+    height: 0;
+}
+.search_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+.search_slider::-webkit-slider-thumb {
+    cursor: pointer;
+    height: 4vw;
+    width: 2vw;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+}
+.search_slider::-moz-range-thumb {
+    cursor: pointer;
+    height: 4vw;
+    width: 2vw;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+}
