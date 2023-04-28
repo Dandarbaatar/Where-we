@@ -1,8 +1,11 @@
 /** @format */
-import { Button } from "react-bootstrap";
-import Ex from "../assets/Vector.svg";
+import Ex from "../assets/x.svg";
 
-export const Filter = ({ name }) => {
+export const Filter = ({ name, setName, all }) => {
+  let temp;
+  const Delete = () => {
+    setName(all.filter((e) => e.fill != name));
+  };
   return (
     <div
       style={{
@@ -12,21 +15,24 @@ export const Filter = ({ name }) => {
         alignItems: "center",
         borderRadius: "5vw",
         paddingLeft: "1vw",
+        height: "2.2vw",
       }}
     >
-      <div>{name}</div>
-      <Button
+      <div style={{ fontSize: "0.8vw" }}>{name}</div>
+      <button
+        onClick={Delete}
         style={{
           backgroundColor: "transparent",
           border: "none",
           display: "flex",
           alignItems: "center",
-          width: "2.5vw",
-          height: "100%",
+          width: "2vw",
+          height: "3vw",
+          marginLeft: "0.3vw",
         }}
       >
-        <img alt="" src={Ex}></img>
-      </Button>
+        <img style={{ width: "0.6vw" }} src={Ex}></img>
+      </button>
     </div>
   );
 };
