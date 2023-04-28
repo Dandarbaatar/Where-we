@@ -76,6 +76,7 @@
   height: 5vh;
   border-radius: 35px;
   border: none;
+  background-color: white;
 }
 .headerHamburger {
   width: 2vw;
@@ -307,7 +308,24 @@
   line-height: 10px;
   /* or 111% */  
   color: #484848;
-  
+  display: flex;
+  flex-direction: column;
+
+}
+/* header login sign up navbar sukhbat css */
+li{
+  display: flex; 
+padding: 0.5rem; 
+font-size: 1.125rem;
+line-height: 1.75rem; 
+flex-direction: column; 
+border-radius: 0.25rem; 
+cursor: pointer; 
+}
+li:hover {
+  background: #9A9A9A;
+  }
+
   }
   .Footer_informations{
   width: 6vw;
@@ -365,3 +383,4 @@
   li:hover {
     background: #9A9A9A;
     } 
+

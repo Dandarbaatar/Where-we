@@ -11,6 +11,8 @@ import AddProductPage3 from "./components/addProductPage3";
 import AddProductPage4 from "./components/addProductPage4";
 import AddProductPage5 from "./components/addProductPage5";
 import AddProductPage6 from "./components/addProductPage6";
+import Register from "./components/registerPopUp";
+import Login from "./components/loginPopUp";
 import { Detail } from "./pages/Detail";
 
 function App() {
@@ -27,6 +29,10 @@ function App() {
         <Route path="/addproducts4" element={<AddProductPage4 />} />
         <Route path="/addproducts5" element={<AddProductPage5 />} />
         <Route path="/addproducts6" element={<AddProductPage6 />} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/login" element={<Login/>} />
+
+
       </Routes>
     </BrowserRouter>
   );
