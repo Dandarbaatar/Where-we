@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState } from "react";
 
 export const DualRange = () => {
   const [minVal, setMinVal] = useState(1);
@@ -52,7 +52,7 @@ export const DualRange = () => {
           style={{
             width: "100%",
             height: "1.2vw",
-            backgroundColor: "#ced4da",
+            backgroundColor: "#787B7B",
             borderRadius: "2vw",
             position: "absolute",
             zIndex: "1",
@@ -60,7 +60,7 @@ export const DualRange = () => {
         ></div>
         <div
           style={{
-            backgroundColor: "#4E4FE4",
+            backgroundColor: "#5f6161",
             width: "100%",
             height: "1.2vw",
             zIndex: "2",

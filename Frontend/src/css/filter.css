@@ -25,7 +25,7 @@
     -webkit-tap-highlight-color: transparent;
   }
 .search_slider::-webkit-slider-thumb {
-    background-color: #2224DD;
+    background-color: #5f6161;
     cursor: pointer;
     height: 1.2vw;
     width: 1.2vw;

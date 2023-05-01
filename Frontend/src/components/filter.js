@@ -2,9 +2,8 @@
 import Ex from "../assets/x.svg";
 
 export const Filter = ({ name, setName, all }) => {
-  let temp;
   const Delete = () => {
-    setName(all.filter((e) => e.fill != name));
+    setName(all.filter((e) => e.fill !== name));
   };
   return (
     <div
@@ -31,7 +30,7 @@ export const Filter = ({ name, setName, all }) => {
           marginLeft: "0.3vw",
         }}
       >
-        <img style={{ width: "0.6vw" }} src={Ex}></img>
+        <img alt="" style={{ width: "0.6vw" }} src={Ex}></img>
       </button>
     </div>
   );
