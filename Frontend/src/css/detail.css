@@ -5,14 +5,14 @@ body {
 }
 .detailContainer {
   width: 100vw;
-  height: 100vh;
+  height: max-content;
   background-color: rgb(255, 255, 255);
+  border: 1px solid red;
 }
 .detailHeroDad {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid red; */
   width: 100vw;
   height: 60vh;
 }
@@ -110,7 +110,7 @@ body {
   /* justify-content: space-around; */
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 .descHeaderDad {
   width: 90%;
@@ -322,4 +322,101 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+}
+.displayNone {
+  display: none;
+}
+.detailDescriptionService {
+  display: flex;
+  /* align-items: center; */
+  width: 90%;
+  height: max-content;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+.serviceBoxes {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid black; */
+  width: 70%;
+  justify-content: space-between;
+}
+.showOnMap {
+  width: 195px;
+  height: 60px;
+  background: #9a9a9a;
+  border-radius: 28px;
+  border: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  margin-top: 50px;
+}
+.amenitiesButton {
+  width: 240px;
+  height: 100px;
+  background: #ffffff;
+  border: 1px solid #484848;
+  border-radius: 6px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 50px;
+  color: #484848;
+}
+.detailReview {
+  /* border: 1px solid purple; */
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: max-content;
+}
+.detailReviewSon {
+  width: 90%;
+}
+.reviewHeader {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #484848;
+  width: 70%;
+  width: 12%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.revInfoText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #484848;
+}
+.rewInfoMain {
+  display: flex;
+  /* border: 1px solid black; */
+  width: 350px;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+.revInfoLine5 {
+  border: 3px solid gray;
+  width: 140px;
+  height: 2px;
+  background: #9a9a9a;
+  border-radius: 2px;
 }

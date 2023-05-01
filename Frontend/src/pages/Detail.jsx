@@ -10,21 +10,15 @@ import car from "../assets/carsvg.svg";
 import pet from "../assets/petsvg.svg";
 import property from "../assets/property.svg";
 import phone from "../assets/phone.svg";
-import { Amenities } from "../components/amenities";
-import washer from "../assets/washer.svg";
-import check from "../assets/check.svg";
-import snow from "../assets/snow.svg";
-import kitchen from "../assets/kitchen.svg";
-import tv from "../assets/tv.svg";
-import wifi from "../assets/wifi.svg";
-import balcony from "../assets/balcony.svg";
 import Footer from "../components/footer.jsx";
+import { DetailDescription } from "../components/detailDescription";
+import filledStar from "../assets/filledStar.svg";
+import { ReviewInfo } from "../components/reviewInfo";
 
 export const Detail = () => {
   return (
     <div className="detailContainer">
       <Header />
-
       <div className="detailHeroDad">
         <div className="detailHero">
           <div
@@ -79,7 +73,6 @@ export const Detail = () => {
         </div>
       </div>
       <div className="detailDesc">
-        {/* <div className="descHeaderDad"> */}
         <div className="descHeader">
           <div className="descHeaderLeft">
             <div className="descHeaderLeftSon">
@@ -128,9 +121,68 @@ export const Detail = () => {
             </div>
           </div>
         </div>
+        <DetailDescription
+          mainClass="detailDescription"
+          headerClass="detailDescHeader"
+          header="Apartment Description"
+          textClass="detailDescText"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat."
+        />
+        <DetailDescription
+          mainClass="detailDescription"
+          headerClass="detailDescHeader"
+          header="Offered Amenities"
+          amenities1="detailDescAmenities"
+          buttonClass="amenitiesButton"
+          button="Show All Amenities"
+        />
+        <DetailDescription
+          mainClass="detailDescription"
+          headerClass="detailDescHeader"
+          header="Safety and Hygiene"
+          amenities2="detailDescAmenities"
+        />
+        <DetailDescription
+          mainClass="detailDescriptionService"
+          headerClass="detailDescHeader"
+          header="Nearby Services"
+          servicesBoxMain="serviceMain"
+          serviceBoxes="serviceBoxes"
+          buttonClass="showOnMap"
+          button="Show On Map"
+        />
+      </div>
+      <div className="detailReview">
+        <div className="detailReviewSon">
+          <div className="reviewHeader">
+            Reviews{" "}
+            <img
+              src={filledStar}
+              alt=""
+              style={{ height: "23px", width: "23px" }}
+            />{" "}
+            5.0
+          </div>
+          <ReviewInfo
+            textClass="revInfoText"
+            revLineClass="revInfoLine5"
+            number="5.0"
+            text="Amenities"
+          />
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
-        {/* </div> */}
-        <div className="detailDescription">
+///    JIAHAN BOLHI HUVILBAR NI GSH HAHA ------>
+
+{
+  /* <div className="detailDescription">
           <div className="detailDescHeader">Apartment Description</div>
           <div className="detailDescText">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -144,8 +196,10 @@ export const Detail = () => {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </div>
-        </div>
-        <div className="detailDescription">
+        </div> */
+}
+{
+  /* <div className="detailDescription">
           <div className="detailDescHeader">Offered Amenities</div>
           <div className="detailDescAmenities">
             <div className="descAmenitiesMain">
@@ -164,8 +218,10 @@ export const Detail = () => {
             </div>
             <div className="descAmenitiesMore"></div>
           </div>
-        </div>
-        <div className="detailDescription">
+        </div> */
+}
+{
+  /* <div className="detailDescription">
           <div className="detailDescHeader">Safety and Hygiene</div>
           <div className="detailDescAmenities">
             <div className="descAmenitiesMain">
@@ -183,9 +239,37 @@ export const Detail = () => {
             </div>
             <div className="descAmenitiesMore"></div>
           </div>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-};
+        </div> */
+}
+{
+  /* <div className="detailDescription">
+          <div className="detailDescHeader">Nearby Services</div>
+          <ServicesBox
+            header="Grill Restro & Bar"
+            location="100 meters away"
+            star1="displayFlex"
+            star2="displayFlex"
+            star3="displayFlex"
+            // star4="displayFlex"
+            // star5="displayFlex"
+          />
+          <ServicesBox
+            header="Grill Restro & Bar"
+            location="100 meters away"
+            star1="displayFlex"
+            star2="displayFlex"
+            star3="displayFlex"
+            // star4="displayFlex"
+            // star5="displayFlex"
+          />
+          <ServicesBox
+            header="Grill Restro & Bar"
+            location="100 meters away"
+            star1="displayFlex"
+            star2="displayFlex"
+            star3="displayFlex"
+            // star4="displayFlex"
+            // star5="displayFlex"
+          />    
+        </div> */
+}
