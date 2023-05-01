@@ -214,6 +214,21 @@
   display: flex;
   flex-direction: column;
 }
+/* Footer css */
+
+.Footer_container {
+  width: 100vw;
+  height: 52vh;
+  margin-top: 200px;
+  background-color: #eff0f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Footer_container_small {
+  width: 90vw;
+  height: 40vh;
+  }
 .homeCard2TopContentImg {
   width: 23vw;
   height: 3vh;
@@ -228,6 +243,52 @@
   justify-content: space-between;
   align-items: end;
 }
+.Footer_titles {
+  width: 12vw;
+  height: 3vh;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 10px;
+  /* or 111% */
+  color: #484848;
+}
+.Footer_informations {
+  width: 6vw;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 46px;
+  /* or 133% */
+  color: #484848;
+}
+.Footer_first {
+  width: 24vw;
+  height: 32vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Footer_buttons {
+  width: 7.5vw;
+  height: 5vh;
+  border: none;
+  background: #e0e2e6;
+  border-radius: 6px;
+}
+.Footer_second {
+  width: 16vw;
+  height: 40vh;
+
+  display: flex;
+  flex-direction: column;
+}
+.Footer_third {
+  width: 16vw;
+  height: 32vh;
 .homeCard2Under {
   display: flex;
   flex-direction: column;
@@ -310,7 +371,90 @@
   color: #484848;
   display: flex;
   flex-direction: column;
+}
+.Footer_four {
+  width: 16vw;
+  height: 32vh;
 
+  display: flex;
+  flex-direction: column;
+}
+.boxesBox {
+  height: 230px;
+  width: 240px;
+  background-color: #eff0f2;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin-right: 20px; */
+}
+.boxesText {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.amenitiesMain {
+  /* border: 1px solid black; */
+  display: flex;
+  width: 370px;
+  height: 40px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.amenitiesImg {
+  margin-right: 18px;
+}
+.amenitiesText {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 18px;
+}
+.displayFlex {
+  display: flex;
+  margin-right: 5px;
+  height: 18px;
+  width: 18px;
+}
+.displayNone {
+  display: none;
+}
+.serviceMain {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 30px;
+  flex-direction: column;
+  border: 1px solid black;
+  height: 130px;
+  width: 300px;
+  box-shadow: 0px 0px 8px rgba(102, 104, 106, 0.5);
+  border-radius: 6px;
+  background-color: white;
+}
+.serviceHeader {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+.serviceLocation {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #484848;
+}
+.serviceChild {
+  width: 50%;
+  display: flex;
+  align-items: center;
 }
 /* header login sign up navbar sukhbat css */
 li{
@@ -370,5 +514,4 @@ li:hover {
     display: flex;
     flex-direction: column;
   }
-
 
