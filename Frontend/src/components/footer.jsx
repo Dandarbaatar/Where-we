@@ -13,10 +13,7 @@ function Footer() {
       <div className="Footer_container_small">
         <div className="Footer_first">
           <img width="150px" src={logo} alt="" />
-          <div
-            style={{
-              width: "15vw",
-              fontFamily: "Montserrat",
+          <div style={{width:"15vw",fontFamily: 'arial',
               fontStyle: "normal",
               fontWeight: "500",
               fontSize: "16px",

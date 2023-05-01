@@ -1,0 +1,237 @@
+/* Login gej bichsen baigaach sign up iin css */
+
+.Login_header{
+    width: 536px;
+    display: flex;
+    justify-content: space-between;
+}
+.Login_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Login_login{
+width: 8vw;
+height: 3vh;
+display: flex;
+
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 22px;
+
+color: #484848;
+}
+.Login_inp{
+    width: 24vw;
+    height: 5vh;
+    box-sizing: border-box;
+
+background: #FFFFFF;
+border: 1px solid #C2C6CC;
+border-radius: 20px;
+}
+.Login_line{
+    width: 24vw;
+    border: 1px solid #E0E2E6;
+    height: 0px;
+}
+.Login_butt{
+    border: none;
+    background: none;
+    height: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.Login_container_small{
+   
+width: 27vw;
+height: 52vh;
+
+
+background: #FFFFFF;
+box-shadow: 0px 0px 8px rgba(194, 198, 204, 0.6);
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.Login_pr{
+    color: #2d2a2a;;
+}
+.Login_butt1{
+    width: 11vw;
+    height: 5vh;
+    border-radius: 50px;
+    border: none;
+    background-color: #9A9A9A;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 18px;
+
+color: #FFFFFF;
+}
+.Login_container_small_1{
+   height: 48vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+}
+.Login_sicz{
+    height: 9vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Login_butt2{
+    width: 11vw;
+    height: 5vh;
+    border: none;
+    background: none;
+
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 18px;
+
+color: #9A9A9A;
+}
+.Login_inp::placeholder {
+    color: #C5C5C5;
+  }
+  .overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* login css */
+
+  .signup_header{
+    width: 536px;
+    display: flex;
+    justify-content: space-between;
+}
+.signup_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup_login{
+width: 8vw;
+height: 3vh;
+display: flex;
+
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 22px;
+
+color: #484848;
+}
+.signup_inp{
+    width: 24vw;
+    height: 5vh;
+    box-sizing: border-box;
+
+background: #FFFFFF;
+border: 1px solid #C2C6CC;
+border-radius: 20px;
+}
+.signup_line{
+    width: 24vw;
+    border: 1px solid #E0E2E6;
+    height: 0px;
+}
+.signup_butt{
+    border: none;
+    background: none;
+    height: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.signup_container_small{
+   
+width: 27vw;
+height: 36vh;
+
+
+background: #FFFFFF;
+box-shadow: 0px 0px 8px rgba(194, 198, 204, 0.6);
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.signup_pr{
+    color: #2d2a2a;;
+}
+.signup_butt1{
+    width: 11vw;
+    height: 5vh;
+    border-radius: 50px;
+    border: none;
+    background-color: #9A9A9A;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 18px;
+
+color: #FFFFFF;
+}
+.signup_container_small_1{
+   height: 32vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+}
+.signup_sicz{
+    height: 9vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.signup_butt2{
+    width: 11vw;
+    height: 5vh;
+    border: none;
+    background: none;
+
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 18px;
+
+color: #9A9A9A;
+}
+.signup_inp::placeholder {
+    color: #C5C5C5;
+  }
+  .overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }

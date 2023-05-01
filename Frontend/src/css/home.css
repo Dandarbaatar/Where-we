@@ -34,7 +34,7 @@
   height: 7vh;
   display: flex;
   flex-direction: row;
-  gap: 3vw;
+  gap: 4vw;
 }
 .homePage1Topic {
   width: 15vw;

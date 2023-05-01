@@ -1,7 +1,7 @@
 import { Header } from "../components/header";
 import { HomeCard } from "../components/homeCard.jsx";
 import { HomeCard2 } from "../components/homeCard2";
-
+import Footer from "../components/footer.jsx"
 
 import { Link } from "react-router-dom";
 
@@ -74,9 +74,12 @@ export const Home = () => {
           <div className="homePage2Content1Zuras"></div>
         </div>
         <div className="homePage5cards">
-          <HomeCard2 />
+          {arr.map((e) => {
+            return <HomeCard2 />;
+          })}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

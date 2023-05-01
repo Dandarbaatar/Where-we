@@ -3,13 +3,15 @@ import "../css/hostpage.css"
 import {Header} from "../components/header.jsx"
 import Footer from "../components/footer.jsx"
 
+
 function Hostpage() {
   const handlesubs = () => {
         window.location = "addProducts1"
   }
+
   return (
-    <div>
-       <Header/>
+ <div>
+       <Header />
       <div className="host_container">
      
         <div className='host_banner'>
@@ -57,6 +59,8 @@ function Hostpage() {
     </div>
     <Footer/>
     </div>
+  
+   
     
   )
 }
