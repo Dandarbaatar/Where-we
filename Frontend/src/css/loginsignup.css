@@ -1,7 +1,7 @@
 /* Login gej bichsen baigaach sign up iin css */
 
 .Login_header{
-    width: 536px;
+    width: 24vw;
     display: flex;
     justify-content: space-between;
 }
@@ -120,7 +120,7 @@ color: #9A9A9A;
   /* login css */
 
   .signup_header{
-    width: 536px;
+    width: 24vw;
     display: flex;
     justify-content: space-between;
 }
