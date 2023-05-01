@@ -63,7 +63,7 @@ exports.userlogin = async (req, res) => {
         res.status(200).send({ token: token, id: user._id });
         return;
       } else {
-        res.status(500).send("Invalid password or email");
+        res.status(500).send("Invalid password or username");
         return;
       }
     } else {
