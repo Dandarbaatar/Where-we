@@ -7,7 +7,7 @@ body {
   width: 100vw;
   height: max-content;
   background-color: rgb(255, 255, 255);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .detailHeroDad {
   display: flex;
@@ -63,13 +63,54 @@ body {
   justify-content: center;
   align-items: center;
 }
-.morePhoto {
-  /* color: #484848; */
-  color: whitesmoke;
+.morePhotos {
   font-size: 40px;
   /* border: 1px solid green; */
   height: 50%;
   width: 50%;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 17px;
+  color: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+.plus {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  color: white;
+}
+.more {
+  font-size: 40px;
+  /* border: 1px solid green; */
+  height: 50%;
+  width: 50%;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 17px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.photos {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 22px;
+  color: white;
 }
 .hostInfoDad {
   height: 30%;
@@ -340,6 +381,7 @@ body {
   /* border: 1px solid black; */
   width: 70%;
   justify-content: space-between;
+  cursor: pointer;
 }
 .showOnMap {
   width: 195px;
@@ -396,7 +438,7 @@ body {
 }
 .revInfoText {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   font-family: "Montserrat";
   font-style: normal;
@@ -404,14 +446,16 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #484848;
+  width: 200px;
 }
 .rewInfoMain {
   display: flex;
   /* border: 1px solid black; */
-  width: 350px;
+  width: 400px;
   height: 30px;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 .revInfoLine5 {
   border: 3px solid gray;
@@ -419,4 +463,94 @@ body {
   height: 2px;
   background: #9a9a9a;
   border-radius: 2px;
+}
+.revInfoDad {
+  display: flex;
+  width: 55%;
+  height: 15vh;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.revTextsMain {
+  display: flex;
+  /* border: 1px solid black; */
+  width: 400px;
+  height: 200px;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.revTextsUser {
+  /* border: 1px solid black; */
+  display: flex;
+  height: 80px;
+}
+.revTextsUserImg {
+  height: 70px;
+  width: 70px;
+}
+.revTextsUserName {
+  /* border: 1px solid black; */
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #484848;
+  margin-left: 15px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.revTextUserDate {
+  /* border: 1px solid black; */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9a9a9a;
+  margin-left: 15px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.revTextsText {
+  height: 100px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #9a9a9a;
+}
+.revTexts {
+  display: flex;
+  /* border: 1px solid black; */
+  width: 55%;
+  height: 50vh;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 80px;
+}
+.revTextsSon {
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: space-between;
+}
+.reviewButton {
+  width: 240px;
+  height: 65px;
+  background: #ffffff;
+  border: 1px solid #484848;
+  border-radius: 6px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #484848;
+}
+button {
+  cursor: pointer;
 }

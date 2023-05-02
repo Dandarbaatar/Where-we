@@ -14,6 +14,9 @@ import Footer from "../components/footer.jsx";
 import { DetailDescription } from "../components/detailDescription";
 import filledStar from "../assets/filledStar.svg";
 import { ReviewInfo } from "../components/reviewInfo";
+import { ReviewTexts } from "../components/reviewTexts";
+import Logo from "../assets/Logo.svg";
+import redHeart from "../assets/redHeart.svg";
 
 export const Detail = () => {
   return (
@@ -66,7 +69,12 @@ export const Detail = () => {
                   backgroundImage: `url(${sad})`,
                 }}
               >
-                <div className="morePhoto">More photos</div>
+                <div className="morePhotos">
+                  <div className="plus">+2</div>
+                  <div className="more">
+                    More <div className="photos">Photos</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -87,6 +95,7 @@ export const Detail = () => {
               </div>
               <div className="descHeaderRight">
                 <img src={love} alt="Heart" className="colorBlack" />
+                {/* <img src={redHeart} alt="Heart" className="colorBlack" /> */}
                 <img src={share} alt="Heart" className="colorBlack" />
               </div>
             </div>
@@ -107,7 +116,7 @@ export const Detail = () => {
                 <div className="periodMedium">Medium Period: $ 2000</div>
                 <div className="periodLong">Long Period: $ 2000</div>
               </div>
-              <div className="descBoxReserve">Reserve Now</div>
+              <button className="descBoxReserve">Reserve Now</button>
               <div className="descBoxFooter">
                 <div className="descBoxProperty">
                   <img src={property} alt="" />
@@ -166,12 +175,73 @@ export const Detail = () => {
             />{" "}
             5.0
           </div>
-          <ReviewInfo
-            textClass="revInfoText"
-            revLineClass="revInfoLine5"
-            number="5.0"
-            text="Amenities"
-          />
+          <div className="revInfoDad">
+            <div className="revInfoSon">
+              <ReviewInfo
+                textClass="revInfoText"
+                revLineClass="revInfoLine5"
+                number="5.0"
+                text="Amenities"
+              />
+              <ReviewInfo
+                textClass="revInfoText"
+                revLineClass="revInfoLine5"
+                number="5.0"
+                text="Communication"
+              />
+              <ReviewInfo
+                textClass="revInfoText"
+                revLineClass="revInfoLine5"
+                number="5.0"
+                text="Value for Money"
+              />
+            </div>
+            <div className="revInfoSon">
+              <ReviewInfo
+                textClass="revInfoText"
+                revLineClass="revInfoLine5"
+                number="5.0"
+                text="Hygiene"
+              />
+              <ReviewInfo
+                textClass="revInfoText"
+                revLineClass="revInfoLine5"
+                number="5.0"
+                text="Location of Property"
+              />
+            </div>
+          </div>
+          <div className="revTexts">
+            <div className="revTextsSon">
+              <ReviewTexts
+                imgSrc={Logo}
+                username="John Doberman"
+                date="Mar 12 2023"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              />
+              <ReviewTexts
+                imgSrc={Logo}
+                username="John Doberman"
+                date="Mar 12 2023"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              />
+            </div>
+            <div className="revTextsSon">
+              <ReviewTexts
+                imgSrc={Logo}
+                username="John Doberman"
+                date="Mar 12 2023"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              />
+              <ReviewTexts
+                imgSrc={Logo}
+                username="John Doberman"
+                date="Mar 12 2023"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              />
+            </div>
+          </div>
+          <button className="reviewButton">Show All Reviews</button>
         </div>
       </div>
       <Footer />
