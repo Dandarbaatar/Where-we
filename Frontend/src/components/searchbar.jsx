@@ -1,7 +1,30 @@
 import { Button } from "react-bootstrap";
 import SearchButton from "../assets/SearchButton.svg";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import "react-calendar/dist/Calendar.css";
+import Calendar from "react-calendar";
 
 export const SearchBar = () => {
+  const body = document.getElementById("calendar");
+  const [search, setSearch] = useState("");
+  const [changes, setChanges] = useState("");
+  useEffect(() => {
+    axios({ method: "GET", url: "http://localhost:8000/searchuser" }).then(
+      (res) => {
+        setSearch(res);
+      }
+    );
+  }, []);
+  const createCalendar = () => {
+    body.append(<Calendar></Calendar>);
+  };
+  const Change = (e) => {
+    setChanges(e.target.value);
+  };
+  const Searching = () => {
+    console.log(search);
+  };
   return (
     <div
       style={{
@@ -29,6 +52,7 @@ export const SearchBar = () => {
             height: "1.3vw",
             outline: "none",
           }}
+          onChange={Change}
         ></input>
       </div>
       <hr
@@ -41,7 +65,8 @@ export const SearchBar = () => {
       />
       <div>
         <div style={{ fontSize: "0.8vw", fontWeight: "600" }}>Check In</div>
-        <input
+        <button
+          id="calendar"
           placeholder="Add Dates"
           style={{
             fontSize: "0.8vw",
@@ -50,7 +75,8 @@ export const SearchBar = () => {
             height: "1.3vw",
             outline: "none",
           }}
-        ></input>
+          onClick={createCalendar}
+        ></button>
       </div>
       <hr
         style={{
@@ -105,6 +131,7 @@ export const SearchBar = () => {
           alignItems: "center",
           justifyContent: "center",
         }}
+        onClick={Searching}
       >
         <img
           alt=""
