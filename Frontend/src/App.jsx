@@ -29,8 +29,8 @@ function App() {
         <Route path="/addproducts4" element={<AddProductPage4 />} />
         <Route path="/addproducts5" element={<AddProductPage5 />} />
         <Route path="/addproducts6" element={<AddProductPage6 />} />
-        {/* <Route path="/register" element={<Register/>} />
-        <Route path="/login" element={<Login/>} /> */}
+        {/* <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} /> */}
       </Routes>
     </BrowserRouter>
   );
