@@ -1,6 +1,6 @@
 const express = require("express");
-const { TempGetUsers } = require("../controller/searchController");
+const { GetDetails } = require("../controller/searchController");
 
-const SearchRouter = express.Router().get("/searchuser", TempGetUsers);
+const SearchRouter = express.Router().get("/searchdetails", GetDetails);
 
 module.exports = SearchRouter;

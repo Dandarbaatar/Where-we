@@ -1,8 +1,8 @@
-const { TempGetUsers } = require("../query/searchQuery");
+const { GetDetails } = require("../query/searchQuery");
 
-exports.TempGetUsers = async (req, res) => {
+exports.GetDetails = async (req, res) => {
   try {
-    const result = await TempGetUsers(req);
+    const result = await GetDetails(req);
     res.send({ result });
   } catch (err) {
     res.send({ err });

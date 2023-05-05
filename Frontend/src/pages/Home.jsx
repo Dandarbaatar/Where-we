@@ -2,12 +2,14 @@ import { Header } from "../components/header";
 import { HomeCard } from "../components/homeCard.jsx";
 import { HomeCard2 } from "../components/homeCard2";
 import Footer from "../components/footer.jsx";
+import { useState } from "react";
 
 import { Link } from "react-router-dom";
 
 import "../css/home.css";
 import { SearchBar } from "../components/searchbar";
 export const Home = () => {
+  const [types, setTypes] = useState("");
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
   return (
     <div className="Home">
@@ -17,14 +19,34 @@ export const Home = () => {
           <div className="homePage1Content">
             <div className="homePage1Topic">FIND</div>
             <div className="homePage1Contents">
-              <div className="homePage1Content1">Rooms</div>
-              <div className="homePage1Content1">Flats</div>
-              <div className="homePage1Content1">Hostels</div>
-              <div className="homePage1Content1">villas</div>
+              <div
+                onClick={() => setTypes("Rooms")}
+                className="homePage1Content1"
+              >
+                Rooms
+              </div>
+              <div
+                onClick={() => setTypes("Flats")}
+                className="homePage1Content1"
+              >
+                Flats
+              </div>
+              <div
+                onClick={() => setTypes("Hostels")}
+                className="homePage1Content1"
+              >
+                Hostels
+              </div>
+              <div
+                onClick={() => setTypes("Villas")}
+                className="homePage1Content1"
+              >
+                Villas
+              </div>
             </div>
           </div>
         </div>
-        <SearchBar />
+        <SearchBar types={types} />
       </div>
       <div className="homePage2">
         <div className="homePage2Content1">

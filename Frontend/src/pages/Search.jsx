@@ -4,15 +4,16 @@ import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import filter from "../assets/Filter.svg";
 import { Filter } from "../components/filter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SearchCard } from "../components/searchcard";
 import { Header } from "../components/header";
 import Map from "../assets/result-map.svg";
 import "../css/filter.css";
 import { DualRange } from "../components/dualrangeslider";
-import { axios } from "axios";
+import axios from "axios";
 
 export const Search = () => {
+  const [search, setSearch] = useState("");
   const [clas, setClas] = useState(0);
   const Clas = () => {
     if (clas === 0) {
@@ -21,6 +22,16 @@ export const Search = () => {
       setClas(0);
     }
   };
+  useEffect(() => {
+    axios({ method: "GET", url: "http://localhost:8000/searchdetails" }).then(
+      (res) => {
+        setSearch(res);
+      }
+    );
+  }, []);
+  useEffect(() => {
+    console.log(search);
+  }, [search]);
   const [name, setName] = useState([
     { fill: "100 Smart Street" },
     { fill: "12 Mar 2021" },

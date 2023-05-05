@@ -4,26 +4,32 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "react-calendar/dist/Calendar.css";
 import Calendar from "react-calendar";
+import { Link } from "react-router-dom";
 
-export const SearchBar = () => {
-  const body = document.getElementById("calendar");
-  const [search, setSearch] = useState("");
-  const [changes, setChanges] = useState("");
-  useEffect(() => {
-    axios({ method: "GET", url: "http://localhost:8000/searchuser" }).then(
-      (res) => {
-        setSearch(res);
-      }
-    );
-  }, []);
-  const createCalendar = () => {
-    body.append(<Calendar></Calendar>);
+export const SearchBar = ({ types }) => {
+  let period = "";
+  let location = "";
+  let guests = 0;
+  const Period = (e) => {
+    period = e.target.value;
   };
-  const Change = (e) => {
-    setChanges(e.target.value);
+  const Location = (e) => {
+    location = e.target.value;
+  };
+  const Guests = (e) => {
+    guests = Number(e.target.value);
   };
   const Searching = () => {
-    console.log(search);
+    axios({
+      method: "POST",
+      url: "http://localhost:8000/searchdetails",
+      data: {
+        period: period,
+        location: location,
+        guests: guests,
+        placetype: types,
+      },
+    });
   };
   return (
     <div
@@ -37,7 +43,7 @@ export const SearchBar = () => {
         marginLeft: "25vw",
         justifyContent: "space-between",
         alignItems: "center",
-        paddingLeft: "1.5vw",
+        paddingLeft: "2vw",
         paddingRight: "0.8vw",
       }}
     >
@@ -52,7 +58,7 @@ export const SearchBar = () => {
             height: "1.3vw",
             outline: "none",
           }}
-          onChange={Change}
+          onChange={Location}
         ></input>
       </div>
       <hr
@@ -63,20 +69,21 @@ export const SearchBar = () => {
           border: "none",
         }}
       />
-      <div>
+      {/* <div>
         <div style={{ fontSize: "0.8vw", fontWeight: "600" }}>Check In</div>
         <button
-          id="calendar"
-          placeholder="Add Dates"
           style={{
             fontSize: "0.8vw",
             border: "none",
             width: "5vw",
             height: "1.3vw",
             outline: "none",
+            backgroundColor: "transparent",
           }}
           onClick={createCalendar}
-        ></button>
+        >
+          Add Dates
+        </button>
       </div>
       <hr
         style={{
@@ -85,9 +92,9 @@ export const SearchBar = () => {
           height: "1.7vw",
           border: "none",
         }}
-      />
+      /> */}
       <div>
-        <div style={{ fontSize: "0.8vw", fontWeight: "600" }}>Check Out</div>
+        <div style={{ fontSize: "0.8vw", fontWeight: "600" }}>Period</div>
         <input
           placeholder="Add Dates"
           style={{
@@ -97,6 +104,7 @@ export const SearchBar = () => {
             height: "1.3vw",
             outline: "none",
           }}
+          onChange={Period}
         ></input>
       </div>
       <hr
@@ -118,9 +126,10 @@ export const SearchBar = () => {
             height: "1.3vw",
             outline: "none",
           }}
+          onChange={Guests}
         ></input>
       </div>
-      <Button
+      <Link
         style={{
           width: "3.2vw",
           height: "3.2vw",
@@ -132,13 +141,14 @@ export const SearchBar = () => {
           justifyContent: "center",
         }}
         onClick={Searching}
+        to="/search"
       >
         <img
           alt=""
           style={{ width: "1.2vw", height: "1.2vw" }}
           src={SearchButton}
         ></img>
-      </Button>
+      </Link>
     </div>
   );
 };
