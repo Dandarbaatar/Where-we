@@ -82,7 +82,6 @@ export const Home = () => {
           <div className="homePage4ContentText2">
             Earn extra just by renting your property...
           </div>
-
           <Link to={"/hostpage"}>
             <button className="homePage4ContentBtn">Become A Host</button>
           </Link>
