@@ -81,6 +81,7 @@
 .headerHamburger {
   width: 2vw;
   height: 2vh;
+  cursor: pointer;
 }
 .headerContentRight1 {
   display: flex;
@@ -354,6 +355,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  }
+  .Footer_container_small{
+    width: 90vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+  }
+  .Footer_titles{
+  width: 25vw;
+  height: 5vh;
+  font-family: 'arial';
+=======
 }
 .Footer_container_small {
   width: 90vw;
@@ -365,6 +378,7 @@
   width: 12vw;
   height: 3vh;
   font-family: "arial";
+
   font-style: normal;
   font-weight: 800;
   font-size: 30px;

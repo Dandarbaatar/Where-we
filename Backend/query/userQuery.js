@@ -39,7 +39,7 @@ exports.uptadeUserQuery = async (req) => {
     username: username,
     password: password,
     email: email,
-    phonenumber:cphonenumber
+    phonenumber:phonenumber
   });
   return result;
 };
