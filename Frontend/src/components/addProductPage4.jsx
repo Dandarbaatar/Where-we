@@ -5,15 +5,15 @@ function AddProductPage4() {
   const [checkedArray, setCheckedArray] = useState([]);
 
   const handlechange = (event) => {
-    const { valuew, checked } = event.target;
+    const { value, checked } = event.target;
     if (checked === true) {
       setCheckedArray([
         ...checkedArray, // Keep the existing checked items
-        valuew, // Update the checkbox's value
+        value, // Update the checkbox's value
       ]);
     }
     if (!checked) {
-      setCheckedArray(checkedArray.filter((e) => e !== valuew));
+      setCheckedArray(checkedArray.filter((e) => e !== value));
       // delete checkedItems[value]; // Remove the unchecked item from the object
     }
   };

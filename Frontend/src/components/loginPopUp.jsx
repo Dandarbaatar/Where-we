@@ -17,9 +17,9 @@ function LoginPopUp({ hey, onClose }) {
           password: password1,
           username: username1,
         },
-        headers: {
-          //   authorization: `bearer ${res?.data?.token}`,
-        },
+        // headers: {
+        //   authorization: `bearer ${res?.data?.token}`,
+        // },
       });
       console.log(res);
 
@@ -32,12 +32,13 @@ function LoginPopUp({ hey, onClose }) {
         localStorage.setItem("username", username1);
         localStorage.setItem("id", id);
       }
-    } catch (res) {
-      if (res?.status === 500) {
-        toast("Invalid password or username ");
-      } else {
-        toast("User not found");
-      }
+    } catch (err) {
+      console.log(err.message);
+      // if (res?.status === 500) {
+      //   toast("Invalid password or username ");
+      // } else {
+      //   toast("User not found");
+      // }
     }
   };
   if (!hey) return null;

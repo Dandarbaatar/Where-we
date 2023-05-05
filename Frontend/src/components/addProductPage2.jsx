@@ -55,13 +55,7 @@ function AddProductPage2() {
   }
   const handlesub = () => {
     const array = [];
-    array.push([
-      "bedrooms" + bedrooms,
-      "bathrooms" + bathrooms,
-      "parkings" + parkings,
-      "rooms" + rooms,
-      "beds" + beds,
-    ]);
+    array.push([bedrooms, bathrooms, parkings, rooms, beds]);
     console.log(array);
     localStorage.setItem("checkeds", array);
     window.location = "addProducts3";
