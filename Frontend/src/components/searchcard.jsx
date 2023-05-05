@@ -47,7 +47,7 @@ export const SearchCard = ({
               marginTop: "1.7vw",
             }}
           >
-            <img style={{ width: "2.5vw" }} src={Like}></img>
+            <img alt="" style={{ width: "2.5vw" }} src={Like}></img>
           </button>
         </div>
         <div

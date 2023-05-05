@@ -2,24 +2,36 @@
 
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
-import filter from "../assets/Vector.svg";
+import filter from "../assets/Filter.svg";
 import { Filter } from "../components/filter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SearchCard } from "../components/searchcard";
 import { Header } from "../components/header";
 import Map from "../assets/result-map.svg";
 import "../css/filter.css";
 import { DualRange } from "../components/dualrangeslider";
+import axios from "axios";
 
 export const Search = () => {
+  const [search, setSearch] = useState("");
   const [clas, setClas] = useState(0);
   const Clas = () => {
-    if (clas == 0) {
+    if (clas === 0) {
       setClas(1);
     } else {
       setClas(0);
     }
   };
+  useEffect(() => {
+    axios({ method: "GET", url: "http://localhost:8000/searchdetails" }).then(
+      (res) => {
+        setSearch(res);
+      }
+    );
+  }, []);
+  useEffect(() => {
+    console.log(search);
+  }, [search]);
   const [name, setName] = useState([
     { fill: "100 Smart Street" },
     { fill: "12 Mar 2021" },
@@ -57,6 +69,7 @@ export const Search = () => {
       liked: false,
     },
   ]);
+
   return (
     <div>
       <Header />
@@ -156,6 +169,39 @@ export const Search = () => {
               <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Rooms</div>
                 <hr style={{ width: "90%", height: "0.1vw" }}></hr>
+              </div>
+              <div
+                style={{
+                  width: "10vw",
+                  position: "absolute",
+                  marginLeft: "68vw",
+                  marginTop: "20vw",
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                }}
+              >
+                <button
+                  style={{
+                    width: "3.5vw",
+                    height: "2vw",
+                    border: "none",
+                    backgroundColor: "#0080EA",
+                    borderRadius: "0.5vw",
+                  }}
+                >
+                  Done
+                </button>
+                <button
+                  style={{
+                    width: "3.5vw",
+                    height: "2vw",
+                    border: "solid grey 1px",
+                    backgroundColor: "#8E9799",
+                    borderRadius: "0.5vw",
+                  }}
+                >
+                  Cancel
+                </button>
               </div>
             </div>
             <div
