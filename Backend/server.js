@@ -6,7 +6,6 @@ const { connectDb } = require("./database/db");
 
 const cors = require("cors");
 const SearchRouter = require("./router/searchRouter");
-const cors = require('cors');
 const bodyParser = require('body-parser')
 
 
