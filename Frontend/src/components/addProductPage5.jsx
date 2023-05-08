@@ -12,6 +12,7 @@ function AddProductPage5(props) {
   const saftey = localStorage.getItem("checkedArray");
   const descript = localStorage.getItem("Description");
   const userid = localStorage.getItem("id");
+  const image = localStorage.getItem("image");
   const postData = (e) => {
     axios
       .post(`http://localhost:8000/user/${userid}/detail`, {
@@ -20,6 +21,7 @@ function AddProductPage5(props) {
         Placetype: WKOPL,
         saftey: saftey,
         description: descript,
+        image: image,
       })
       .then((res) => toast(res?.data))
       .catch((err) => console.log(err));

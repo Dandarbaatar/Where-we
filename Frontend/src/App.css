@@ -366,7 +366,6 @@
   width: 25vw;
   height: 5vh;
   font-family: 'arial';
-=======
 }
 .Footer_container_small {
   width: 90vw;
@@ -503,29 +502,69 @@ li:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.Footer_buttons {
-  width: 7.5vw;
-  height: 5vh;
-  border: none;
-  background: #e0e2e6;
-  border-radius: 6px;
-}
-.Footer_second {
-  width: 16vw;
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-}
-.Footer_third {
-  width: 16vw;
-  height: 32vh;
-  display: flex;
-  flex-direction: column;
-}
-.Footer_four {
-  width: 16vw;
-  height: 32vh;
-  display: flex;
-  flex-direction: column;
-}
+  }
+  .Footer_buttons{
+    width: 7.5vw;
+    height: 5vh;
+    border: none;
+    background: #E0E2E6;
+    border-radius: 6px;
+  }
+  .Footer_second{
+    width: 16vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .Footer_third{
+    width: 16vw;
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .Footer_four{
+    width: 16vw;
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+/* addimage */
+  .App1 {
+    width: 100vw;
+    height: 100vh;
+    border: solid 1px black;
+  }
+  
+  .img123 {
+    width: 300px;
+    margin: 10px;
+  }
+
+  .butka{
+    width: 8vw;
+    height: 4vh;
+    border: none;
+    background-color: #9a9a9a;
+    border-radius: 10px;
+    color: #E0E2E6;
+  }
+  .small_container_app{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .app2{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+
+
