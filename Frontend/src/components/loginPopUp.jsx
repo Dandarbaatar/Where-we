@@ -1,8 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/loginsignup.css";
 import Xbutt from "../assets/Vector (2).svg";
-function loginPopUp({ hey, onClose }) {
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+function LoginPopUp({ hey, onClose }) {
+  const [username1, setUsername1] = useState("");
+  const [password1, setPassword1] = useState("");
+
+  const loginUser = async () => {
+    try {
+      const res = await axios({
+        url: "http://localhost:8000/login",
+        method: "POST",
+        data: {
+          password: password1,
+          username: username1,
+        },
+        headers: {
+          // authorization: `bearer ${token}`,
+        },
+      });
+
+      if (res?.status === 200) {
+        const token = res?.data?.token;
+        const id = res?.data?.id;
+        localStorage.setItem("token", token);
+        localStorage.setItem("username", username1);
+        localStorage.setItem("id", id);
+        toast("Successfully logged in");
+        window.location.reload();
+      }
+    } catch (err) {
+      toast(err.message);
+    }
+  };
   if (!hey) return null;
+
   return (
     <div className="overlay">
       <ToastContainer />
