@@ -1,13 +1,7 @@
 import "../App.css";
 import "../css/addProduct.css";
 import { useState, useEffect } from "react";
-import {
-  ref,
-  uploadBytes,
-  getDownloadURL,
-  listAll,
-  list,
-} from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
 import { storage } from "../firebase";
 import { v4 } from "uuid";
 import { Header } from "./header";
@@ -37,7 +31,7 @@ function Addimage() {
         });
       });
     });
-  }, []);
+  });
   const setter = () => {
     window.location = "addProductPage5";
     localStorage.setItem("image", imageUrls);
@@ -66,7 +60,7 @@ function Addimage() {
           </button>
         </div>
         {imageUrls.map((url) => {
-          return <img className="img123" src={url} />;
+          return <img alt="" className="img123" src={url} />;
         })}
       </div>
 
