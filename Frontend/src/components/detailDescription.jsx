@@ -8,6 +8,8 @@ import wifi from "../assets/wifi.svg";
 import balcony from "../assets/balcony.svg";
 import check from "../assets/check.svg";
 import { ServicesBox } from "../components/servicesBox";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const DetailDescription = (props) => {
   return (

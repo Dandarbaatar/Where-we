@@ -2,8 +2,8 @@ import { Button } from "react-bootstrap";
 import SearchButton from "../assets/SearchButton.svg";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import "react-calendar/dist/Calendar.css";
-import Calendar from "react-calendar";
+// import "react-calendar/dist/Calendar.css";
+// import Calendar from "react-calendar";
 import { Link } from "react-router-dom";
 
 export const SearchBar = ({ types }) => {

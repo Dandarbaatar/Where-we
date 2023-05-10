@@ -8,7 +8,7 @@ function AddProductPage6() {
       e.preventDefault();
     }
     console.log(input);
-    window.location = "addProducts5";
+    window.location = "addimage";
     localStorage.setItem("Description", input);
   };
   return (

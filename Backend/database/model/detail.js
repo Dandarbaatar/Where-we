@@ -1,24 +1,36 @@
 const mongoose = require("mongoose");
 
 const DetailSchema = new mongoose.Schema({
-        facilities: {
-        type: String,
-        required: true,
+        bedrooms:{
+            type: Array,
+            required: true,
+        },
+        rooms:{
+            type: Array,
+            required: true,
+        },
+        bathrooms:{
+            type: Array,
+            required: true,
+        },
+        parkings:{
+            type: Array,
+            required: true,
         },
         amenities: {
-        type: String,
+        type: Array,
         required: true,
         },
         Placetype: {
-        type: String,
+        type: Array,
         required: true,
         },
         saftey: {
-        type: String,
+        type: Array,
         required: true,
         },
         image:{
-            type: String,
+            type: Array,
         },
         price:{
         type:String,
