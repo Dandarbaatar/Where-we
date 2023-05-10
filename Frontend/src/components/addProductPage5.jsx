@@ -5,8 +5,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function AddProductPage5(props) {
-  const hhe = "s"
-  const lol = 's'
   const [dataFather , setDataFather ] = useState({})
   let FullData = [];
   let obj1 = {};
