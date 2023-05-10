@@ -6,7 +6,6 @@ function AddProductPage2() {
   const [bathrooms, setBathrooms] = useState(0);
   const [parkings, setParkings] = useState(0);
   const [rooms, setRooms] = useState(0);
-  const [beds, setBeds] = useState(0);
 
   const nemeh = () => {
     setBedrooms(bedrooms + 1);
@@ -44,20 +43,16 @@ function AddProductPage2() {
   if (rooms < 0) {
     setRooms(0);
   }
-  const nemeh4 = () => {
-    setBeds(beds + 1);
-  };
-  const hasah4 = () => {
-    setBeds(beds - 1);
-  };
-  if (beds < 0) {
-    setBeds(0);
-  }
+
   const handlesub = () => {
-    const array = [];
-    array.push([bedrooms, bathrooms, parkings, rooms, beds]);
-    console.log(array);
-    localStorage.setItem("checkeds", array);
+    // const array = [];
+    // array.push([bedrooms, bathrooms, parkings, rooms]);
+    // array.split(",");
+    // console.log(array);
+    localStorage.setItem("bedrooms", bedrooms);
+    localStorage.setItem("rooms", rooms);
+    localStorage.setItem("parkings", parkings);
+    localStorage.setItem("bathrooms", bathrooms);
     window.location = "addProducts3";
   };
 
@@ -143,25 +138,6 @@ function AddProductPage2() {
                 {rooms} <div className="fontsss">rooms</div>{" "}
               </div>
               <button className="host_add2_plus_minus" onClick={hasah3}>
-                -
-              </button>
-            </div>
-            <div className="host_add2_buttons">
-              <button className="host_add2_plus_minus" onClick={nemeh4}>
-                +
-              </button>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  width: "10vw",
-                  justifyContent: "space-evenly",
-                  alignItems: "center",
-                }}
-              >
-                {beds} <div className="fontsss">beds</div>{" "}
-              </div>
-              <button className="host_add2_plus_minus" onClick={hasah4}>
                 -
               </button>
             </div>

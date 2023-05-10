@@ -15,12 +15,12 @@ exports.detailsData = async (req) => {
 };
 
 exports.createDetailQuery = async (req) => {
-  const { facilities, amenities,Placetype,saftey ,image,price,mediumperiod,longperiod,shortperiod,description,} = req.body;
+  const {  amenities,Placetype,saftey ,image,price,mediumperiod,longperiod,shortperiod,description,bedrooms,rooms,bathrooms,parkings} = req.body;
   const {id} = req.params
   const objId = new mongoose.Types.ObjectId(id);
 
   const result = await new DetailSchema({
-    facilities: facilities,
+    bedrooms:bedrooms,
     amenities: amenities,
     Placetype:Placetype,
     saftey:saftey,
@@ -30,7 +30,10 @@ exports.createDetailQuery = async (req) => {
     longperiod:longperiod,
     shortperiod:shortperiod,
     description:description,
-    userId:objId
+    userId:objId,
+    rooms:rooms,
+    bathrooms:bathrooms,
+    parkings:parkings
     
   }).save();
   return result;
@@ -40,7 +43,7 @@ exports.uptadeDetailQuery = async (req) => {
   const { id } = req.params;
   const objId = new mongoose.Types.ObjectId(id);
   const result = await DetailSchema.findById({ _id: objId });
-  const { facilities, amenities,Placetype,saftey ,image,price,mediumperiod,longperiod,shortperiod,description} = req.body;
+  const { facilities, amenities,Placetype,saftey ,image,price,mediumperiod,longperiod,shortperiod,description,bedrooms,rooms,bathrooms,parkings} = req.body;
 
   await DetailSchema.findByIdAndUpdate(result, {
     facilities: facilities,
@@ -53,6 +56,10 @@ exports.uptadeDetailQuery = async (req) => {
     longperiod:longperiod,
     shortperiod:shortperiod,
     description:description,
+    rooms:rooms,
+    bathrooms:bathrooms,
+    parkings:parkings,
+    bedrooms:bedrooms,
   });
   return result;
 };

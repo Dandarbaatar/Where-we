@@ -7,16 +7,24 @@ import "react-toastify/dist/ReactToastify.css";
 
 function AddProductPage5(props) {
   const WKOPL = localStorage.getItem("checkedItems");
-  const facilities = localStorage.getItem("checkeds");
+  const bedrooms = localStorage.getItem("bedrooms");
+  const rooms = localStorage.getItem("rooms");
+  const bathrooms = localStorage.getItem("bathrooms");
+  const parkings = localStorage.getItem("parkings");
   const amenities = localStorage.getItem("checkedList");
   const saftey = localStorage.getItem("checkedArray");
   const descript = localStorage.getItem("Description");
   const userid = localStorage.getItem("id");
   const image = localStorage.getItem("image");
+  const questions = image.slice();
+  console.log(questions);
   const postData = (e) => {
     axios
       .post(`http://localhost:8000/user/${userid}/detail`, {
-        facilities: facilities,
+        rooms: rooms,
+        bathrooms: bathrooms,
+        parkings: parkings,
+        bedrooms: bedrooms,
         amenities: amenities,
         Placetype: WKOPL,
         saftey: saftey,
@@ -25,6 +33,7 @@ function AddProductPage5(props) {
       })
       .then((res) => toast(res?.data))
       .catch((err) => console.log(err));
+    window.location = "/";
   };
 
   return (

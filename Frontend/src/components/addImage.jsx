@@ -22,19 +22,19 @@ function Addimage() {
       });
     });
   };
-
-  useEffect(() => {
-    listAll(imagesListRef).then((response) => {
-      response.items.forEach((item) => {
-        getDownloadURL(item).then((url) => {
-          setImageUrls((prev) => [...prev, url]);
-        });
-      });
-    });
-  });
+  // const upload = () => {
+  //   listAll(imagesListRef).then((response) => {
+  //     response.items.forEach((item) => {
+  //       getDownloadURL(item).then((url) => {
+  //         setImageUrls((prev) => [...prev, url]);
+  //       });
+  //     });
+  //   });
+  // };
+  // upload();
   const setter = () => {
-    window.location = "addProductPage5";
     localStorage.setItem("image", imageUrls);
+    window.location = "addproducts5";
   };
 
   return (
