@@ -6,8 +6,9 @@ import { storage } from "../firebase";
 import { v4 } from "uuid";
 import { Header } from "./header";
 import Footer from "./footer";
+import { Link } from "react-router-dom";
 
-function Addimage() {
+function Addimage({ data, setData }) {
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrls, setImageUrls] = useState([]);
 
@@ -33,8 +34,8 @@ function Addimage() {
   // };
   // upload();
   const setter = () => {
-    localStorage.setItem("image", imageUrls);
-    window.location = "addproducts5";
+    setData(...data, imageUrls);
+    console.log(data);
   };
 
   return (
@@ -55,9 +56,11 @@ function Addimage() {
               Upload Image
             </button>
           </div>
-          <button onClick={setter} className="host_button_s">
-            Next
-          </button>
+          <Link to="/addproducts5">
+            <button onClick={setter} className="host_button_s">
+              Next
+            </button>
+          </Link>
         </div>
         {imageUrls.map((url) => {
           return <img alt="" className="img123" src={url} />;

@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "../css/addProduct.css";
 import { Header } from "../components/header.jsx";
-function AddProductPage6() {
+import { Link } from "react-router-dom";
+function AddProductPage6({ data, setData }) {
   const [input, setInput] = useState("");
   const handlesubmit = (e) => {
     if (e && e.preventDefault) {
       e.preventDefault();
     }
-    console.log(input);
-    window.location = "addimage";
-    localStorage.setItem("Description", input);
+    setData(...data, ...input);
+    console.log(data);
   };
   return (
     <div>
@@ -26,9 +26,11 @@ function AddProductPage6() {
             />
           </div>
           <div>
-            <button className="host_button_s" onClick={handlesubmit}>
-              Next
-            </button>
+            <Link to="/addimage">
+              <button className="host_button_s" onClick={handlesubmit}>
+                Next
+              </button>
+            </Link>
           </div>
         </div>
       </div>

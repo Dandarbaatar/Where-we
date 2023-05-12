@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../css/addProduct.css";
 import { Header } from "../components/header.jsx";
-function AddProductPage3() {
+import { Link } from "react-router-dom";
+function AddProductPage3({ data, setData }) {
   const [checkedList, setCheckedList] = useState([]);
 
   const handlechange = (event) => {
@@ -18,12 +19,8 @@ function AddProductPage3() {
     }
   };
   const handleSubmit = () => {
-    if (checkedList) {
-      // window.location = "hostpage"
-      localStorage.setItem("checkedList", checkedList);
-      console.log(checkedList);
-      window.location = "addProducts4";
-    }
+    setData([...data, ...checkedList]);
+    console.log(data);
   };
 
   return (
@@ -77,9 +74,14 @@ function AddProductPage3() {
             </div>
           </div>
           <div>
-            <button className="host_button_s" onClick={handleSubmit}>
-              Next
-            </button>
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              to="/addproducts4"
+            >
+              <button className="host_button_s" onClick={handleSubmit}>
+                Next
+              </button>
+            </Link>
           </div>
         </div>
       </div>

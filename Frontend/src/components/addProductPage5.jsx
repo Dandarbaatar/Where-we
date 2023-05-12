@@ -6,7 +6,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function AddProductPage5(props) {
-  const WKOPL = localStorage.getItem("checkedItems");
   const bedrooms = localStorage.getItem("bedrooms");
   const rooms = localStorage.getItem("rooms");
   const bathrooms = localStorage.getItem("bathrooms");
@@ -16,9 +15,11 @@ function AddProductPage5(props) {
   const descript = localStorage.getItem("Description");
   const userid = localStorage.getItem("id");
   const image = localStorage.getItem("image");
-  const questions = image.slice();
-  console.log(questions);
-  const postData = (e) => {
+  const apartment = localStorage.getItem("apartment");
+  const villa = localStorage.getItem("villa");
+  const ger = localStorage.getItem("ger");
+  const house = localStorage.getItem("house");
+  const postData = () => {
     axios
       .post(`http://localhost:8000/user/${userid}/detail`, {
         rooms: rooms,
@@ -26,14 +27,31 @@ function AddProductPage5(props) {
         parkings: parkings,
         bedrooms: bedrooms,
         amenities: amenities,
-        Placetype: WKOPL,
         saftey: saftey,
         description: descript,
         image: image,
+        apartment: apartment,
+        villa: villa,
+        ger: ger,
+        house: house,
       })
       .then((res) => toast(res?.data))
       .catch((err) => console.log(err));
-    window.location = "/";
+    // window.location = "/";
+    localStorage.removeItems(
+      "house",
+      "ger",
+      "villa",
+      "apartment",
+      "saftey",
+      "description",
+      "rooms",
+      "bathrooms",
+      " parkings",
+      "bedrooms",
+      "amenities",
+      "image"
+    );
   };
 
   return (

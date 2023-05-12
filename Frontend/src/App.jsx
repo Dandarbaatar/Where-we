@@ -15,8 +15,10 @@ import AddProductPage6 from "./components/addProductPage6";
 // import Login from "./components/loginPopUp";
 import { Detail } from "./pages/Detail";
 import Addimage from "./components/addImage";
+import { useState } from "react";
 
 function App() {
+  const [data, setData] = useState([]);
   return (
     <BrowserRouter>
       <Routes>
@@ -24,12 +26,30 @@ function App() {
         <Route path="/hostpage" element={<Hostpage />} />
         <Route path="/search" element={<Search />} />
         <Route path="/detail" element={<Detail />} />
-        <Route path="/addproducts1" element={<AddProductPage1 />} />
-        <Route path="/addproducts2" element={<AddProductPage2 />} />
-        <Route path="/addproducts3" element={<AddProductPage3 />} />
-        <Route path="/addproducts4" element={<AddProductPage4 />} />
-        <Route path="/addproducts5" element={<AddProductPage5 />} />
-        <Route path="/addproducts6" element={<AddProductPage6 />} />
+        <Route
+          path="/addproducts1"
+          element={<AddProductPage1 data={data} setData={setData} />}
+        />
+        <Route
+          path="/addproducts2"
+          element={<AddProductPage2 data={data} setData={setData} />}
+        />
+        <Route
+          path="/addproducts3"
+          element={<AddProductPage3 data={data} setData={setData} />}
+        />
+        <Route
+          path="/addproducts4"
+          element={<AddProductPage4 data={data} setData={setData} />}
+        />
+        <Route
+          path="/addproducts5"
+          element={<AddProductPage5 data={data} setData={setData} />}
+        />
+        <Route
+          path="/addproducts6"
+          element={<AddProductPage6 data={data} setData={setData} />}
+        />
         <Route path="/addimage" element={<Addimage />} />
         {/* <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} /> */}

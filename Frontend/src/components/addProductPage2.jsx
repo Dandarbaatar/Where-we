@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "../css/addProduct.css";
 import { Header } from "../components/header.jsx";
-function AddProductPage2() {
+import { Link } from "react-router-dom";
+
+function AddProductPage2({ data, setData }) {
+  const item = [];
   const [bedrooms, setBedrooms] = useState(0);
   const [bathrooms, setBathrooms] = useState(0);
   const [parkings, setParkings] = useState(0);
   const [rooms, setRooms] = useState(0);
-
   const nemeh = () => {
     setBedrooms(bedrooms + 1);
   };
@@ -45,15 +47,17 @@ function AddProductPage2() {
   }
 
   const handlesub = () => {
-    // const array = [];
-    // array.push([bedrooms, bathrooms, parkings, rooms]);
+    item.push(bedrooms, rooms, parkings, bathrooms);
+    console.log(data);
+    setData([...data, item]);
+    console.log(data);
     // array.split(",");
     // console.log(array);
-    localStorage.setItem("bedrooms", bedrooms);
-    localStorage.setItem("rooms", rooms);
-    localStorage.setItem("parkings", parkings);
-    localStorage.setItem("bathrooms", bathrooms);
-    window.location = "addProducts3";
+    // localStorage.setItem("bedrooms", bedrooms);
+    // localStorage.setItem("rooms", rooms);
+    // localStorage.setItem("parkings", parkings);
+    // localStorage.setItem("bathrooms", bathrooms);
+    // window.location = "addProducts3";
   };
 
   return (
@@ -142,9 +146,15 @@ function AddProductPage2() {
               </button>
             </div>
           </div>
-          <button className="host_button_s" onClick={handlesub}>
-            Next
-          </button>
+
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            to="/addproducts3"
+          >
+            <button className="host_button_s" onClick={handlesub}>
+              Next
+            </button>
+          </Link>
         </div>
       </div>
     </div>
