@@ -172,6 +172,7 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 30px;
+  background-image: url("./assets/asd.jpeg");
 }
 .homeCard2TopContent {
   width: 23vw;
