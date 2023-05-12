@@ -48,6 +48,7 @@ export const Home = () => {
         </div>
         <SearchBar types={types} />
       </div>
+
       <div className="homePage2">
         <div className="homePage2Content1">
           <div className="homePage2Content1Texts">

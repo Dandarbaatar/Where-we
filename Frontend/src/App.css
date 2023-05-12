@@ -103,6 +103,7 @@
   background-color: #efefef;
   border-radius: 8px;
   border: none;
+  background-image: url("./assets/asd.jpeg");
 }
 .homeCardContent {
   display: flex;
@@ -499,5 +500,22 @@ li:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+/*zurh css*/
+.zurh-Btn {
+  border: none;
+  background: none;
+}
+.zurh-svg {
+  width: 2vw;
+  height: 2vh;
+}
+.zurh-big {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  width: 2vw;
+  height: 3vh;
+  justify-content: center;
   align-items: center;
 }
