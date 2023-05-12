@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export const SearchBar = ({ types }) => {
+  const [request, setRequest] = useState([]);
   let period = "";
   let location = "";
   let guests = 0;
@@ -19,17 +20,14 @@ export const SearchBar = ({ types }) => {
   const Guests = (e) => {
     guests = Number(e.target.value);
   };
-  const Searching = () => {
-    axios({
-      method: "POST",
-      url: "http://localhost:8000/searchdetails",
-      data: {
-        period: period,
-        location: location,
-        guests: guests,
-        placetype: types,
-      },
+  const Searching = async () => {
+    setRequest({
+      period: period,
+      location: location,
+      guests: guests,
+      types: types,
     });
+    localStorage.setItem("items", JSON.stringify(request));
   };
   return (
     <div
