@@ -7,7 +7,7 @@ const Zurh = () => {
   return (
     <div className="zurh-big">
       <button className="zurh-Btn" onClick={() => setLike(!like)}>
-        <img src={like == true ? likedHeart : heart} />
+        <img src={like === true ? likedHeart : heart} />
       </button>
     </div>
   );
