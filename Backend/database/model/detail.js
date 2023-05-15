@@ -2,29 +2,42 @@ const mongoose = require("mongoose");
 
 const DetailSchema = new mongoose.Schema({
         bedrooms:{
-            type: Array,
+            type:String,
             required: true,
         },
         rooms:{
-            type: Array,
+            type:String,
             required: true,
         },
         bathrooms:{
-            type: Array,
+            type:String,
             required: true,
         },
         parkings:{
-            type: Array,
+            type:String,
             required: true,
         },
         amenities: {
         type: Array,
         required: true,
         },
-        Placetype: {
-        type: Array,
-        required: true,
+        villa:{
+            type:String,
+            
         },
+        house:{
+            type:String,
+            
+        },
+        ger:{
+            type:String,
+           
+        },
+        apartment:{
+            type:String,
+        
+        },
+
         saftey: {
         type: Array,
         required: true,

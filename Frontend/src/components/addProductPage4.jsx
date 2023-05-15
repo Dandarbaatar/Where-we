@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../css/addProduct.css";
-import { Header } from "../components/header.jsx";
-function AddProductPage4() {
+import AddProductPage6 from "./addProductPage6";
+function AddProductPage4(props) {
   const [checkedArray, setCheckedArray] = useState([]);
-
+  const [click, setClick] = useState(false);
   const handlechange = (event) => {
     const { value, checked } = event.target;
     if (checked === true) {
@@ -17,64 +17,66 @@ function AddProductPage4() {
       // delete checkedItems[value]; // Remove the unchecked item from the object
     }
   };
-  const handleSubmit = () => {
-    if (checkedArray) {
-      // window.location = "hostpage"
-      localStorage.setItem("checkedArray", checkedArray);
-      console.log(checkedArray);
-      window.location = "addProducts6";
-    }
-  };
-
+  console.log(props.data1, props.data2, props.data3, checkedArray);
   return (
     <div>
-      <Header />
-      <div className="host_add_container">
-        <div className="host_add_container_l">
-          <div className="host_add_question">
-            Add saftey available at your place.
-          </div>
-          <div className="host_add_checkbox_father">
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <input
-                type="checkbox"
-                value="sanitizers"
-                onChange={handlechange}
-              />
-              <div className="host_add_answer">sanitizers</div>
+      {click ? (
+        <AddProductPage6
+          data1={props.data1}
+          data2={props.data2}
+          data3={props.data3}
+          data4={checkedArray}
+        />
+      ) : (
+        <div className="host_add_container">
+          <div className="host_add_container_l">
+            <div className="host_add_question">
+              Add saftey available at your place.
             </div>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <input
-                type="checkbox"
-                value="fire throwers"
-                onChange={handlechange}
-              />
-              <div className="host_add_answer">fire extinguishers</div>
+            <div className="host_add_checkbox_father">
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <input
+                  type="checkbox"
+                  value="sanitizers"
+                  onChange={handlechange}
+                />
+                <div className="host_add_answer">sanitizers</div>
+              </div>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <input
+                  type="checkbox"
+                  value="fire throwers"
+                  onChange={handlechange}
+                />
+                <div className="host_add_answer">fire extinguishers</div>
+              </div>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <input
+                  type="checkbox"
+                  value="daily cleaner"
+                  onChange={handlechange}
+                />
+                <div className="host_add_answer">daily cleaner</div>
+              </div>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <input
+                  type="checkbox"
+                  value="fire detector"
+                  onChange={handlechange}
+                />
+                <div className="host_add_answer">Smoke detector</div>
+              </div>
             </div>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <input
-                type="checkbox"
-                value="daily cleaner"
-                onChange={handlechange}
-              />
-              <div className="host_add_answer">daily cleaner</div>
+            <div>
+              <button className="host_button_s" onClick={() => setClick(true)}>
+                {/* <button className="host_button_s" onClick={handleSubmit}> */}
+                Next
+                {/* </button> */}
+              </button>
             </div>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <input
-                type="checkbox"
-                value="fire detector"
-                onChange={handlechange}
-              />
-              <div className="host_add_answer">Smoke detector</div>
-            </div>
-          </div>
-          <div>
-            <button className="host_button_s" onClick={handleSubmit}>
-              Next
-            </button>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
