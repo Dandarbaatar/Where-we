@@ -15,7 +15,7 @@ exports.detailsData = async (req) => {
 };
 
 exports.createDetailQuery = async (req) => {
-  const {  amenities,Placetype,saftey ,image,price,mediumperiod,longperiod,shortperiod,description,bedrooms,rooms,bathrooms,parkings} = req.body;
+  const {  amenities,Placetype,saftey ,image,price,mediumperiod,longperiod,shortperiod,description,bedrooms,rooms,bathrooms,parkings,ger ,villa,house,apartment} = req.body;
   const {id} = req.params
   const objId = new mongoose.Types.ObjectId(id);
 
@@ -33,7 +33,11 @@ exports.createDetailQuery = async (req) => {
     userId:objId,
     rooms:rooms,
     bathrooms:bathrooms,
-    parkings:parkings
+    parkings:parkings,
+    apartment: apartment,
+    villa: villa,
+    ger: ger,
+    house: house,
     
   }).save();
   return result;
@@ -43,10 +47,10 @@ exports.uptadeDetailQuery = async (req) => {
   const { id } = req.params;
   const objId = new mongoose.Types.ObjectId(id);
   const result = await DetailSchema.findById({ _id: objId });
-  const { facilities, amenities,Placetype,saftey ,image,price,mediumperiod,longperiod,shortperiod,description,bedrooms,rooms,bathrooms,parkings} = req.body;
+  const { amenities,Placetype,saftey ,image,price,mediumperiod,longperiod,shortperiod,description,bedrooms,rooms,bathrooms,parkings,ger ,villa,house,apartment} = req.body;
 
   await DetailSchema.findByIdAndUpdate(result, {
-    facilities: facilities,
+   
     amenities: amenities,
     Placetype:Placetype,
     saftey:saftey,
@@ -60,6 +64,10 @@ exports.uptadeDetailQuery = async (req) => {
     bathrooms:bathrooms,
     parkings:parkings,
     bedrooms:bedrooms,
+    apartment: apartment,
+    villa: villa,
+    ger: ger,
+    house: house,
   });
   return result;
 };
