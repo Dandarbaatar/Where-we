@@ -1,42 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap%27");
 .headerBigNone {
   width: 100vw;
@@ -52,7 +13,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #c2c6cc;
+  background-image: linear-gradient(to bottom, #10284a, #35475f);
+  /* border: 1px solid red; */
 }
 .header {
   display: flex;
@@ -76,12 +38,13 @@
   height: 5vh;
   border-radius: 35px;
   border: none;
-  background-color: white;
+  background-color: var(--dark-sec-500);
 }
 .headerHamburger {
   width: 2vw;
   height: 2vh;
   cursor: pointer;
+  color: var(--white);
 }
 .headerContentRight1 {
   display: flex;
@@ -97,14 +60,14 @@
   height: 4vh;
 }
 .headerHostBtn {
-  font-family: "arial";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 16px;
   line-height: 17px;
   width: 10vw;
   height: 5vh;
-  background-color: #484848;
+  background-color: var(--dark-sec-500);
   color: #ffffff;
   border-radius: 35px;
   border: none;
@@ -123,7 +86,7 @@
 .headerhaichu {
   font-family: "Pacifico";
   font-size: 30px;
-  color: black;
+  color: var(--white);
 }
 .headerhaichu1 {
   font-family: "Pacifico";
@@ -221,14 +184,15 @@
   width: 100vw;
   height: 52vh;
   margin-top: 200px;
-  background-color: #eff0f2;
+  background-image: linear-gradient(#35475f, #10284a);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .Footer_container_small {
   width: 90vw;
-  height: 40vh;
+  height: 50vh;
+  /* border: 1px solid red; */
 }
 .homeCard2TopContentImg {
   width: 23vw;
@@ -252,18 +216,9 @@
   font-weight: 800;
   font-size: 30px;
   line-height: 10px;
-  /* or 111% */
-  color: #484848;
-}
-.Footer_informations {
-  width: 6vw;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 46px;
-  /* or 133% */
-  color: #484848;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
 }
 .Footer_first {
   width: 24vw;
@@ -318,7 +273,6 @@
 .zurh {
   width: 3vw;
   height: 3vh;
- 
 }
 .homeCard2Tsegnud {
   width: 4vw;
@@ -355,17 +309,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  }
-  .Footer_container_small{
-    width: 90vw;
-    height: 40vh;
-    display: flex;
-    flex-direction: row;
-  }
-  .Footer_titles{
-  width: 25vw;
-  height: 5vh;
-  font-family: 'arial';
 }
 .Footer_container_small {
   width: 90vw;
@@ -373,19 +316,11 @@
   display: flex;
   flex-direction: row;
 }
-.Footer_titles {
-  width: 12vw;
-  height: 3vh;
-  font-family: "arial";
-
-  font-style: normal;
-  font-weight: 800;
-  font-size: 30px;
-  line-height: 10px;
-  /* or 111% */
-  color: #484848;
+.Footer_container_small {
+  width: 90vw;
+  height: 40vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .Footer_four {
   width: 16vw;
@@ -397,14 +332,14 @@
 .boxesBox {
   height: 230px;
   width: 240px;
-  background-color: #eff0f2;
+  background-color: var(--dark-sec-500);
   border-radius: 10px;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* margin-right: 20px; */
+  color: var(--white);
   cursor: pointer;
 }
 .boxesText {
@@ -431,6 +366,7 @@
   font-weight: 500;
   font-size: 23px;
   line-height: 18px;
+  color: var(--white);
 }
 .displayFlex {
   display: flex;
@@ -447,25 +383,26 @@
   align-items: flex-start;
   padding-left: 30px;
   flex-direction: column;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 130px;
   width: 300px;
   box-shadow: 0px 0px 8px rgba(102, 104, 106, 0.5);
   border-radius: 6px;
-  background-color: white;
+  background-color: var(--dark-sec-500);
 }
 .serviceHeader {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
+  color: var(--white);
 }
 .serviceLocation {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  color: #484848;
+  color: var(--gray);
 }
 .serviceChild {
   width: 50%;
@@ -483,18 +420,19 @@ li {
   cursor: pointer;
 }
 li:hover {
-  background: #9a9a9a;
+  /* background: #9a9a9a; */
+  color: black;
 }
 
 .Footer_informations {
   width: 6vw;
-  font-family: "arial";
   font-style: normal;
+  line-height: 46px;
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 22px;
   line-height: 46px;
-  /* or 133% */
-  color: #484848;
+  color: var(--gray);
 }
 .Footer_first {
   width: 24vw;
@@ -502,69 +440,64 @@ li:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  }
-  .Footer_buttons{
-    width: 7.5vw;
-    height: 5vh;
-    border: none;
-    background: #E0E2E6;
-    border-radius: 6px;
-  }
-  .Footer_second{
-    width: 16vw;
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-  }
-  .Footer_third{
-    width: 16vw;
-    height: 32vh;
-    display: flex;
-    flex-direction: column;
-  
-  }
-  .Footer_four{
-    width: 16vw;
-    height: 32vh;
-    display: flex;
-    flex-direction: column;
-  }
+}
+.Footer_buttons {
+  width: 7.5vw;
+  height: 5vh;
+  border: none;
+  background: #e0e2e6;
+  border-radius: 6px;
+}
+.Footer_second {
+  width: 16vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+.Footer_third {
+  width: 16vw;
+  height: 32vh;
+  display: flex;
+  flex-direction: column;
+}
+.Footer_four {
+  width: 16vw;
+  height: 32vh;
+  display: flex;
+  flex-direction: column;
+}
 
 /* addimage */
-  .App1 {
-    width: 100vw;
-    height: 100vh;
-    border: solid 1px black;
-  }
-  
-  .img123 {
-    width: 300px;
-    margin: 10px;
-  }
+.App1 {
+  width: 100vw;
+  height: 100vh;
+  border: solid 1px black;
+}
 
-  .butka{
-    width: 8vw;
-    height: 4vh;
-    border: none;
-    background-color: #9a9a9a;
-    border-radius: 10px;
-    color: #E0E2E6;
-  }
-  .small_container_app{
-    width: 500px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .app2{
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    
-  }
+.img123 {
+  width: 300px;
+  margin: 10px;
+}
 
-
-
+.butka {
+  width: 8vw;
+  height: 4vh;
+  border: none;
+  background-color: #9a9a9a;
+  border-radius: 10px;
+  color: #e0e2e6;
+}
+.small_container_app {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.app2 {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

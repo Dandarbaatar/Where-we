@@ -4,7 +4,8 @@ export const Boxes = (props) => {
     <div className="boxesBox">
       <img src={props.imgSource} alt="" />
       <div className="boxesText">
-        {props.number},{props.text}
+        {props.number}
+        {props.text}
       </div>
     </div>
   );
