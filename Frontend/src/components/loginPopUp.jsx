@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../css/loginsignup.css";
+import "../css/constants.css";
 import Xbutt from "../assets/Vector (2).svg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -57,7 +58,7 @@ function LoginPopUp({ hey, onClose }) {
                   onChange={(e) => setUsername1(e.target.value)}
                   className="signup_inp"
                   type="text"
-                  placeholder="      Enter your Username here"
+                  placeholder="Enter your Username here"
                 />
               </div>
               <div className="signup_sicz">
@@ -66,7 +67,7 @@ function LoginPopUp({ hey, onClose }) {
                   onChange={(e) => setPassword1(e.target.value)}
                   className="signup_inp"
                   type="text"
-                  placeholder="      Enter your Password"
+                  placeholder="Enter your Password"
                 />
               </div>
             </div>

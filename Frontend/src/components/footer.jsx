@@ -1,25 +1,28 @@
 import React from "react";
 import "../App.css";
+import "../css/constants.css";
 import logo from "../assets/Logo.svg";
 import facebook from "../assets/fbicon.svg";
 import twitter from "../assets/twittericon.svg";
 import instagram from "../assets/instaicon.svg";
 import linkedin from "../assets/linkedinicon.svg";
-import playstore from "../assets/playstore.svg";
-import applestore from "../assets/appstore.svg";
+// import playstore from "../assets/playstore.svg";
+// import applestore from "../assets/appstore.svg";
 function Footer() {
   return (
     <div className="Footer_container">
       <div className="Footer_container_small">
         <div className="Footer_first">
           <img width="150px" src={logo} alt="" />
-          <div style={{width:"15vw",fontFamily: 'arial',
+          <div
+            style={{
+              width: "15vw",
+              fontFamily: "arial",
               fontStyle: "normal",
               fontWeight: "500",
               fontSize: "16px",
               lineHeight: "30px",
-              /* or 133% */
-              color: "#484848",
+              color: "var(--gray)",
             }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -32,12 +35,12 @@ function Footer() {
               justifyContent: "space-between",
             }}
           >
-            <button className="Footer_buttons">
+            {/* <button className="Footer_buttons">
               <img src={playstore} alt="" /> PlayStore
             </button>
             <button className="Footer_buttons">
               <img src={applestore} alt="" /> AppleStore
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="Footer_second">

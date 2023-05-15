@@ -6,8 +6,7 @@ body {
 .detailContainer {
   width: 100vw;
   height: max-content;
-  background-color: rgb(255, 255, 255);
-  /* border: 1px solid red; */
+  background-color: var(--dark-prim-500);
 }
 .detailHeroDad {
   display: flex;
@@ -21,12 +20,10 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid blue; */
   width: 97%;
   height: 94%;
 }
 .detailHeroSon {
-  /* border: 1px solid green; */
   width: 49%;
   height: 100%;
   display: flex;
@@ -205,13 +202,14 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
+  color: var(--white);
 }
 .descHeaderLeftLocation {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  color: #9a9a9a;
+  color: var(--gray);
 }
 .descBoxDad {
   /* border: 1px solid black; */
@@ -237,6 +235,7 @@ body {
   /* justify-content: center; */
   flex-direction: column;
   align-items: center;
+  background-color: var(--dark-sec-500);
 }
 .descBoxes {
   /* border: 1px solid blue; */
@@ -248,7 +247,7 @@ body {
 }
 
 .descBoxPrice {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -257,6 +256,7 @@ body {
   height: 20%;
   display: flex;
   align-items: center;
+  color: var(--white);
 }
 .line {
   border: 1px solid #e0e2e6;
@@ -267,7 +267,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  color: #9a9a9a;
+  color: var(--gray);
   height: 30%;
   width: 90%;
   font-family: "Montserrat", sans-serif;
@@ -283,8 +283,8 @@ body {
   border: 1px solid black;
   width: 90%;
   height: 14%;
-  color: white;
-  background-color: #484848;
+  color: black;
+  background-color: var(--white);
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -311,6 +311,7 @@ body {
 }
 .descBoxPropertyText {
   margin-left: 20px;
+  color: var(--white);
 }
 .detailDescription {
   display: flex;
@@ -321,7 +322,7 @@ body {
   /* border: 1px solid black; */
 }
 .detailDescHeader {
-  color: black;
+  color: var(--white);
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -333,7 +334,7 @@ body {
   height: 130px;
 }
 .detailDescText {
-  color: #9a9a9a;
+  color: var(--gray);
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -386,7 +387,7 @@ body {
 .showOnMap {
   width: 195px;
   height: 60px;
-  background: #9a9a9a;
+  background: var(--dark-sec-500);
   border-radius: 28px;
   border: none;
   font-family: "Montserrat";
@@ -394,14 +395,14 @@ body {
   font-weight: 700;
   font-size: 15px;
   line-height: 18px;
-  color: #ffffff;
+  color: var(--white);
   margin-top: 50px;
 }
 .amenitiesButton {
   width: 240px;
   height: 100px;
-  background: #ffffff;
-  border: 1px solid #484848;
+  background: none;
+  border: 1px solid var(--white);
   border-radius: 6px;
   font-family: "Montserrat";
   font-style: normal;
@@ -409,7 +410,7 @@ body {
   font-size: 15px;
   line-height: 18px;
   margin-bottom: 50px;
-  color: #484848;
+  color: var(--white);
 }
 .detailReview {
   /* border: 1px solid purple; */
@@ -428,7 +429,7 @@ body {
   font-weight: 700;
   font-size: 22px;
   line-height: 27px;
-  color: #484848;
+  color: var(--white);
   width: 70%;
   width: 12%;
   display: flex;
@@ -445,7 +446,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  color: #484848;
+  color: var(--white);
   width: 200px;
 }
 .rewInfoMain {
@@ -458,11 +459,16 @@ body {
   margin-bottom: 10px;
 }
 .revInfoLine5 {
-  border: 3px solid gray;
+  border: 3px solid var(--gray);
   width: 140px;
   height: 2px;
   background: #9a9a9a;
   border-radius: 2px;
+}
+.revNumber {
+  color: var(--white);
+  font-size: large;
+  font-weight: 600;
 }
 .revInfoDad {
   display: flex;
@@ -496,7 +502,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-  color: #484848;
+  color: var(--white);
   margin-left: 15px;
   height: 40px;
   display: flex;
@@ -509,7 +515,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #9a9a9a;
+  color: var(--gray);
   margin-left: 15px;
   height: 40px;
   display: flex;
@@ -522,7 +528,7 @@ body {
   font-weight: 400;
   font-size: 17px;
   line-height: 20px;
-  color: #9a9a9a;
+  color: var(--gray);
 }
 .revTexts {
   display: flex;
@@ -541,15 +547,15 @@ body {
 .reviewButton {
   width: 240px;
   height: 65px;
-  background: #ffffff;
-  border: 1px solid #484848;
+  background: none;
+  border: 1px solid var(--white);
   border-radius: 6px;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
-  color: #484848;
+  color: var(--white);
 }
 button {
   cursor: pointer;

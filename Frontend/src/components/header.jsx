@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../App.css";
+import "../css/constants.css";
 import headerImg1 from "../assets/header1.svg";
 import hamburger from "../assets/hamburger.svg";
 import { Link } from "react-router-dom";
@@ -36,7 +37,8 @@ export const Header = (props) => {
     <div>
       <PopUp ok={popUpSignUp} onClick={() => setPopUpSignUp(false)} />
       <LoginPopUp hey={popUpLogin} onClose={() => setPopUpLogin(false)} />
-      <div className={props.headerClass || "headerBig"}>
+      {/* <div className={props.headerClass || "headerBig"}> */}
+      <div className="headerBig">
         <div className="header">
           <div className="headerContent1">
             <img className="headerLogo" src={logo} alt="" />
@@ -64,7 +66,8 @@ export const Header = (props) => {
                   {open && (
                     <div
                       style={{
-                        background: "white",
+                        // background: "#2c3342",
+                        background: "red",
                         width: "160px",
                         height: "150px",
                         display: "flex",
@@ -77,7 +80,7 @@ export const Header = (props) => {
                     >
                       <div
                         style={{
-                          background: "none",
+                          background: "green",
                           width: "100px",
                           height: "50px",
                           display: "flex",
@@ -137,7 +140,7 @@ export const Header = (props) => {
                   {open && (
                     <div
                       style={{
-                        background: "white",
+                        background: "#2c3342",
                         width: "160px",
                         height: "100px",
                         display: "flex",
@@ -146,6 +149,9 @@ export const Header = (props) => {
                         position: "absolute",
                         borderRadius: "6px",
                         boxShadow: "0px 0px 8px rgba(194, 198, 204, 0.6)",
+                        color: "white",
+                        top: "78px",
+                        right: "48px",
                       }}
                     >
                       <div
