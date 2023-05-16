@@ -3,23 +3,17 @@ const mongoose = require("mongoose");
 const DetailSchema = new mongoose.Schema({
         bedrooms:{
             type:String,
-            required: true,
         },
         rooms:{
             type:String,
-            required: true,
         },
         bathrooms:{
             type:String,
-            required: true,
+            
         },
         parkings:{
             type:String,
-            required: true,
-        },
-        amenities: {
-        type: Array,
-        required: true,
+            
         },
         villa:{
             type:String,
@@ -27,20 +21,13 @@ const DetailSchema = new mongoose.Schema({
         },
         house:{
             type:String,
-            
         },
         ger:{
             type:String,
-           
         },
         apartment:{
             type:String,
         
-        },
-
-        saftey: {
-        type: Array,
-        required: true,
         },
         image:{
             type: Array,
@@ -65,6 +52,44 @@ const DetailSchema = new mongoose.Schema({
             type:String,
             required:true,
         },
+        teleision:{
+            type:String,
+        },
+        wifi:{
+            type:String,
+        },
+        washer:{
+            type:String,
+        },
+        balcony:{
+            type:String,
+        },
+        cleaner:{
+            type:String,
+        },
+        radio:{
+            type:String,
+        },
+        lift:{
+            type:String,
+        },
+        aircondioner:{
+            type:String,
+        },
+        sanitizers:{
+            type:String,
+        },
+        fire:{
+            type:String,
+        },
+        daily:{
+            type:String,
+        },
+
+        smoke:{
+            type:String,
+        },
+
         createdAt: { type: Date, default: Date.now() },
         
     });

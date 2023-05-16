@@ -6,7 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 function AddProductPage5(props) {
   let FullData = [];
-
   let obj1 = {};
   let obj2 = {};
   let obj3 = {};
@@ -14,22 +13,22 @@ function AddProductPage5(props) {
   let obj5 = {};
   let obj6 = {};
   props.data1.forEach((elem, i) => {
-    obj1[`key${i}`] = elem;
+    obj1[`${elem}`] = elem;
   });
   props.data2.forEach((elem, i) => {
     obj2[`key${i}`] = elem;
   });
   props.data3.forEach((elem, i) => {
-    obj3[`key${i}`] = elem;
+    obj3[`${elem}`] = elem;
   });
   props.data4.forEach((elem, i) => {
-    obj4[`key${i}`] = elem;
+    obj4[`${elem}`] = elem;
   });
   props.data5.forEach((elem, i) => {
-    obj5[`key${i}`] = elem;
+    obj5[`description${i}`] = elem;
   });
   props.data6.forEach((elem, i) => {
-    obj6[`key${i}`] = elem;
+    obj6[`zurag${i}`] = elem;
   });
   FullData.push(obj1, obj2, obj3, obj4, obj5, obj6);
   console.log(FullData);
