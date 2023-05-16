@@ -45,7 +45,7 @@ function AddProductPage4(props) {
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <input
                   type="checkbox"
-                  value="fire throwers"
+                  value="fireThrowers"
                   onChange={handlechange}
                 />
                 <div className="host_add_answer">fire extinguishers</div>
@@ -53,7 +53,7 @@ function AddProductPage4(props) {
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <input
                   type="checkbox"
-                  value="daily cleaner"
+                  value="dailyCleaner"
                   onChange={handlechange}
                 />
                 <div className="host_add_answer">daily cleaner</div>
@@ -61,7 +61,7 @@ function AddProductPage4(props) {
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <input
                   type="checkbox"
-                  value="fire detector"
+                  value="fireDetector"
                   onChange={handlechange}
                 />
                 <div className="host_add_answer">Smoke detector</div>
