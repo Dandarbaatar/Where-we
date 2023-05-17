@@ -8,6 +8,7 @@ import axios from "axios"
 import { Link } from "react-router-dom";
 
 import "../css/home.css";
+import "../css/constants.css";
 import { SearchBar } from "../components/searchbar";
 export const Home = () => {
   const [details,setDetails] = useState([])

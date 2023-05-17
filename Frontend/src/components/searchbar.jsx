@@ -134,7 +134,7 @@ export const SearchBar = ({ types }) => {
           width: "3.2vw",
           height: "3.2vw",
           borderRadius: "10vw",
-          backgroundColor: "#484848",
+          backgroundColor: "var(--dark-sec-500)",
           border: "none",
           display: "flex",
           alignItems: "center",
