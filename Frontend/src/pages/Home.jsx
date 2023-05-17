@@ -12,6 +12,7 @@ import { SearchBar } from "../components/searchbar";
 export const Home = () => {
   const [details,setDetails] = useState([])
   const [types, setTypes] = useState("");
+  const [img,setImg] = useState("")
 
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
   useEffect(() => {
@@ -20,10 +21,8 @@ export const Home = () => {
       .then((response) => setDetails(response?.data?.data));
   
   }, []);
-  console.log(details)
 
 
-  const arr = [1, 3, 4, 5, 3, 4, 5, 6, 3];
 
   return (
     <div className="Home">
@@ -72,8 +71,8 @@ export const Home = () => {
           <div className="homePage2Content1Zuras"></div>
         </div>
         <div className="homePage2Content2Cards">
-          {arr.map((e) => {
-            return <HomeCard />;
+          {details.map((e) => {
+            return <HomeCard image={e[0]} name={e?.apartment}  />;
           })}
         </div>
       </div>
