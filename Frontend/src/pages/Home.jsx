@@ -11,7 +11,7 @@ import "../css/constants.css";
 import { SearchBar } from "../components/searchbar";
 export const Home = () => {
   const [types, setTypes] = useState("");
-  const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
+  const arr = [1, 3, 4, 5, 3, 4, 5, 6, 3];
   return (
     <div className="Home">
       <div className="homeBig">
@@ -96,6 +96,11 @@ export const Home = () => {
             <div className="homePage2Content1Text">on our Listing</div>
           </div>
           <div className="homePage2Content1Zuras"></div>
+        </div>
+        <div className="homePage5cards">
+          {arr.map((e) => {
+            return <HomeCard2 />;
+          })}
         </div>
         <div className="homePage5cards">
           {arr.map((e) => {
