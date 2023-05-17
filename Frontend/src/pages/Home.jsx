@@ -3,12 +3,28 @@ import { HomeCard } from "../components/homeCard.jsx";
 import { HomeCard2 } from "../components/homeCard2";
 import Footer from "../components/footer.jsx";
 import { useState } from "react";
+import { useState ,useEffect} from "react";
+import axios from "axios"
 import { Link } from "react-router-dom";
 import "../css/home.css";
+import "../css/constants.css";
 import { SearchBar } from "../components/searchbar";
 export const Home = () => {
+  const [details,setDetails] = useState([])
   const [types, setTypes] = useState("");
+
+  const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/details")
+      .then((response) => setDetails(response?.data?.data));
+  
+  }, []);
+  console.log(details)
+
+
   const arr = [1, 3, 4, 5, 3, 4, 5, 6, 3];
+
   return (
     <div className="Home">
       <div className="homeBig">

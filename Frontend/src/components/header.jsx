@@ -37,13 +37,15 @@ export const Header = (props) => {
     <div>
       <PopUp ok={popUpSignUp} onClick={() => setPopUpSignUp(false)} />
       <LoginPopUp hey={popUpLogin} onClose={() => setPopUpLogin(false)} />
-      {/* <div className={props.headerClass || "headerBig"}> */}
-      <div className="headerBig">
+      <div className={props.headerClass || "headerBig"}>
+        {/* <div className="headerBig"> */}
         <div className="header">
-          <div className="headerContent1">
-            <img className="headerLogo" src={logo} alt="" />
-            <div className={props.Haichu || "headerhaichu"}>Хайчихуу?</div>
-          </div>
+          <Link to={"/"}>
+            <div className="headerContent1">
+              <img className="headerLogo" src={logo} alt="" />
+              <div className={props.Haichu || "headerhaichu"}>Хайчихуу?</div>
+            </div>
+          </Link>
           <div className="headerContent">
             <div className="darkLight">
               <Darklighbttn />
@@ -199,6 +201,7 @@ export const Header = (props) => {
             </div>
           </div>
         </div>
+        {/* </div> */}
       </div>
     </div>
   );

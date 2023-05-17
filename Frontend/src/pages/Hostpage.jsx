@@ -2,11 +2,17 @@ import React from 'react'
 import "../css/hostpage.css"
 import {Header} from "../components/header.jsx"
 import Footer from "../components/footer.jsx"
+import { toast } from 'react-toastify'
 
 
 function Hostpage() {
+  const user = localStorage.getItem("username")
   const handlesubs = () => {
+    if (user) {
         window.location = "addProducts1"
+    }else {
+      toast("nevterne uu")
+    }
   }
 
   return (
