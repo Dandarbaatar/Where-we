@@ -583,3 +583,38 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+/*about us */
+.about {
+  width: 100vw;
+  height: 100vh;
+  background-color: #10284a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutUs {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  width: 100vw;
+  height: 20vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Medeelel {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.Medeelel1 {
+  width: 20vw;
+  height: 50vh;
+  background-color: #c2c6cc;
+  display: flex;
+}

@@ -3,9 +3,7 @@ import { HomeCard } from "../components/homeCard.jsx";
 import { HomeCard2 } from "../components/homeCard2";
 import Footer from "../components/footer.jsx";
 import { useState } from "react";
-
 import { Link } from "react-router-dom";
-
 import "../css/home.css";
 import { SearchBar } from "../components/searchbar";
 export const Home = () => {
