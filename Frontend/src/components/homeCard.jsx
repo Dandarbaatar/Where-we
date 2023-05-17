@@ -1,14 +1,14 @@
 import React from "react";
 import "../App.css";
 import "../css/constants.css";
-import Zurh from "../assets/homeCardLike.svg";
+import Zurh from "./zurh.jsx";
 export const HomeCard = () => {
   return (
     <div className="homeCard">
       <div className="homeCardDiv">
-        <button className="homeCardBtn">
-          <img className="homeCardImg1" src={Zurh} />
-        </button>
+        <div>
+          <Zurh />
+        </div>
       </div>
       <div className="homeCardContent1">
         <div className="homeCardContent">
