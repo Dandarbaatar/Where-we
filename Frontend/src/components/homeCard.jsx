@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import "../css/constants.css";
 import Zurh from "../assets/homeCardLike.svg";
 export const HomeCard = () => {
   return (

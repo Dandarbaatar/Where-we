@@ -168,7 +168,7 @@
 .homeCard2Top {
   width: 25vw;
   height: 36vh;
-  background-color: #e0e2e6;
+  background-color: #636363;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -263,7 +263,7 @@
   font-weight: 700;
   font-size: 28px;
   line-height: 22px;
-  color: #484848;
+  color: var(--white);
 }
 .homeCard2UnderText2 {
   font-family: "arial";
@@ -271,7 +271,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 17px;
-  color: #9a9a9a;
+  color: var(--gray);
 }
 .zurh {
   width: 3vw;
@@ -301,7 +301,7 @@
   font-weight: 600;
   font-size: 28px;
   line-height: 22px;
-  color: #9a9a9a;
+  color: var(--white);
 }
 /* Footer css */
 
