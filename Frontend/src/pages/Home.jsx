@@ -2,15 +2,14 @@ import { Header } from "../components/header";
 import { HomeCard } from "../components/homeCard.jsx";
 import { HomeCard2 } from "../components/homeCard2";
 import Footer from "../components/footer.jsx";
-import { useState } from "react";
-import { useState ,useEffect} from "react";
-import axios from "axios"
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import "../css/home.css";
 import "../css/constants.css";
 import { SearchBar } from "../components/searchbar";
 export const Home = () => {
-  const [details,setDetails] = useState([])
+  const [details, setDetails] = useState([]);
   const [types, setTypes] = useState("");
   const [img,setImg] = useState("")
 
@@ -19,10 +18,7 @@ export const Home = () => {
     axios
       .get("http://localhost:8000/details")
       .then((response) => setDetails(response?.data?.data));
-  
   }, []);
-
-
 
   return (
     <div className="Home">
