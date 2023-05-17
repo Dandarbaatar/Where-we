@@ -1,17 +1,19 @@
-import React, { useState } from "react";
-import { createContext } from "react";
-export const ThemeContext = createContext(null);
+import { createContext, useContext, useState } from "react";
 export const Darklighbttn = () => {
-  const [theme, setTheme] = useState("dark");
-  const handleToggle = () => {
-    setTheme(!theme);
+  const [theme, setTheme] = useState(true);
+  const toggler = () => {
+    if (theme) {
+      setTheme(false);
+    } else {
+      setTheme(true);
+    }
+    localStorage.setItem("dl-bttn", theme);
   };
+  localStorage.getItem("dl-bttn");
   return (
-    <ThemeContext.Provider>
-      <button onClick={handleToggle} className={theme ? "light" : "dark"}>
-        <div id="Btn"></div>
-        <div id="Btn1"></div>
-      </button>
-    </ThemeContext.Provider>
+    <label class="switch">
+      <input type="checkbox" />
+      <span onClick={toggler} class="slider round"></span>
+    </label>
   );
 };
