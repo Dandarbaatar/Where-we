@@ -1,12 +1,10 @@
-import React,{useEffect, useState} from "react";
+import React from "react";
 import "../css/addProduct.css";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function AddProductPage5(props) {
-  const [dataFather , setDataFather ] = useState({})
-  let FullData = [];
   let obj1 = {};
   let obj2 = {};
   let obj3 = {};
@@ -31,15 +29,11 @@ function AddProductPage5(props) {
   props.data6.forEach((elem, i) => {
     obj6[`zurag${i}`] = elem;
   });
-  
-  useEffect(() => {
-    setDataFather({...obj1, ...obj2, ...obj3, ...obj4,...obj5});
-    }, []);
-   
+   console.log(obj5);
     // console.log(dataFather)
 
   // console.log(FullData[0); 
-  const userId = localStorage.getItem("userId")
+  const userId = localStorage.getItem("id")
   let image = []
   image = obj6 ;
   const apartment = (obj1.apartment)
@@ -50,8 +44,8 @@ function AddProductPage5(props) {
   const bathrooms = (obj2.key1);
   const rooms = (obj2.key3);
   const parkings =(obj2.key2);
-  const price = (obj6.descroption1)
-  const description = (obj6.descroption0)
+  const price = (obj5.description1)
+  const description = (obj5.description0)
   const teleision = (obj3.teleision)
   const wifi = (obj3.wifi)
   const washer = (obj3.washer)
@@ -64,9 +58,59 @@ function AddProductPage5(props) {
   const fire = (obj4.fireThrower)
   const daily = (obj4.dailyCleaner)
   const smoke = (obj4.fireDetector)
+  console.log(description);
   const postData = () => {
+    // axios
+    //   .post(`http://localhost:8000/user/${userId}/detail`, {
+    //     userId:userId,
+    //     apartment: apartment,
+    //     villa: villa,
+    //     ger: ger,
+    //     house: house,
+    //   })
+    //   axios
+    //   .post(`http://localhost:8000/user/${userId}/saftey`, {
+    //     userId:userId,
+    //     sanitizers:sanitizers,
+    //     fire:fire,
+    //     daily:daily,
+    //     smoke:smoke
+    //   })
+    //   axios
+    //   .post(`http://localhost:8000/user/${userId}/numbers`, {
+    //     bedrooms:bedrooms,
+    //     userId:userId,
+    //     rooms:rooms,
+    //     bathrooms:bathrooms,
+    //     parkings:parkings,
+    //   })
+    //   axios
+    //   .post(`http://localhost:8000/user/${userId}/images`, {
+    //     image:image,
+    //     userId:userId,
+    //   })
+    //   axios
+    //   .post(`http://localhost:8000/user/${userId}/description`, {
+    //     price:price,
+    //     userId:userId,
+    //     description:description,
+    //   })
+    //   axios
+    //   .post(`http://localhost:8000/user/${userId}/amenities`, {
+    //     userId:userId,
+    //     teleision:teleision,
+    //     wifi:wifi,
+    //     washer:washer,
+    //     balcony:balcony,
+    //     cleaner:cleaner,
+    //     radio:radio,
+    //     lift:lift,
+    //     aircondioner:aircondioner,
+    //   })
+    //   .then((res) => toast(res?.data))
+    //   .catch((err) => console.log(err));
     axios
-      .post(`http://localhost:8000/user/detail`, {
+      .post(`http://localhost:8000/user/${userId}/detail`, {
         bedrooms:bedrooms,
         image:image,
         price:price,
@@ -94,7 +138,6 @@ function AddProductPage5(props) {
       })
       .then((res) => toast(res?.data))
       .catch((err) => console.log(err));
-    // window.location = "/";
   };
 
   return (
@@ -110,7 +153,7 @@ function AddProductPage5(props) {
             presentation for listing the property fluently...
           </div>
           <div>
-            <button className="host_button_s3">Post My Property</button>
+            <button onClick={postData} className="host_button_s3">Post My Property</button>
           </div>
         </div>
       </div>

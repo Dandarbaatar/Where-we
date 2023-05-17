@@ -48,7 +48,7 @@ function AddProductPage2(props) {
     setRooms(0);
   }
   data2.push(bedrooms, bathrooms, parkings, rooms);
-  console.log(data2);
+  // console.log(data2);
   const handlesub = () => {
     setClick(true);
   };
