@@ -8,7 +8,7 @@ function AddProductPage6(props) {
   const [click, setClick] = useState(false);
   const arr = [];
   arr.push(input, price);
-  console.log(props.data1, props.data2, props.data3, props.data4, arr);
+  // console.log(props.data1, props.data2, props.data3, props.data4, arr);
   return (
     <div>
       {click ? (

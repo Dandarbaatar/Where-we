@@ -1,7 +1,6 @@
 const express = require("express");
 const UserRouter = require("./router/userRouter");
 const DetailRouter = require( "./router/detailRouter");
-
 const { connectDb } = require("./database/db");
 
 const cors = require("cors");
@@ -20,6 +19,7 @@ app.use(UserRouter);
 app.use(SearchRouter);
 
 app.use(DetailRouter)
+
 
 app.use(express.json());
 app.use((req, res, next) => {

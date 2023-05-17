@@ -21,16 +21,22 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export const Detail = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
+  const [details, setDetails] = useState([]);
+ 
+   useEffect(() => {
     axios
       .get("http://localhost:8000/details")
-      .then((response) => setData(response?.data?.data));
+      .then((response) => setDetails(response?.data?.data));
+  
   }, []);
+  console.log(details)
+
+  
 
   return (
     <div className="detailContainer">
       <Header />
+     
       <div className="detailHeroDad">
         <div className="detailHero">
           <div
@@ -50,45 +56,48 @@ export const Detail = () => {
               </div>
             </div>
           </div>
-          <div className="detailHeroSon">
-            <div className="detailHeroSon1">
-              <div
-                className="heroPic"
-                style={{
-                  backgroundImage: `url(${sad})`,
-                }}
-              ></div>
-              <div
-                className="heroPic"
-                style={{
-                  backgroundImage: `url(${sad})`,
-                }}
-              ></div>
-            </div>
-            <div className="detailHeroSon1">
-              <div
-                className="heroPic"
-                style={{
-                  backgroundImage: `url(${sad})`,
-                }}
-              ></div>
-              <div
-                className="heroPic"
-                style={{
-                  backgroundImage: `url(${sad})`,
-                }}
-              >
-                <div className="morePhotos">
-                  <div className="plus">+2</div>
-                  <div className="more">
-                    More <div className="photos">Photos</div>
+         
+            
+                  <div className="detailHeroSon">
+                  <div className="detailHeroSon1">
+                  <div
+                    className="heroPic"
+                    style={{
+                      backgroundImage: `url(${sad})`,
+                    }}
+                  ></div>
+                  <div
+                    className="heroPic"
+                    style={{
+                      backgroundImage: `url(${sad}})`,
+                    }}
+                  ></div>
+                </div>
+                <div className="detailHeroSon1">
+                  <div
+                    className="heroPic"
+                    style={{
+                      backgroundImage: `url(${sad})`,
+                    }}
+                  ></div>
+                  <div
+                    className="heroPic"
+                    style={{
+                      backgroundImage: `url(${sad})`,
+                    }}
+                  >
+                    <div className="morePhotos">
+                      <div className="plus">+2</div>
+                      <div className="more">
+                        More <div className="photos">Photos</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
+                 </div>
         </div>
       </div>
+    
       <div className="detailDesc">
         <div className="descHeader">
           <div className="descHeaderLeft">
@@ -109,17 +118,17 @@ export const Detail = () => {
               </div>
             </div>
 
-            {/* {data.map((item) => {
-              return (                      key={item?.id}
-                number={item?.facilities} */}
-            <div className="descBoxes">
-              <Boxes text="Bedrooms" imgSource={bedroom} />
-              <Boxes text="2 Bathrooms" imgSource={bathroom} />
-              <Boxes text="3 Cars/2 Bikes" imgSource={car} />
-              <Boxes text="0 Pets Allowed" imgSource={pet} />
-            </div>
-            {/* //   );
-            // })} */}
+          
+   {/* <div className="descBoxes" key={el}>
+              <Boxes text={el?.bedrooms + " bedrooms"}imgSource={bedroom} />
+              <Boxes text={el?.bathrooms + " bathrooms"} imgSource={bathroom} />
+              <Boxes text={el?.parkings + " parkings"} imgSource={car} />
+              <Boxes text={el?.rooms + " rooms"} imgSource={pet} />
+            </div>  */}
+        
+         
+            
+            
           </div>
 
           <div className="descBoxDad">
