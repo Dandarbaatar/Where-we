@@ -12,6 +12,7 @@ import { SearchBar } from "../components/searchbar";
 export const Home = () => {
   const [details,setDetails] = useState([])
   const [types, setTypes] = useState("");
+
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
   useEffect(() => {
     axios
@@ -20,6 +21,9 @@ export const Home = () => {
   
   }, []);
   console.log(details)
+
+
+  const arr = [1, 3, 4, 5, 3, 4, 5, 6, 3];
 
   return (
     <div className="Home">
@@ -58,6 +62,7 @@ export const Home = () => {
         </div>
         <SearchBar types={types} />
       </div>
+
       <div className="homePage2">
         <div className="homePage2Content1">
           <div className="homePage2Content1Texts">
@@ -92,7 +97,6 @@ export const Home = () => {
           <div className="homePage4ContentText2">
             Earn extra just by renting your property...
           </div>
-
           <Link to={"/hostpage"}>
             <button className="homePage4ContentBtn">Become A Host</button>
           </Link>
@@ -105,6 +109,11 @@ export const Home = () => {
             <div className="homePage2Content1Text">on our Listing</div>
           </div>
           <div className="homePage2Content1Zuras"></div>
+        </div>
+        <div className="homePage5cards">
+          {arr.map((e) => {
+            return <HomeCard2 />;
+          })}
         </div>
         <div className="homePage5cards">
           {arr.map((e) => {

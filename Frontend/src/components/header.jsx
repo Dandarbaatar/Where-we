@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/Logo.svg";
 import PopUp from "./registerPopUp";
 import LoginPopUp from "./loginPopUp";
-
+import { Darklighbttn } from "./dark-light-Btn";
 export const Header = (props) => {
   const Menus = [{ signup: "Sign Up", login: "Login" }];
   const LoggedInMenu = [
@@ -45,6 +45,9 @@ export const Header = (props) => {
             <div className={props.Haichu || "headerhaichu"}>Хайчихуу?</div>
           </div>
           <div className="headerContent">
+            <div className="darkLight">
+              <Darklighbttn />
+            </div>
             <Link to={"/hostpage"}>
               <button className="headerHostBtn">Become A Host</button>
             </Link>
