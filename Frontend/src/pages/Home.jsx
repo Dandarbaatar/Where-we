@@ -2,11 +2,10 @@ import { Header } from "../components/header";
 import { HomeCard } from "../components/homeCard.jsx";
 import { HomeCard2 } from "../components/homeCard2";
 import Footer from "../components/footer.jsx";
+import { useState } from "react";
 import { useState ,useEffect} from "react";
 import axios from "axios"
-
 import { Link } from "react-router-dom";
-
 import "../css/home.css";
 import "../css/constants.css";
 import { SearchBar } from "../components/searchbar";

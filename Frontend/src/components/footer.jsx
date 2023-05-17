@@ -6,6 +6,7 @@ import facebook from "../assets/fbicon.svg";
 import twitter from "../assets/twittericon.svg";
 import instagram from "../assets/instaicon.svg";
 import linkedin from "../assets/linkedinicon.svg";
+import { Link } from "react-router-dom";
 // import playstore from "../assets/playstore.svg";
 // import applestore from "../assets/appstore.svg";
 function Footer() {
@@ -45,7 +46,9 @@ function Footer() {
         </div>
         <div className="Footer_second">
           <div className="Footer_titles">COMPANY</div>
-          <div className="Footer_informations">About us</div>
+          <Link to={"/aboutus"}>
+            <div className="Footer_informations">About us</div>
+          </Link>
           <div className="Footer_informations">Legal information</div>
           <div className="Footer_informations">Contact us</div>
           <div className="Footer_informations">Blogs</div>
