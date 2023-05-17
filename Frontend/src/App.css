@@ -104,11 +104,7 @@
   /* background-color: #efefef; */
   border-radius: 8px;
   border: none;
-<<<<<<< HEAD
-  background-image: url("./assets/asd.jpeg");
-=======
   background-color: var(--dark-sec-500);
->>>>>>> 2e90b34 (just)
 }
 .homeCardContent {
   display: flex;
