@@ -1,7 +1,9 @@
 import React from "react";
 import "../App.css";
 import Zurh from "./zurh.jsx";
-export const HomeCard = () => {
+
+
+export const HomeCard = ({name,image}) => {
   return (
     <div className="homeCard">
       <div className="homeCardDiv">
@@ -11,8 +13,8 @@ export const HomeCard = () => {
       </div>
       <div className="homeCardContent1">
         <div className="homeCardContent">
-          <img className="homeCardContentImg" />
-          <div className="homeCardContentText1">Well Furnished Apartment</div>
+          <img alt="" className="homeCardContentImg" src={image} />
+          <div className="homeCardContentText1">Well Furnished {name}</div>
           <div className="homeCardContentText2">100 Smart Street, LA, USA</div>
         </div>
       </div>
