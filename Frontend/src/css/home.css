@@ -1,7 +1,7 @@
 .homeBig {
   width: 100vw;
   height: 100vh;
-  background-image: url("https://wallpaperaccess.com/full/19603.jpg");
+  background-image: url("../assets/home.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;

@@ -528,7 +528,7 @@ li:hover {
   width: 4vw;
   height: 4vh;
   border: none;
-  border-radius: 50px;
+  border-radius: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -542,50 +542,22 @@ li:hover {
   height: 4vh;
   border: none;
   border-radius: 100px;
-  align-items: start;
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: center;
   justify-content: end;
 }
 .dark #Btn {
   width: 2vw;
-  height: 4vh;
+  height: 3vh;
   border: none;
   background-color: white;
   border-radius: 100px;
 }
 .light #Btn {
   width: 2vw;
-  height: 4vh;
+  height: 3vh;
   border: none;
   background-color: #2c3342;
   border-radius: 100px;
-}
-@keyframes light {
-  0% {
-    background-color: red;
-    left: 0px;
-    top: 0px;
-  }
-  25% {
-    background-color: red;
-    left: 200px;
-    top: 0px;
-  }
-  50% {
-    background-color: red;
-    left: 200px;
-    top: 200px;
-  }
-  75% {
-    background-color: red;
-    left: 0px;
-    top: 200px;
-  }
-  100% {
-    background-color: red;
-    left: 0px;
-    top: 0px;
-  }
 }
