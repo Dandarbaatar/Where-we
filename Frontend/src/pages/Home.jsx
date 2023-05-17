@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import "../css/home.css";
 import { SearchBar } from "../components/searchbar";
 export const Home = () => {
+  console.log("s");
   const [types, setTypes] = useState("");
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
   return (
