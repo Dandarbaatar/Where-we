@@ -46,7 +46,7 @@ function Footer() {
         </div>
         <div className="Footer_second">
           <div className="Footer_titles">COMPANY</div>
-          <Link to={"/aboutus"}>
+          <Link to={"/aboutus"} style={{ textDecoration: "none" }}>
             <div className="Footer_informations">About us</div>
           </Link>
           <div className="Footer_informations">Legal information</div>

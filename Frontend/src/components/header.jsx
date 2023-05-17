@@ -40,7 +40,7 @@ export const Header = (props) => {
       <div className={props.headerClass || "headerBig"}>
         {/* <div className="headerBig"> */}
         <div className="header">
-          <Link to={"/"}>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
             <div className="headerContent1">
               <img className="headerLogo" src={logo} alt="" />
               <div className={props.Haichu || "headerhaichu"}>Хайчихуу?</div>
