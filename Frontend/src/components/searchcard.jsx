@@ -9,6 +9,7 @@ export const SearchCard = ({
   bedrooms,
   description,
   parkings,
+  price,
 }) => {
   let name;
   users?.forEach((e) => {
@@ -89,7 +90,7 @@ export const SearchCard = ({
             >
               <div style={{ fontSize: "1vw" }}>Listed by:</div>
               <div style={{ fontSize: "1.3vw", fontWeight: "700" }}>{name}</div>
-              <div style={{ fontSize: "1.1vw" }}>For:</div>
+              <div style={{ fontSize: "1.1vw" }}>For:{price}$</div>
             </div>
           </div>
           <button
@@ -126,7 +127,7 @@ export const SearchCard = ({
           <div style={{ fontSize: "1.2vw", fontWeight: "700" }}>
             {description}
           </div>
-          <div style={{ color: "#9A9A9A", fontSize: "0.9vw" }}>location</div>
+          <div style={{ color: "#9A9A9A", fontSize: "0.9vw" }}>{placetype}</div>
         </div>
         <div
           style={{

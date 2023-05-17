@@ -14,15 +14,16 @@ import axios from "axios";
 
 export const Search = () => {
   let items = JSON.parse(localStorage.getItem("items"));
-  console.log(items);
-  const [search, setSearch] = useState("");
+  const [filt, setFilt] = useState("");
+  const [search, setSearch] = useState(["price"]);
   const [users, setUsers] = useState("");
   const [clas, setClas] = useState(0);
   const [name, setName] = useState([
-    { fill: "100 Smart Street" },
-    { fill: "12 Mar 2021" },
-    { fill: "Short Period" },
+    { fill: items.types },
+    { fill: items.guests },
+    { fill: `${items.minval}-${items.maxval} ` },
   ]);
+  console.log(items.minval);
   const [card, setCard] = useState([]);
   const Clas = () => {
     if (clas === 0) {
@@ -34,7 +35,6 @@ export const Search = () => {
   useEffect(() => {
     axios({ method: "GET", url: "http://localhost:8000/searchdetails" }).then(
       (res) => {
-        setSearch(res.data.result);
         setCard(res.data.result[0]);
         setUsers(res.data.result[1]);
       }
@@ -48,6 +48,7 @@ export const Search = () => {
       console.log("bottom");
     }
   };
+  console.log(card);
   useEffect(() => {
     window.addEventListener("scroll", GetMore, {
       passive: true,
@@ -79,7 +80,7 @@ export const Search = () => {
                   marginTop: "1vw",
                 }}
               >
-                10 Results Found
+                Results
               </div>
               <div
                 style={{
@@ -151,7 +152,7 @@ export const Search = () => {
               <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Price</div>
                 <hr style={{ width: "90%", height: "0.1vw" }}></hr>
-                <DualRange />
+                {/* <DualRange /> */}
               </div>
               <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Rooms</div>
@@ -174,6 +175,7 @@ export const Search = () => {
                     border: "none",
                     backgroundColor: "#0080EA",
                     borderRadius: "0.5vw",
+                    fontSize: "1vw",
                   }}
                 >
                   Done
@@ -185,6 +187,8 @@ export const Search = () => {
                     border: "solid grey 1px",
                     backgroundColor: "#8E9799",
                     borderRadius: "0.5vw",
+                    fontSize: "1vw",
+                    paddingLeft: "0.1vw",
                   }}
                 >
                   Cancel
@@ -193,6 +197,7 @@ export const Search = () => {
             </div>
             <div
               style={{
+                minHeight: "100vh",
                 width: "90vw",
                 backgroundColor: "#F5F5F5",
                 marginTop: "-1vw",
@@ -203,20 +208,24 @@ export const Search = () => {
               }}
             >
               <div>
-                {card?.map((el, key) => {
-                  return (
-                    <SearchCard
-                      key={key}
-                      users={users}
-                      userId={el.userId}
-                      placetype={el.Placetype}
-                      bathrooms={el.bathrooms}
-                      bedrooms={el.bedrooms}
-                      description={el.description}
-                      parkings={el.parkings}
-                    />
-                  );
-                })}
+                {card
+                  ?.filter((e) => e.price >= items.minval)
+                  .filter((e) => e.price <= items.maxval)
+                  .map((el, key) => {
+                    return (
+                      <SearchCard
+                        key={key}
+                        users={users}
+                        userId={el.userId}
+                        placetype={el.apartment}
+                        bathrooms={el.bathrooms}
+                        bedrooms={el.bedrooms}
+                        description={el.description}
+                        parkings={el.parkings}
+                        price={el.price}
+                      />
+                    );
+                  })}
               </div>
               <div
                 style={{
@@ -224,9 +233,7 @@ export const Search = () => {
                   marginLeft: "14vw",
                   marginTop: "3vw",
                 }}
-              >
-                <img alt="" style={{ width: "44.5vw" }} src={Map}></img>
-              </div>
+              ></div>
             </div>
           </div>
         </div>
