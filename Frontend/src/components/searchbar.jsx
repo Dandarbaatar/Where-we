@@ -22,7 +22,6 @@ export const SearchBar = ({ types }) => {
     setRequest({ ...request, types });
   }, [types]);
   const Searching = () => {
-    console.log(request);
     localStorage.setItem("items", JSON.stringify(request));
     navigate("/search");
   };
@@ -42,7 +41,7 @@ export const SearchBar = ({ types }) => {
         paddingRight: "0.8vw",
       }}
     >
-      <div>
+      {/* <div>
         <div
           className="search_bartext"
           style={{ fontSize: "0.8vw", fontWeight: "600" }}
@@ -62,15 +61,15 @@ export const SearchBar = ({ types }) => {
           value={request.location}
           onChange={Location}
         ></input>
-      </div>
-      <hr
+      </div> */}
+      {/* <hr
         style={{
           backgroundColor: "grey",
           width: "0.08vw",
           height: "1.7vw",
           border: "none",
         }}
-      />
+      /> */}
       <div style={{ paddingBottom: "1vw" }}>
         <div
           className="search_bartext"

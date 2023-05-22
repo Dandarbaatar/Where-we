@@ -211,6 +211,7 @@ export const Search = () => {
                 {card
                   ?.filter((e) => e.price >= items.minval)
                   .filter((e) => e.price <= items.maxval)
+                  .filter((e) => e.placetype != items.types)
                   .map((el, key) => {
                     return (
                       <SearchCard
