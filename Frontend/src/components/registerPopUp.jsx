@@ -47,7 +47,7 @@ function RegisterPopUp({ ok, onClick, hey }) {
                 <input
                   className="Login_inp"
                   type="text"
-                  placeholder="      Enter your Name"
+                  placeholder="Enter your Name"
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
@@ -56,7 +56,7 @@ function RegisterPopUp({ ok, onClick, hey }) {
                 <input
                   className="Login_inp"
                   type="text"
-                  placeholder="      Enter your Phone Number"
+                  placeholder="Enter your Phone Number"
                   onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
@@ -65,7 +65,7 @@ function RegisterPopUp({ ok, onClick, hey }) {
                 <input
                   className="Login_inp"
                   type="text"
-                  placeholder="      Enter your Gmail"
+                  placeholder="Enter your Gmail"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
@@ -74,7 +74,7 @@ function RegisterPopUp({ ok, onClick, hey }) {
                 <input
                   className="Login_inp"
                   type="text"
-                  placeholder="      Enter your Password"
+                  placeholder="Enter your Password"
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>

@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Mulish:wght@500;600;700;900&family=Open+Sans:wght@400;600;700&display=swap");
+:root {
+  /* Main background color */
+  --dark-prim-500: #35475f;
+  --dark-prim-400: #5d6c7f;
+  --dark-prim-300: #35475f;
+  --dark-prim-200: #5d6c7f;
+  --dark-prim-100: #35475f;
+  /* Secondary color (Button edr deer ashiglagdana) */
+  --dark-sec-500: #2c3342;
+  --dark-sec-400: #565c68;
+  --dark-sec-300: #35475f;
+  --dark-sec-200: #5d6c7f;
+  --dark-sec-100: #35475f;
+  /* Other color */
+  --white: #ffff;
+  --black: #0000;
+  --gray: #dddd;
+}

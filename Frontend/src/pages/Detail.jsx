@@ -1,5 +1,6 @@
 import { Header } from "../components/header";
 import "../css/detail.css";
+import "../css/constants.css";
 import sad from "../assets/asd.jpeg";
 import love from "../assets/Heart.svg";
 import share from "../assets/Share.svg";
@@ -16,7 +17,6 @@ import filledStar from "../assets/filledStar.svg";
 import { ReviewInfo } from "../components/reviewInfo";
 import { ReviewTexts } from "../components/reviewTexts";
 import Logo from "../assets/Logo.svg";
-import redHeart from "../assets/redHeart.svg";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -109,20 +109,17 @@ export const Detail = () => {
               </div>
             </div>
 
-            {data.map((item) => {
-              return (
-                <div className="descBoxes" key={item?.id}>
-                  <Boxes
-                    number={item?.facilities}
-                    text="Bedrooms"
-                    imgSource={bedroom}
-                  />
-                  <Boxes text="2 Bathrooms" imgSource={bathroom} />
-                  <Boxes text="3 Cars/2 Bikes" imgSource={car} />
-                  <Boxes text="0 Pets Allowed" imgSource={pet} />
-                </div>
-              );
-            })}
+            {/* {data.map((item) => {
+              return (                      key={item?.id}
+                number={item?.facilities} */}
+            <div className="descBoxes">
+              <Boxes text="Bedrooms" imgSource={bedroom} />
+              <Boxes text="2 Bathrooms" imgSource={bathroom} />
+              <Boxes text="3 Cars/2 Bikes" imgSource={car} />
+              <Boxes text="0 Pets Allowed" imgSource={pet} />
+            </div>
+            {/* //   );
+            // })} */}
           </div>
 
           <div className="descBoxDad">

@@ -63,7 +63,18 @@ input[type="checkbox"]{
     font-weight: 700;
     font-size: 15px;
     line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.host_button_s1{
+    width: 119px;
+    height: 56px;
+    border: none;
+    color: #FFFFFF;
+    background: none;
+}
+
 input[type="checkbox"]:hover{
     background-color:#9A9A9A ;
 }
@@ -75,6 +86,13 @@ input[type="checkbox"]:checked:after{
 }
 .host_add_container_l{
     width: 90vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.host_add_container_l_s{
+    width: 40vw;
     height: 30vh;
     display: flex;
     flex-direction: column;
