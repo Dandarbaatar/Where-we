@@ -46,7 +46,6 @@ const DetailSchema = new mongoose.Schema({
         },
         description:{
             type:String,
-            required:true,
         },
         userId:{
             type:String,
