@@ -5,8 +5,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function AddProductPage5(props) {
-  const [data1 ,setData1] = useState("")
-  const [dataFather , setDataFather ] = useState({})
   let FullData = [];
   let obj1 = {};
   let obj2 = {};
@@ -33,14 +31,10 @@ function AddProductPage5(props) {
     obj6[`zurag${i}`] = elem;
   });
   
-  useEffect(() => {
-    setDataFather({...obj1, ...obj2, ...obj3, ...obj4,...obj5});
-    }, []);
-   
     // console.log(dataFather)
 
   // console.log(FullData[0); 
-  const userId = localStorage.getItem("userId")
+  const userId = localStorage.getItem("id")
   let image = []
   image = obj6 ;
   const apartment = (obj1.apartment)
@@ -67,7 +61,7 @@ function AddProductPage5(props) {
   const smoke = (obj4.fireDetector)
   const postData = () => {
     axios
-      .post(`http://localhost:8000/user/detail`, {
+      .post(`http://localhost:8000/user/${userId}/detail`, {
         bedrooms:bedrooms,
         image:image,
         price:price,
@@ -114,7 +108,7 @@ console.log("saadd")
             presentation for listing the property fluently...
           </div>
           <div>
-            <button className="host_button_s3">Post My Property</button>
+            <button onClick={postData} className="host_button_s3">Post My Property</button>
           </div>
         </div>
       </div>
