@@ -21,9 +21,6 @@ exports.createDetailQuery = async (req) => {
 
   const result = await new DetailSchema({
     bedrooms:bedrooms,
-    amenities: amenities,
-    Placetype:Placetype,
-    saftey:saftey,
     image:image,
     price:price,
     mediumperiod:mediumperiod,
@@ -63,9 +60,6 @@ exports.uptadeDetailQuery = async (req) => {
   await DetailSchema.findByIdAndUpdate(result, {
    
     bedrooms:bedrooms,
-    amenities: amenities,
-    Placetype:Placetype,
-    saftey:saftey,
     image:image,
     price:price,
     mediumperiod:mediumperiod,
