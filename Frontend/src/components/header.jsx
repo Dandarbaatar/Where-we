@@ -64,7 +64,9 @@ export const Header = (props) => {
                     src={hamburger}
                   />
                 </div>
-                <img className="headerContentRight2" alt="" src={headerImg1} />
+                <Link to={"/account"}>
+                  <img className="headerContentRight2" src={headerImg1} />
+                </Link>
               </div>
               {user ? (
                 <div>
