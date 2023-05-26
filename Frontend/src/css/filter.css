@@ -44,3 +44,6 @@
     position: relative;
     box-shadow: 0 0 1px 1px black;
 }
+.search_bartext:hover{
+    cursor:default;
+}

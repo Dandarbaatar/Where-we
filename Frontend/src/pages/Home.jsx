@@ -30,25 +30,25 @@ export const Home = () => {
             <div className="homePage1Topic">FIND</div>
             <div className="homePage1Contents">
               <div
-                onClick={() => setTypes("Rooms")}
+                onClick={() => setTypes("apartment")}
                 className="homePage1Content1"
               >
-                Rooms
+                Apartment
               </div>
               <div
-                onClick={() => setTypes("Flats")}
+                onClick={() => setTypes("flat")}
                 className="homePage1Content1"
               >
                 Flats
               </div>
               <div
-                onClick={() => setTypes("Hostels")}
+                onClick={() => setTypes("hostel")}
                 className="homePage1Content1"
               >
                 Hostels
               </div>
               <div
-                onClick={() => setTypes("Villas")}
+                onClick={() => setTypes("villa")}
                 className="homePage1Content1"
               >
                 Villas
