@@ -1,5 +1,4 @@
 /** @format */
-
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import filter from "../assets/Filter.svg";
@@ -11,6 +10,7 @@ import Map from "../assets/result-map.svg";
 import "../css/filter.css";
 import { DualRange } from "../components/dualrangeslider";
 import axios from "axios";
+import Footer from "../components/footer";
 
 export const Search = () => {
   const [search, setSearch] = useState("");
@@ -71,14 +71,18 @@ export const Search = () => {
   ]);
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "var(--dark-prim-500)",
+      }}
+    >
       <Header />
       <div
         style={{
           width: "100vw",
           display: "flex",
           justifyContent: "center",
-          backgroundColor: "#F5F5F5",
+          backgroundColor: "var(--dark-prim-500)",
         }}
       >
         <div style={{ width: "90%", display: "flex", flexDirection: "row" }}>
@@ -90,6 +94,7 @@ export const Search = () => {
                   fontWeight: "700",
                   marginBottom: "0.7vw",
                   marginTop: "1vw",
+                  color: "var(--white)",
                 }}
               >
                 10 Results Found
@@ -117,18 +122,20 @@ export const Search = () => {
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
-                    backgroundColor: "white",
-                    border: "solid black 1px",
+                    backgroundColor: "var(--dark-prim-500)",
+                    color: "white",
+                    border: "solid white 1px",
                     borderRadius: "10vw",
                     height: "3vw",
                     width: "7vw",
                     justifyContent: "space-evenly",
-                    borderColor: "#9A9A9A",
                   }}
                   onClick={Clas}
                 >
                   <img style={{ width: "1.1vw" }} alt="" src={filter}></img>
-                  <div style={{ color: "black", fontSize: "1vw" }}>Filters</div>
+                  <div style={{ color: "var(--white)", fontSize: "1vw" }}>
+                    Filters
+                  </div>
                 </Button>
               </div>
             </div>
@@ -244,6 +251,7 @@ export const Search = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -113,22 +113,38 @@
 }
 .homePage4 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   width: 90vw;
   height: 40vh;
-  background-color: #505050;
+  background-image: linear-gradient(
+    to right,
+    var(--dark-sec-500),
+    var(--dark-sec-400)
+  );
   border-radius: 10px;
+  border: 1px solid green;
 }
 .homePage4Content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  width: 80vw;
+  width: 30vw;
   height: 35vh;
   gap: 3vh;
+  /* border: 1px solid red; */
+  padding-left: 100px;
+}
+.homePage4Img {
+  border: 1px solid purple;
+  height: 100%;
+  width: 50%;
+  background-image: url("../assets//asd.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .homePage4ContentText1 {
   width: 18vw;

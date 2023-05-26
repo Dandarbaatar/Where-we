@@ -11,7 +11,7 @@ import { SearchBar } from "../components/searchbar";
 export const Home = () => {
   const [details, setDetails] = useState([]);
   const [types, setTypes] = useState("");
-  const [img,setImg] = useState("")
+  const [img, setImg] = useState("");
 
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
   useEffect(() => {
@@ -68,7 +68,7 @@ export const Home = () => {
         </div>
         <div className="homePage2Content2Cards">
           {details.map((e) => {
-            return <HomeCard image={e[0]} name={e?.apartment}  />;
+            return <HomeCard image={e[0]} name={e?.apartment} />;
           })}
         </div>
       </div>
@@ -96,6 +96,7 @@ export const Home = () => {
             <button className="homePage4ContentBtn">Become A Host</button>
           </Link>
         </div>
+        <div className="homePage4Img"></div>
       </div>
       <div className="homePage5">
         <div className="homePage2Content1">

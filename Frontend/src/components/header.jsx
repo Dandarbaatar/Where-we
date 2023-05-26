@@ -71,8 +71,8 @@ export const Header = (props) => {
                   {open && (
                     <div
                       style={{
-                        // background: "#2c3342",
-                        background: "red",
+                        background: "#2c3342",
+                        // background: "#ffff",
                         width: "160px",
                         height: "150px",
                         display: "flex",
