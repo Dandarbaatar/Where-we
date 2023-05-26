@@ -1,5 +1,5 @@
 import "../App.css";
-import zurh from "../assets/homeCardLike.svg";
+import Zurh from "./zurh.jsx";
 export const HomeCard2 = () => {
   const arr = [1, 2, 3, 4];
   return (
@@ -7,7 +7,7 @@ export const HomeCard2 = () => {
       <div className="homeCard2Top">
         <div className="homeCard2TopContent">
           <div className="homeCard2TopContentImg">
-            <img className="zurh" src={zurh} />
+            <Zurh />
           </div>
           <div className="homeCard2TopContentPrice">
             <div className="homeCard2TopContentPrices">$ 1000 - 5000 USD</div>

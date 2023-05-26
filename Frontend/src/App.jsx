@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Home } from "./pages/Home";
 import { Search } from "./pages/Search";
+import { AboutUs } from "./components/aboutUs";
 import Hostpage from "./pages/Hostpage";
 import AddProductPage1 from "./components/addProductPage1";
 import AddProductPage2 from "./components/addProductPage2";
@@ -31,6 +32,7 @@ function App() {
         <Route path="/addproducts5" element={<AddProductPage5 />} />
         <Route path="/addproducts6" element={<AddProductPage6 />} />
         <Route path="/addimage" element={<Addimage />} />
+        <Route path="/aboutus" element={<AboutUs />} />
         {/* <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} /> */}
       </Routes>

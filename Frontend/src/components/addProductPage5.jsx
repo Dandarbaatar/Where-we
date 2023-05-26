@@ -5,7 +5,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function AddProductPage5(props) {
-  let FullData = [];
   let obj1 = {};
   let obj2 = {};
   let obj3 = {};
@@ -30,7 +29,6 @@ function AddProductPage5(props) {
   props.data6.forEach((elem, i) => {
     obj6[`zurag${i}`] = elem;
   });
-  
     // console.log(dataFather)
 
   // console.log(FullData[0); 
@@ -45,8 +43,8 @@ function AddProductPage5(props) {
   const bathrooms = (obj2.key1);
   const rooms = (obj2.key3);
   const parkings =(obj2.key2);
-  const price = (obj6.descroption1)
-  const description = (obj6.descroption0)
+  const price = (obj5.description1)
+  const description = (obj5.description0)
   const teleision = (obj3.teleision)
   const wifi = (obj3.wifi)
   const washer = (obj3.washer)
@@ -89,12 +87,7 @@ function AddProductPage5(props) {
       })
       .then((res) => toast(res?.data))
       .catch((err) => console.log(err));
-    
-    // window.location = "/";
   };
-console.log("saadd")
-
-
   return (
     <div>
       <ToastContainer />
