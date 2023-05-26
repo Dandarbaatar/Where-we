@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import "../css/addProduct.css";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
@@ -29,7 +29,6 @@ function AddProductPage5(props) {
   props.data6.forEach((elem, i) => {
     obj6[`zurag${i}`] = elem;
   });
-   console.log(obj5);
     // console.log(dataFather)
 
   // console.log(FullData[0); 
@@ -58,57 +57,7 @@ function AddProductPage5(props) {
   const fire = (obj4.fireThrower)
   const daily = (obj4.dailyCleaner)
   const smoke = (obj4.fireDetector)
-  console.log(description);
   const postData = () => {
-    // axios
-    //   .post(`http://localhost:8000/user/${userId}/detail`, {
-    //     userId:userId,
-    //     apartment: apartment,
-    //     villa: villa,
-    //     ger: ger,
-    //     house: house,
-    //   })
-    //   axios
-    //   .post(`http://localhost:8000/user/${userId}/saftey`, {
-    //     userId:userId,
-    //     sanitizers:sanitizers,
-    //     fire:fire,
-    //     daily:daily,
-    //     smoke:smoke
-    //   })
-    //   axios
-    //   .post(`http://localhost:8000/user/${userId}/numbers`, {
-    //     bedrooms:bedrooms,
-    //     userId:userId,
-    //     rooms:rooms,
-    //     bathrooms:bathrooms,
-    //     parkings:parkings,
-    //   })
-    //   axios
-    //   .post(`http://localhost:8000/user/${userId}/images`, {
-    //     image:image,
-    //     userId:userId,
-    //   })
-    //   axios
-    //   .post(`http://localhost:8000/user/${userId}/description`, {
-    //     price:price,
-    //     userId:userId,
-    //     description:description,
-    //   })
-    //   axios
-    //   .post(`http://localhost:8000/user/${userId}/amenities`, {
-    //     userId:userId,
-    //     teleision:teleision,
-    //     wifi:wifi,
-    //     washer:washer,
-    //     balcony:balcony,
-    //     cleaner:cleaner,
-    //     radio:radio,
-    //     lift:lift,
-    //     aircondioner:aircondioner,
-    //   })
-    //   .then((res) => toast(res?.data))
-    //   .catch((err) => console.log(err));
     axios
       .post(`http://localhost:8000/user/${userId}/detail`, {
         bedrooms:bedrooms,
@@ -139,7 +88,6 @@ function AddProductPage5(props) {
       .then((res) => toast(res?.data))
       .catch((err) => console.log(err));
   };
-
   return (
     <div>
       <ToastContainer />

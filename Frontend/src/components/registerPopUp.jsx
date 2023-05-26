@@ -27,7 +27,8 @@ function RegisterPopUp({ ok, onClick, hey }) {
       .then((res) => toast(res?.data))
       .catch((err) => console.log(err));
   };
-  const displayLogin = () => {};
+  const displayLogin = () => {
+  };
   return (
     <div className="overlay">
       <ToastContainer />

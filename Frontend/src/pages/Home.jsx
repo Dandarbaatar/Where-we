@@ -11,8 +11,15 @@ import { SearchBar } from "../components/searchbar";
 export const Home = () => {
   const [details, setDetails] = useState([]);
   const [types, setTypes] = useState("");
-  const [img, setImg] = useState("");
-
+  const [data , setData ] = useState([]);
+  const [images, setImages] = useState("")
+ useEffect(()=>{
+  axios.get("http://localhost:8000/details/").then((response) => setData(response?.data.data)).catch((error) =>console.log(error))
+  
+ }, []) 
+ data.map((e) =>
+ setImages(e?.image)
+ )
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
   useEffect(() => {
     axios
@@ -29,25 +36,25 @@ export const Home = () => {
             <div className="homePage1Topic">FIND</div>
             <div className="homePage1Contents">
               <div
-                onClick={() => setTypes("Rooms")}
+                onClick={() => setTypes("apartment")}
                 className="homePage1Content1"
               >
-                Rooms
+                Apartment
               </div>
               <div
-                onClick={() => setTypes("Flats")}
+                onClick={() => setTypes("flat")}
                 className="homePage1Content1"
               >
                 Flats
               </div>
               <div
-                onClick={() => setTypes("Hostels")}
+                onClick={() => setTypes("hostel")}
                 className="homePage1Content1"
               >
                 Hostels
               </div>
               <div
-                onClick={() => setTypes("Villas")}
+                onClick={() => setTypes("villa")}
                 className="homePage1Content1"
               >
                 Villas
@@ -67,8 +74,8 @@ export const Home = () => {
           <div className="homePage2Content1Zuras"></div>
         </div>
         <div className="homePage2Content2Cards">
-          {details.map((e) => {
-            return <HomeCard image={e[0]} name={e?.apartment} />;
+          {data.map((e) => {
+            return <HomeCard name={e?.apartment}  image={e?.image}/>;
           })}
         </div>
       </div>

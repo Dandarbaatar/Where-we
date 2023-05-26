@@ -17,7 +17,6 @@ const DetailSchema = new mongoose.Schema({
     },
     villa:{
         type:String,
-        
     },
     house:{
         type:String,
@@ -84,6 +83,7 @@ const DetailSchema = new mongoose.Schema({
     daily:{
         type:String,
     },
+
 
     smoke:{
         type:String,

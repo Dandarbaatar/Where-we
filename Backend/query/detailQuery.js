@@ -60,8 +60,13 @@ exports.uptadeDetailQuery = async (req) => {
   const {  parkings,villa,house,ger,apartment} = req.body;
 
   await DetailSchema.findByIdAndUpdate(result, {
-   
-  
+    bedrooms:bedrooms,
+    image:image,
+    price:price,
+    mediumperiod:mediumperiod,
+    longperiod:longperiod,
+    shortperiod:shortperiod,
+    description:description,
     userId:objId,
     parkings:parkings,
     apartment: apartment,
