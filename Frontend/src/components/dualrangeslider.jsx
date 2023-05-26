@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export const DualRange = () => {
-  const [minVal, setMinVal] = useState(1);
-  const [maxVal, setMaxVal] = useState(50);
-  let thousandmin = minVal * 100;
-  let thousandmax = maxVal * 100;
+export const DualRange = ({ request, setRequest }) => {
+  const [minVal, setMinVal] = useState(0);
+  const [maxVal, setMaxVal] = useState(5000);
+  let thousandmin = minVal;
+  let thousandmax = maxVal;
+  useEffect(() => {
+    setRequest({ ...request, minval: minVal, maxval: maxVal });
+  }, [minVal, maxVal]);
   return (
     <div
       style={{
-        width: "90%",
+        width: "100%",
+        height: "1vw",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -17,8 +21,8 @@ export const DualRange = () => {
       <input
         className="search_slider"
         type="range"
-        min={1}
-        max={50}
+        min={0}
+        max={5000}
         value={minVal}
         style={{ width: "14vw", position: "absolute", zIndex: "3" }}
         onChange={(e) => {
@@ -29,14 +33,18 @@ export const DualRange = () => {
       <input
         className="search_slider"
         type="range"
-        min={1}
-        max={50}
+        min={0}
+        max={5000}
         value={maxVal}
         onChange={(e) => {
           const value = Math.max(Number(e.target.value), minVal + 1);
           setMaxVal(value);
         }}
-        style={{ width: "14vw", position: "absolute", zIndex: "4" }}
+        style={{
+          width: "14vw",
+          position: "absolute",
+          zIndex: "4",
+        }}
       ></input>
       <div
         style={{
@@ -72,6 +80,7 @@ export const DualRange = () => {
             fontSize: "1vw",
             marginTop: "2.5vw",
             position: "absolute",
+            color: "grey",
           }}
         >
           {thousandmin}$
@@ -82,6 +91,7 @@ export const DualRange = () => {
             marginLeft: "12.5vw",
             marginTop: "2.5vw",
             position: "absolute",
+            color: "grey",
           }}
         >
           {thousandmax}$

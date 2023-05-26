@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/Logo.svg";
 import PopUp from "./registerPopUp";
 import LoginPopUp from "./loginPopUp";
-
+import { Darklighbttn } from "./dark-light-Btn";
 export const Header = (props) => {
   const Menus = [{ signup: "Sign Up", login: "Login" }];
   const LoggedInMenu = [
@@ -37,14 +37,19 @@ export const Header = (props) => {
     <div>
       <PopUp ok={popUpSignUp} onClick={() => setPopUpSignUp(false)} />
       <LoginPopUp hey={popUpLogin} onClose={() => setPopUpLogin(false)} />
-      {/* <div className={props.headerClass || "headerBig"}> */}
-      <div className="headerBig">
+      <div className={props.headerClass || "headerBig"}>
+        {/* <div className="headerBig"> */}
         <div className="header">
-          <div className="headerContent1">
-            <img className="headerLogo" src={logo} alt="" />
-            <div className={props.Haichu || "headerhaichu"}>Хайчихуу?</div>
-          </div>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
+            <div className="headerContent1">
+              <img className="headerLogo" src={logo} alt="" />
+              <div className={props.Haichu || "headerhaichu"}>Хайчихуу?</div>
+            </div>
+          </Link>
           <div className="headerContent">
+            <div className="darkLight">
+              <Darklighbttn />
+            </div>
             <Link to={"/hostpage"}>
               <button className="headerHostBtn">Become A Host</button>
             </Link>
@@ -66,8 +71,8 @@ export const Header = (props) => {
                   {open && (
                     <div
                       style={{
-                        // background: "#2c3342",
-                        background: "red",
+                        background: "#2c3342",
+                        // background: "#ffff",
                         width: "160px",
                         height: "150px",
                         display: "flex",
@@ -196,6 +201,7 @@ export const Header = (props) => {
             </div>
           </div>
         </div>
+        {/* </div> */}
       </div>
     </div>
   );

@@ -20,6 +20,7 @@ exports.createDetailQuery = async (req) => {
   const objId = new mongoose.Types.ObjectId(id);
 
   const result = await new DetailSchema({
+
     bedrooms:bedrooms,
     image:image,
     price:price,
@@ -47,6 +48,7 @@ exports.createDetailQuery = async (req) => {
     fire:fire,
     daily:daily,
     smoke:smoke
+    
   }).save();
   return result;
 };
@@ -55,10 +57,9 @@ exports.uptadeDetailQuery = async (req) => {
   const { id } = req.params;
   const objId = new mongoose.Types.ObjectId(id);
   const result = await DetailSchema.findById({ _id: objId });
-  const {  bedrooms,rooms,bathrooms,parkings,villa,house,ger,apartment,image,price,description,teleision,wifi,washer,balcony,cleaner,radio,lift,aircondioner,sanitizers,fire,daily,smoke,shortperiod,mediumperiod, longperiod} = req.body;
+  const {  parkings,villa,house,ger,apartment} = req.body;
 
   await DetailSchema.findByIdAndUpdate(result, {
-   
     bedrooms:bedrooms,
     image:image,
     price:price,
@@ -67,25 +68,12 @@ exports.uptadeDetailQuery = async (req) => {
     shortperiod:shortperiod,
     description:description,
     userId:objId,
-    rooms:rooms,
-    bathrooms:bathrooms,
     parkings:parkings,
     apartment: apartment,
     villa: villa,
     ger: ger,
     house: house,
-    teleision:teleision,
-    wifi:wifi,
-    washer:washer,
-    balcony:balcony,
-    cleaner:cleaner,
-    radio:radio,
-    lift:lift,
-    aircondioner:aircondioner,
-    sanitizers:sanitizers,
-    fire:fire,
-    daily:daily,
-    smoke:smoke
+   
   });
   return result;
 };

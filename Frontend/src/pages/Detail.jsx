@@ -34,11 +34,15 @@ export const Detail = () => {
   }, []);
   let image = data.image?.zurag0
   console.log(data)
+
+  
+
   return (
     
     <div className="detailContainer">
     
       <Header />
+     
       <div className="detailHeroDad">
         {
           data.image?.map((e)=>{
@@ -63,6 +67,7 @@ export const Detail = () => {
               </div>
             </div>
           </div>
+
 
           <div className="detailHeroSon">
             <div className="detailHeroSon1">
@@ -96,17 +101,17 @@ export const Detail = () => {
                   <div className="plus">+2</div>
                   <div className="more">
                     More <div className="photos">Photos</div>
+
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
+                 </div>
         </div>
             </>)
           })
         }
        
       </div>
+    
       <div className="detailDesc">
         <div className="descHeader">
           <div className="descHeaderLeft">
@@ -138,6 +143,7 @@ export const Detail = () => {
             </div>
             {/* //   );
             // })} */}
+
           </div>
 
           <div className="descBoxDad">

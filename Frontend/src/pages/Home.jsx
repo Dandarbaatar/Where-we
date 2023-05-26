@@ -2,16 +2,18 @@ import { Header } from "../components/header";
 import { HomeCard } from "../components/homeCard.jsx";
 import { HomeCard2 } from "../components/homeCard2";
 import Footer from "../components/footer.jsx";
+
 import { useEffect, useState } from "react";
 import Zurh from "../assets/homeCardLike.svg";
 import axios from "axios"
 import "../App.css"
 
 import { Link } from "react-router-dom";
-
 import "../css/home.css";
+import "../css/constants.css";
 import { SearchBar } from "../components/searchbar";
 export const Home = () => {
+  const [details, setDetails] = useState([]);
   const [types, setTypes] = useState("");
   const [data , setData ] = useState([]);
   const [images, setImages] = useState("")
@@ -21,10 +23,12 @@ export const Home = () => {
  }, []) 
   console.log(data)
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
+
   const darhaar = (el) => {
     console.log(el);
     // window.location.href = `${el}`
   }
+
   return (
     <div className="Home">
       <div className="homeBig">
@@ -34,25 +38,25 @@ export const Home = () => {
             <div className="homePage1Topic">FIND</div>
             <div className="homePage1Contents">
               <div
-                onClick={() => setTypes("Rooms")}
+                onClick={() => setTypes("apartment")}
                 className="homePage1Content1"
               >
-                Rooms
+                Apartment
               </div>
               <div
-                onClick={() => setTypes("Flats")}
+                onClick={() => setTypes("flat")}
                 className="homePage1Content1"
               >
                 Flats
               </div>
               <div
-                onClick={() => setTypes("Hostels")}
+                onClick={() => setTypes("hostel")}
                 className="homePage1Content1"
               >
                 Hostels
               </div>
               <div
-                onClick={() => setTypes("Villas")}
+                onClick={() => setTypes("villa")}
                 className="homePage1Content1"
               >
                 Villas
@@ -62,6 +66,7 @@ export const Home = () => {
         </div>
         <SearchBar types={types} />
       </div>
+
       <div className="homePage2">
         <div className="homePage2Content1">
           <div className="homePage2Content1Texts">
@@ -111,11 +116,11 @@ export const Home = () => {
           <div className="homePage4ContentText2">
             Earn extra just by renting your property...
           </div>
-
           <Link to={"/hostpage"}>
             <button className="homePage4ContentBtn">Become A Host</button>
           </Link>
         </div>
+        <div className="homePage4Img"></div>
       </div>
       <div className="homePage5">
         <div className="homePage2Content1">
@@ -124,6 +129,11 @@ export const Home = () => {
             <div className="homePage2Content1Text">on our Listing</div>
           </div>
           <div className="homePage2Content1Zuras"></div>
+        </div>
+        <div className="homePage5cards">
+          {arr.map((e) => {
+            return <HomeCard2 />;
+          })}
         </div>
         <div className="homePage5cards">
           {arr.map((e) => {
