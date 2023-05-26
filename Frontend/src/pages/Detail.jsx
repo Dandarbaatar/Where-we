@@ -101,7 +101,8 @@ export const Detail = () => {
                   <div className="plus">+2</div>
                   <div className="more">
                     More <div className="photos">Photos</div>
-
+</div>
+</div>
                   </div>
                 </div>
                  </div>
