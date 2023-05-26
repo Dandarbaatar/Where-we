@@ -22,23 +22,36 @@ import axios from "axios";
 
 export const Detail = () => {
   const [data, setData] = useState([]);
+  let split
+  let split1
+  split = (window.location.search);
+  split1 = (split.split("?"))
   useEffect(() => {
     axios
-      .get("http://localhost:8000/details")
+      .get(`http://localhost:8000/detail/${split1[1]}`)
       .then((response) => setData(response?.data?.data));
+      
   }, []);
-
+  let image = data.image?.zurag0
+  console.log(data)
   return (
+    
     <div className="detailContainer">
+    
       <Header />
       <div className="detailHeroDad">
-        <div className="detailHero">
-          <div
+        {
+          data.image?.map((e)=>{
+            console.log(e.zurag0);
+            return (<>
+             <div className="detailHero">
+              <div
             className="heroPicMain"
             style={{
-              backgroundImage: `url(${sad})`,
+              backgroundImage: `url("${e.zurag0}")`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
+              backgroundPosition:"center"
             }}
           >
             <div className="hostInfoDad">
@@ -46,22 +59,23 @@ export const Detail = () => {
               <div className="hostInfo">
                 <div className="listedBy">Listed By:</div>
                 <div className="hostName">Dandarbaatar</div>
-                <div className="hostMoney">For: $1000-$5000</div>
+                <div className="hostMoney">For: {data.price}</div>
               </div>
             </div>
           </div>
+
           <div className="detailHeroSon">
             <div className="detailHeroSon1">
               <div
                 className="heroPic"
                 style={{
-                  backgroundImage: `url(${sad})`,
+                  backgroundImage: `url("${e.zurag1}")`,
                 }}
               ></div>
               <div
                 className="heroPic"
                 style={{
-                  backgroundImage: `url(${sad})`,
+                  backgroundImage: `url("${e.zurag2}")`,
                 }}
               ></div>
             </div>
@@ -69,13 +83,13 @@ export const Detail = () => {
               <div
                 className="heroPic"
                 style={{
-                  backgroundImage: `url(${sad})`,
+                  backgroundImage: `url("${e.zurag3}")`,
                 }}
               ></div>
               <div
                 className="heroPic"
                 style={{
-                  backgroundImage: `url(${sad})`,
+                  backgroundImage: `url(${e.zurag4})`,
                 }}
               >
                 <div className="morePhotos">
@@ -88,6 +102,10 @@ export const Detail = () => {
             </div>
           </div>
         </div>
+            </>)
+          })
+        }
+       
       </div>
       <div className="detailDesc">
         <div className="descHeader">
@@ -96,7 +114,7 @@ export const Detail = () => {
               <div className="descHeaderLeftSonLeft">
                 {" "}
                 <div className="descHeaderLeftMain">
-                  Well Furnished Apartment
+                  Well Furnished {data.Placetype}
                 </div>
                 <div className="descHeaderLeftLocation">
                   100 Smart Street, LA, USA
@@ -113,10 +131,10 @@ export const Detail = () => {
               return (                      key={item?.id}
                 number={item?.facilities} */}
             <div className="descBoxes">
-              <Boxes text="Bedrooms" imgSource={bedroom} />
-              <Boxes text="2 Bathrooms" imgSource={bathroom} />
-              <Boxes text="3 Cars/2 Bikes" imgSource={car} />
-              <Boxes text="0 Pets Allowed" imgSource={pet} />
+              <Boxes number={data.bedrooms} text=" Bedrooms" imgSource={bedroom} />
+              <Boxes  number={data.bathrooms} text=" Bathrooms" imgSource={bathroom} />
+              <Boxes  number={data.parkings} text=" Cars/2 Bikes" imgSource={car} />
+              <Boxes number={data.rooms} text=" Rooms" imgSource={pet} />
             </div>
             {/* //   );
             // })} */}
@@ -148,12 +166,9 @@ export const Detail = () => {
         <DetailDescription
           mainClass="detailDescription"
           headerClass="detailDescHeader"
-          header="Apartment Description"
+          header= {data.Placetype} 
           textClass="detailDescText"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat."
+          text={data.description}
         />
         <DetailDescription
           mainClass="detailDescription"
@@ -162,12 +177,23 @@ export const Detail = () => {
           amenities1="detailDescAmenities"
           buttonClass="amenitiesButton"
           button="Show All Amenities"
+          television="television"
+          wifi="wifi"
+          washer="washer"
+          balcony="balcony"
+          cleaner="cleaner"
+          radio="radio"
+          lift="lift"
+          airConditioner="airConditioner"
         />
         <DetailDescription
           mainClass="detailDescription"
           headerClass="detailDescHeader"
           header="Safety and Hygiene"
           amenities2="detailDescAmenities"
+          cleaning = {data.daily }
+          sanitizers = {data.sanitizers}
+          smoke = {data.smoke}
         />
         <DetailDescription
           mainClass="detailDescriptionService"

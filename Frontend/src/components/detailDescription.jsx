@@ -21,16 +21,16 @@ export const DetailDescription = (props) => {
       <div className={props.amenities1 || "displayNone"}>
         <div className="descAmenitiesMain">
           <div className="descAmenitiesMainLeft">
-            <Amenities imgSrc={kitchen} text="Kitchen" />
-            <Amenities imgSrc={tv} text="Television with Voo" />
+            <Amenities imgSrc={kitchen} text={props.lift} />
+            <Amenities imgSrc={tv} text={props.television} />
           </div>
           <div className="descAmenitiesMainLeft">
-            <Amenities imgSrc={snow} text="Air conditioner" />
-            <Amenities imgSrc={wifi} text="Free Wireless Internet" />
+            <Amenities imgSrc={snow} text={props.airConditioner} />
+            <Amenities imgSrc={wifi} text={props.wifi} />
           </div>
           <div className="descAmenitiesMainLeft">
-            <Amenities imgSrc={washer} text="Washer" />
-            <Amenities imgSrc={balcony} text="Balcony or Patio" />
+            <Amenities imgSrc={washer} text={props.washer}/>
+            <Amenities imgSrc={balcony} text={props.balcony} />
           </div>
         </div>
         <div className="descAmenitiesMore"></div>
@@ -38,12 +38,12 @@ export const DetailDescription = (props) => {
       <div className={props.amenities2 || "displayNone"}>
         <div className="descAmenitiesMain">
           <div className="descAmenitiesMainLeft">
-            <Amenities imgSrc={check} text="Daily Cleaning" />
-            <Amenities imgSrc={check} text="Fire Extinguisher" />
+            <Amenities imgSrc={check} text={props.cleaning}/>
+            <Amenities imgSrc={check} text={props.smoke} />
           </div>
           <div className="descAmenitiesMainLeft">
             <Amenities imgSrc={check} text="Disinfections and Sterilizations" />
-            <Amenities imgSrc={check} text="Smoke Detectors" />
+            <Amenities imgSrc={check} text={props.sanitizers} />
           </div>
         </div>
       </div>

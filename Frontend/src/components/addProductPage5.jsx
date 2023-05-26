@@ -45,8 +45,8 @@ function AddProductPage5(props) {
   const bathrooms = (obj2.key1);
   const rooms = (obj2.key3);
   const parkings =(obj2.key2);
-  const price = (obj6.descroption1)
-  const description = (obj6.descroption0)
+  const price = (obj5.description1)
+  const description = (obj5.description0)
   const teleision = (obj3.teleision)
   const wifi = (obj3.wifi)
   const washer = (obj3.washer)

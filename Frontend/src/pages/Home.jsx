@@ -3,7 +3,9 @@ import { HomeCard } from "../components/homeCard.jsx";
 import { HomeCard2 } from "../components/homeCard2";
 import Footer from "../components/footer.jsx";
 import { useEffect, useState } from "react";
+import Zurh from "../assets/homeCardLike.svg";
 import axios from "axios"
+import "../App.css"
 
 import { Link } from "react-router-dom";
 
@@ -17,10 +19,12 @@ export const Home = () => {
   axios.get("http://localhost:8000/details/").then((response) => setData(response?.data.data)).catch((error) =>console.log(error))
   
  }, []) 
- data.map((e) =>
- setImages(e?.image)
- )
+  console.log(data)
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
+  const darhaar = (el) => {
+    console.log(el);
+    // window.location.href = `${el}`
+  }
   return (
     <div className="Home">
       <div className="homeBig">
@@ -68,7 +72,22 @@ export const Home = () => {
         </div>
         <div className="homePage2Content2Cards">
           {data.map((e) => {
-            return <HomeCard name={e?.apartment}  image={e?.image}/>;
+            return <div onClick={()=>window.location.href = `detail?${e._id}`}>
+            <div   className="homeCard" style={{backgroundImage:`url(${e.image[0].zurag0})`,backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundPosition:"center",borderRadius:"8px"}}>
+            <div className="homeCardDiv">
+              <button className="homeCardBtn">
+                <img className="homeCardImg1" src={Zurh} />
+              </button>
+            </div>
+            <div className="homeCardContent1">
+              <div className="homeCardContent">
+                <img className="homeCardContentImg" />
+                <div className="homeCardContentText1">Well Furnished {e.Placetype}</div>
+                <div className="homeCardContentText2">100 Smart Street, LA, USA</div>
+              </div>
+            </div>
+          </div>
+          </div>
           })}
         </div>
       </div>
