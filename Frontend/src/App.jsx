@@ -16,6 +16,7 @@ import AddProductPage6 from "./components/addProductPage6";
 // import Login from "./components/loginPopUp";
 import { Detail } from "./pages/Detail";
 import Addimage from "./components/addImage";
+import { Account } from "./components/account";
 
 import TeamMember from "./components/TeamMembers";
 
@@ -51,6 +52,7 @@ function App() {
         <Route path="/addproducts6" element={<AddProductPage6 />} />
         <Route path="/addimage" element={<Addimage />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/account" element={<Account />} />
         {/* <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} /> */}
       </Routes>

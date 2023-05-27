@@ -131,7 +131,8 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 40px;
-  color: var(--white);
+  color: white;
+
 }
 .homeCardContent1 {
   display: flex;
@@ -151,8 +152,9 @@
 .homeCardImg1 {
   width: 36px;
   height: 36px;
-  background-color: none;
-}
+
+  background: none;
+
 .homeCardContentImg {
   width: 70px;
   height: 70px;
@@ -191,7 +193,7 @@
 .Footer_container {
   width: 100vw;
   height: 52vh;
-  margin-top: 200px;
+
   background-image: linear-gradient(#35475f, #10284a);
   display: flex;
   align-items: center;
@@ -306,7 +308,9 @@
   font-weight: 600;
   font-size: 28px;
   line-height: 22px;
-  color: var(--white);
+
+  color: white;
+
 }
 /* Footer css */
 
@@ -426,12 +430,12 @@ li {
   flex-direction: column;
   border-radius: 0.25rem;
   cursor: pointer;
+  color: #10284a;
 }
 li:hover {
   /* background: #9a9a9a; */
   color: black;
 }
-
 .Footer_informations {
   width: 6vw;
   font-style: normal;
@@ -593,13 +597,12 @@ input:checked + .slider:before {
 .about {
   width: 100vw;
   height: 100vh;
-  background-color: #10284a;
+  background-color: var(--dark-prim-500);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .aboutUs {
-  color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 60px;
   width: 100vw;
@@ -608,6 +611,48 @@ input:checked + .slider:before {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 800;
+  line-height: 46px;
+  color: #ffffff;
+}
+
+/* .Medeelel1:hover {
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px,
+    rgba(255, 255, 255, 0.12) 0px -12px 30px,
+    rgba(255, 255, 255, 0.12) 0px 4px 6px,
+    rgba(255, 255, 255, 0.17) 0px 12px 13px,
+    rgba(255, 253, 253, 0.09) 0px -3px 5px;
+} */
+.aboutA {
+  width: 19vw;
+  height: 7vh;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  text-align: end;
+}
+.aboutRole {
+  width: 16vw;
+  text-align: start;
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  color: #199bec;
+}
+.aboutSuragch {
+  width: 16vw;
+  text-align: start;
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  color: #ffffff;
+  line-height: 2vh;
 }
 .Medeelel {
   width: 100vw;
@@ -618,8 +663,250 @@ input:checked + .slider:before {
   align-items: center;
 }
 .Medeelel1 {
-  width: 20vw;
-  height: 50vh;
-  background-color: #c2c6cc;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 22vw;
+  height: 57vh;
+  border-radius: 10px;
+  gap: 2vh;
+  background-color: #2c3342;
+  display: flex;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+}
+
+.aboutImg1 {
+  background-image: url("./assets/Chinguun.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 13vw;
+  border-radius: 200px;
+  height: 26vh;
+}
+.aboutImg2 {
+  background-image: url("./assets/Ermuun.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 13vw;
+  border-radius: 200px;
+  height: 26vh;
+}
+.aboutImg3 {
+  background-image: url("./assets/orgil.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 13vw;
+  height: 26vh;
+  border-radius: 200px;
+}
+.aboutImg4 {
+  background-image: url("./assets/Ermuun.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 13vw;
+  border-radius: 200px;
+  height: 26vh;
+}
+.aboutName {
+  width: 16vw;
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 46px;
+  color: #ffffff;
+}
+/*account */
+.acc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20vh;
+  width: 100vw;
+  height: 140vh;
+  background-color: #35475f;
+}
+.accContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90vw;
+  height: 55vh;
+}
+.accContent1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 20vw;
+  height: 54vh;
+  border-radius: 10px;
+  background-color: #2c3342;
+}
+.accContent1Text1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 14vw;
+  height: 19vh;
+}
+.accContent1Text1Upload {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+.accContent1Text1Img {
+  width: 14vw;
+  height: 16vh;
+}
+.accContent1Text2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.accContent1Text2Content1 {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  width: 8vw;
+  height: 3vh;
+  text-align: center;
+}
+.accContent1Text2Content2 {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #dddddd;
+  width: 17vw;
+  height: 3vh;
+  text-align: center;
+}
+.accContent1Text3 {
+  display: flex;
+  flex-direction: column;
+  width: 17vw;
+  height: 7vh;
+  align-items: start;
+  justify-content: space-between;
+  gap: 2vh;
+}
+.accContent1Text3Check1 {
+  width: 10vw;
+  display: flex;
+  gap: 1vw;
+  flex-direction: row;
+}
+.accContent1Text3Check2 {
+  width: 10vw;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+.accContent1Text3Check1Text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #dddddd;
+}
+.accContent1Text3content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+}
+.accContent1Text3User {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #ffffff;
+}
+.accContent2 {
+  display: flex;
+  flex-direction: column;
+  width: 67vw;
+  height: 30vh;
+  align-items: start;
+  justify-content: space-around;
+}
+.accContent2Text1 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2vh;
+}
+
+.accContent2Text1User {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: #ffffff;
+}
+.accContent2Text1Date {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #dddddd;
+}
+.accContent2Text3 {
+  display: flex;
+  flex-direction: row;
+  width: 10vw;
+  height: 2vh;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+}
+.accContent2Text2Btn {
+  width: 7vw;
+  height: 5vh;
+  background: #ffffff;
+  border: 1px solid #484848;
+  border-radius: 6px;
+}
+.accContent2Text3Review {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.accContent2Zuras {
+  width: 65vw;
+  height: 2px;
+  background-color: #ffffff;
+}
+.accContent2Text4 {
+  font-family: "arial";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration-line: underline;
+  color: #ffffff;
 }

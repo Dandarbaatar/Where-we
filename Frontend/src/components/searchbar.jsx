@@ -1,9 +1,10 @@
-import SearchButton from "../assets/SearchButton.svg";
+
 import { useEffect, useState } from "react";
 // import "react-calendar/dist/Calendar.css";
 // import Calendar from "react-calendar";
 import { useNavigate } from "react-router-dom";
 import { DualRange } from "./dualrangeslider";
+import SearchButton from "../assets/SearchButton.svg";
 
 export const SearchBar = ({ types }) => {
   const navigate = useNavigate();
@@ -28,13 +29,13 @@ export const SearchBar = ({ types }) => {
   return (
     <div
       style={{
-        width: "50vw",
-        height: "4vw",
+        width: "25vw",
+        height: "4.5vw",
         backgroundColor: "white",
         borderRadius: "3vw",
         display: "flex",
         flexDirection: "row",
-        marginLeft: "25vw",
+        marginLeft: "37vw",
         justifyContent: "space-between",
         alignItems: "center",
         paddingLeft: "2vw",
@@ -70,10 +71,11 @@ export const SearchBar = ({ types }) => {
           border: "none",
         }}
       /> */}
-      <div style={{ paddingBottom: "1vw" }}>
+      <div style={{ paddingBottom: "1vw", marginLeft: "1vw" }}>
         <div
           className="search_bartext"
-          style={{ fontSize: "0.8vw", fontWeight: "600" }}
+          style={{ fontSize: "1vw", fontWeight: "600" }}
+
         >
           Price Range
         </div>
@@ -94,32 +96,13 @@ export const SearchBar = ({ types }) => {
       </div>
       <hr
         style={{
+          marginLeft: "2vw",
           backgroundColor: "grey",
           width: "0.08vw",
-          height: "1.7vw",
+          height: "4vw",
           border: "none",
         }}
       />
-      <div>
-        <div
-          className="search_bartext"
-          style={{ fontSize: "0.8vw", fontWeight: "600" }}
-        >
-          Guests
-        </div>
-        <input
-          placeholder="Add Guests"
-          style={{
-            fontSize: "0.8vw",
-            border: "none",
-            width: "5vw",
-            height: "1.3vw",
-            outline: "none",
-          }}
-          name="guests"
-          onChange={Location}
-        ></input>
-      </div>
       <button
         style={{
           width: "3.2vw",
