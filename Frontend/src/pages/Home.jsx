@@ -2,7 +2,6 @@ import { Header } from "../components/header";
 import { HomeCard } from "../components/homeCard.jsx";
 import { HomeCard2 } from "../components/homeCard2";
 import Footer from "../components/footer.jsx";
-
 import { useEffect, useState } from "react";
 import Zurh from "../assets/homeCardLike.svg";
 import axios from "axios"

@@ -1,29 +1,27 @@
-/** @format */
+
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import filter from "../assets/Filter.svg";
 import { Filter } from "../components/filter";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { SearchCard } from "../components/searchcard";
 import { Header } from "../components/header";
 import Map from "../assets/result-map.svg";
 import "../css/filter.css";
 import { DualRange } from "../components/dualrangeslider";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { DualRange2 } from "../components/dualrangeslider2";
 import Footer from "../components/footer";
 
 export const Search = () => {
-  let items = JSON.parse(localStorage.getItem("items"));
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem("items")));
+  let checking;
   const [filt, setFilt] = useState("");
-  const [search, setSearch] = useState(["price"]);
+  const [search, setSearch] = useState([]);
   const [users, setUsers] = useState("");
   const [clas, setClas] = useState(0);
-  const [name, setName] = useState([
-    { fill: items.types },
-    { fill: items.guests },
-    { fill: `${items.minval}-${items.maxval} ` },
-  ]);
-  console.log(items.minval);
+  const [name, setName] = useState([]);
   const [card, setCard] = useState([]);
   const Clas = () => {
     if (clas === 0) {
@@ -39,7 +37,31 @@ export const Search = () => {
         setUsers(res.data.result[1]);
       }
     );
+    if ((items?.minval || items?.maxval) && items?.types) {
+      setName([
+        { fill: items?.types },
+        { fill: `${items?.minval}$-${items?.maxval}$ ` },
+      ]);
+    } else if (items?.minval || items?.maxval) {
+      setName([{ fill: `${items?.minval}-${items?.maxval} ` }]);
+    } else if (items?.types) {
+      setName([{ fill: items?.types }]);
+    }
   }, []);
+  checking = useMemo(() => {
+    if ((items?.minval || items?.maxval) && items?.types) {
+      return card
+        ?.filter((e) => e.price >= items?.minval)
+        .filter((e) => e.price <= items?.maxval)
+        .filter((e) => e.Placetype === items?.types.toLowerCase());
+    } else if (items?.minval || items?.maxval) {
+      return card
+        ?.filter((e) => e.price >= items?.minval)
+        .filter((e) => e.price <= items?.maxval);
+    } else if (items?.types) {
+      return card?.filter((e) => e.Placetype === items?.types.toLowerCase());
+    }
+  }, [card]);
   const GetMore = () => {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
@@ -48,7 +70,6 @@ export const Search = () => {
       console.log("bottom");
     }
   };
-  console.log(card);
   useEffect(() => {
     window.addEventListener("scroll", GetMore, {
       passive: true,
@@ -70,7 +91,7 @@ export const Search = () => {
           width: "100vw",
           display: "flex",
           justifyContent: "center",
-          backgroundColor: "var(--dark-prim-500)",
+          backgroundColor: "#35475F",
         }}
       >
         <div style={{ width: "90%", display: "flex", flexDirection: "row" }}>
@@ -82,10 +103,10 @@ export const Search = () => {
                   fontWeight: "700",
                   marginBottom: "0.7vw",
                   marginTop: "1vw",
-                  color: "var(--white)",
+                  color: "#FFFFFF",
                 }}
               >
-                Results
+                {checking?.length} Results
               </div>
               <div
                 style={{
@@ -102,6 +123,8 @@ export const Search = () => {
                       name={el.fill}
                       setName={setName}
                       all={name}
+                      items={items}
+                      setItems={setItems}
                     />
                   );
                 })}
@@ -110,18 +133,18 @@ export const Search = () => {
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
-                    backgroundColor: "var(--dark-prim-500)",
-                    color: "white",
-                    border: "solid white 1px",
+                    border: "solid black 1px",
                     borderRadius: "10vw",
                     height: "3vw",
                     width: "7vw",
                     justifyContent: "space-evenly",
+                    borderColor: "#9A9A9A",
+                    backgroundColor: "#35475F",
                   }}
                   onClick={Clas}
                 >
                   <img style={{ width: "1.1vw" }} alt="" src={filter}></img>
-                  <div style={{ color: "var(--white)", fontSize: "1vw" }}>
+                  <div style={{ fontSize: "1vw", color: "#FFFFFF" }}>
                     Filters
                   </div>
                 </Button>
@@ -136,30 +159,13 @@ export const Search = () => {
                 display: "flex",
                 flexDirection: "row",
                 paddingTop: "2vw",
+                color: "white",
               }}
             >
               <div className="search_choise">
-                <div style={{ fontSize: "1.5vw" }}>Location</div>
-                <hr style={{ width: "90%", height: "0.1vw" }}></hr>
-                <input
-                  style={{
-                    width: "90%",
-                    height: "2vw",
-                    borderRadius: "2vw",
-                    border: "black solid 1px",
-                    paddingLeft: "4%",
-                  }}
-                  placeholder="Search"
-                ></input>
-              </div>
-              <div className="search_choise">
-                <div style={{ fontSize: "1.5vw" }}>Rent Duration</div>
-                <hr style={{ width: "90%", height: "0.1vw" }}></hr>
-              </div>
-              <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Price</div>
                 <hr style={{ width: "90%", height: "0.1vw" }}></hr>
-                {/* <DualRange /> */}
+                <DualRange2 />
               </div>
               <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Rooms</div>
@@ -204,36 +210,41 @@ export const Search = () => {
             </div>
             <div
               style={{
+                backgroundColor: "#35475F",
                 minHeight: "100vh",
                 width: "90vw",
-                backgroundColor: "#F5F5F5",
                 marginTop: "-1vw",
-                display: "flex",
-                flexDirection: "row",
                 zIndex: "6",
                 position: "relative",
               }}
             >
-              <div>
-                {card
-                  ?.filter((e) => e.price >= items.minval)
-                  .filter((e) => e.price <= items.maxval)
-                  .filter((e) => e.placetype != items.types)
-                  .map((el, key) => {
-                    return (
-                      <SearchCard
-                        key={key}
-                        users={users}
-                        userId={el.userId}
-                        placetype={el.apartment}
-                        bathrooms={el.bathrooms}
-                        bedrooms={el.bedrooms}
-                        description={el.description}
-                        parkings={el.parkings}
-                        price={el.price}
-                      />
-                    );
-                  })}
+              <div
+                style={{
+                  width: "95vw",
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                }}
+              >
+                {checking?.map((el, key) => {
+                  return (
+                    <SearchCard
+                      key={key}
+                      users={users}
+                      img={el.image}
+                      userId={el.userId}
+                      placetype={
+                        el.Placetype.charAt(0).toUpperCase() +
+                        el.Placetype.slice(1)
+                      }
+                      bathrooms={el.bathrooms}
+                      bedrooms={el.bedrooms}
+                      description={el.description}
+                      parkings={el.parkings}
+                      price={el.price}
+                    />
+                  );
+                })}
               </div>
               <div
                 style={{
