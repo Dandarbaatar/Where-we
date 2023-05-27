@@ -6,10 +6,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import { Link } from "react-router-dom";
-
 import "../css/home.css";
+import "../css/constants.css";
 import { SearchBar } from "../components/searchbar";
 export const Home = () => {
+  const [details, setDetails] = useState([]);
   const [types, setTypes] = useState("");
   const [data, setData] = useState([]);
   const [images, setImages] = useState("");
@@ -23,6 +24,12 @@ export const Home = () => {
   //  setImages(e?.image)
   //  )
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/details")
+      .then((response) => setDetails(response?.data?.data));
+  }, []);
+
   return (
     <div className="Home">
       <div className="homeBig">
@@ -60,6 +67,7 @@ export const Home = () => {
         </div>
         <SearchBar types={types} />
       </div>
+
       <div className="homePage2">
         <div className="homePage2Content1">
           <div className="homePage2Content1Texts">
@@ -94,11 +102,11 @@ export const Home = () => {
           <div className="homePage4ContentText2">
             Earn extra just by renting your property...
           </div>
-
           <Link to={"/hostpage"}>
             <button className="homePage4ContentBtn">Become A Host</button>
           </Link>
         </div>
+        <div className="homePage4Img"></div>
       </div>
       <div className="homePage5">
         <div className="homePage2Content1">
@@ -107,6 +115,11 @@ export const Home = () => {
             <div className="homePage2Content1Text">on our Listing</div>
           </div>
           <div className="homePage2Content1Zuras"></div>
+        </div>
+        <div className="homePage5cards">
+          {arr.map((e) => {
+            return <HomeCard2 />;
+          })}
         </div>
         <div className="homePage5cards">
           {arr.map((e) => {
