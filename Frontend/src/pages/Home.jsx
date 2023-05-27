@@ -3,7 +3,7 @@ import { HomeCard } from "../components/homeCard.jsx";
 import { HomeCard2 } from "../components/homeCard2";
 import Footer from "../components/footer.jsx";
 import { useEffect, useState } from "react";
-import axios from "axios"
+import axios from "axios";
 
 import { Link } from "react-router-dom";
 
@@ -11,15 +11,17 @@ import "../css/home.css";
 import { SearchBar } from "../components/searchbar";
 export const Home = () => {
   const [types, setTypes] = useState("");
-  const [data , setData ] = useState([]);
-  const [images, setImages] = useState("")
- useEffect(()=>{
-  axios.get("http://localhost:8000/details/").then((response) => setData(response?.data.data)).catch((error) =>console.log(error))
-  
- }, []) 
- data.map((e) =>
- setImages(e?.image)
- )
+  const [data, setData] = useState([]);
+  const [images, setImages] = useState("");
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/details/")
+      .then((response) => setData(response?.data.data))
+      .catch((error) => console.log(error));
+  }, []);
+  //  data.map((e) =>
+  //  setImages(e?.image)
+  //  )
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
   return (
     <div className="Home">
@@ -68,7 +70,7 @@ export const Home = () => {
         </div>
         <div className="homePage2Content2Cards">
           {data.map((e) => {
-            return <HomeCard name={e?.apartment}  image={e?.image}/>;
+            return <HomeCard name={e?.apartment} image={e?.image} />;
           })}
         </div>
       </div>
