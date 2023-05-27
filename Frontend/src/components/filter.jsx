@@ -1,9 +1,21 @@
 /** @format */
 import Ex from "../assets/x.svg";
 
-export const Filter = ({ name, setName, all }) => {
+export const Filter = ({ name, setName, all, items }) => {
+  let temp;
   const Delete = () => {
     setName(all.filter((e) => e.fill !== name));
+    if (items.types == name) {
+      temp = [{ minval: items.minval, maxval: items.maxval }];
+      temp = JSON.stringify(temp);
+      temp = temp.replace("[", "");
+      localStorage.setItem("items", temp.replace("]", ""));
+    } else if (`${items?.minval}$-${items?.maxval}$ ` == name) {
+      temp = [{ types: items.types }];
+      temp = JSON.stringify(temp);
+      temp = temp.replace("[", "");
+      localStorage.setItem("items", temp.replace("]", ""));
+    }
   };
   return (
     <div
