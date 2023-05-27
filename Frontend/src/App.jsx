@@ -17,7 +17,7 @@ import AddProductPage6 from "./components/addProductPage6";
 import { Detail } from "./pages/Detail";
 import Addimage from "./components/addImage";
 import { Account } from "./components/account";
-
+import { AccEdit } from "./components/accountEdit";
 import TeamMember from "./components/TeamMembers";
 
 const teamMembers = [
@@ -53,6 +53,7 @@ function App() {
         <Route path="/addimage" element={<Addimage />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/accountEdit" element={<AccEdit />} />
         {/* <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} /> */}
       </Routes>

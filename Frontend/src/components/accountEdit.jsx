@@ -1,15 +1,14 @@
+import { Header } from "./header";
 import React from "react";
 import "../App.css";
-import { Header } from "./header";
-import Footer from "./footer";
+import Footer from "../components/footer";
 import Checker from "../assets/ddd.svg";
-import star from "../assets/star.svg";
 import Acc from "../assets/acc.svg";
-import { Link } from "react-router-dom";
-export const Account = () => {
+import cancel from "../assets/cancel.svg";
+export const AccEdit = () => {
   const username = localStorage.getItem("username");
   return (
-    <div className="acc">
+    <div className="accEdit">
       <Header />
       <div className="accContent">
         <div className="accContent1">
@@ -49,15 +48,32 @@ export const Account = () => {
             <div className="accContent2Text1User">{username}</div>
             <div className="accContent2Text1Date">Joined in 2021</div>
           </div>
-          <Link to={"/accountedit"}>
-            <button className="accContent2Text2Btn">Edit Profile</button>
-          </Link>
-          <div className="accContent2Text3">
-            <img src={star} />
-            <div className="accContent2Text3Review">0 Reviews</div>
+          <div className="accEditInps">
+            <div className="accEditInps1">
+              <div className="accEditInps1About">About</div>
+              <input className="accEditInps1Inp3" />
+            </div>
+            <div className="accEditInps2">
+              <div className="accEditInps1About">Location</div>
+              <input className="accEditInps1Inp2" />
+            </div>
+            <div className="accEditInps3">
+              <div className="accEditInps1About">Work</div>
+              <input className="accEditInps1Inp2" />
+            </div>
           </div>
-          <div className="accContent2Zuras"></div>
-          <div className="accContent2Text4">Reviewed By You</div>
+          <div className="accEditTexts">
+            <div className="accEditText">
+              All the required user information can be added here...
+            </div>
+            <div className="accEditBtns">
+              <button className="accEditBtn1">
+                <img src={cancel} />
+                <div className="accEditBtnCancel">cancel</div>
+              </button>
+              <button className="accEditBtn2">save</button>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
