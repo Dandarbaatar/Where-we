@@ -13,7 +13,7 @@ function AddProductPage5(props) {
   let obj5 = {};
   let obj6 = {};
   props.data1.forEach((elem, i) => {
-    obj1[`${elem}`] = elem;
+    obj1["Placetype"] = elem;
   });
   props.data2.forEach((elem, i) => {
     obj2[`key${i}`] = elem;
@@ -32,26 +32,29 @@ function AddProductPage5(props) {
   });
   
     // console.log(dataFather)
-
+console.log(props.data1)
   // console.log(FullData[0); 
   const userId = localStorage.getItem("id")
   let image = []
   image = obj6 ;
-  const apartment = (obj1.apartment)
-  const villa =  (obj1.villa)
-  const ger = (obj1.ger)
-  const house = (obj1.house)
+  const Placetype = (obj1.Placetype)
+ 
+  // const villa =  (obj1.villa)
+  // const ger = (obj1.ger)
+  // const house = (obj1.house)
   const bedrooms = (obj2.key0);
+  
   const bathrooms = (obj2.key1);
   const rooms = (obj2.key3);
   const parkings =(obj2.key2);
-  const price = (obj6.descroption1)
-  const description = (obj6.descroption0)
+  const price = (obj5.description1)
+  const description = (obj5.description0)
   const teleision = (obj3.teleision)
   const wifi = (obj3.wifi)
   const washer = (obj3.washer)
   const balcony = (obj3.balcony)
   const cleaner = (obj3.cleaner)
+  console.log(cleaner)
   const radio = (obj3.radio)
   const lift = (obj3.lift)
   const aircondioner = (obj3.airCondioner)
@@ -69,10 +72,10 @@ function AddProductPage5(props) {
         rooms:rooms,
         bathrooms:bathrooms,
         parkings:parkings,
-        apartment: apartment,
-        villa: villa,
-        ger: ger,
-        house: house,
+        Placetype: Placetype,
+        // villa: villa,
+        // ger: ger,
+        // house: house,
         description:description,
         teleision:teleision,
         wifi:wifi,

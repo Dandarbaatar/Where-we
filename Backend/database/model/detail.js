@@ -15,20 +15,20 @@ const DetailSchema = new mongoose.Schema({
             type:String,
             
         },
-        villa:{
+        Placetype:{
             type:String,
             
         },
-        house:{
-            type:String,
-        },
-        ger:{
-            type:String,
-        },
-        apartment:{
-            type:String,
+        // house:{
+        //     type:String,
+        // },
+        // ger:{
+        //     type:String,
+        // },
+        // apartment:{
+        //     type:String,
         
-        },
+        // },
         image:{
             type: Array,
         },

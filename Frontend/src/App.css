@@ -128,7 +128,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 40px;
-  color: #484848;
+  color: white;
 }
 .homeCardContent1 {
   display: flex;
@@ -148,6 +148,7 @@
 .homeCardImg1 {
   width: 36px;
   height: 36px;
+  background: none;
 }
 .homeCardContentImg {
   width: 70px;
@@ -298,7 +299,7 @@
   font-weight: 600;
   font-size: 28px;
   line-height: 22px;
-  color: #9a9a9a;
+  color: white;
 }
 /* Footer css */
 
@@ -418,12 +419,12 @@ li {
   flex-direction: column;
   border-radius: 0.25rem;
   cursor: pointer;
+  color: #10284a;
 }
 li:hover {
   /* background: #9a9a9a; */
   color: black;
 }
-
 .Footer_informations {
   width: 6vw;
   font-style: normal;

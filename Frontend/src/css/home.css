@@ -164,7 +164,7 @@
 }
 .homePage5 {
   width: 90vw;
-  height: 80vh;
+  height: 1100px;
   display: flex;
   flex-direction: column;
   gap: 7vh;
@@ -172,7 +172,9 @@
 }
 .homePage5cards {
   flex-direction: row;
-  gap: 3vw;
+  gap: 5vw;
   display: flex;
-  overflow-x: scroll;
+  flex-wrap: wrap;
+  height: 80vh;
+  overflow-y: scroll;
 }

@@ -9,9 +9,9 @@ import PopUp from "./registerPopUp";
 import LoginPopUp from "./loginPopUp";
 
 export const Header = (props) => {
-  const Menus = [{ signup: "Sign Up", login: "Login" }];
+  const Menus = [{ signup: "Бүртгүүлэх", login: "Нэвтрэх" }];
   const LoggedInMenu = [
-    { wishlists: "wishlists", logout: "logout", myhost: "myhost" },
+    { wishlists: "wishlists", logout: "Гарах", myhost: "myhost" },
   ];
   const [open, setOpen] = useState(false);
   const [popUpSignUp, setPopUpSignUp] = useState(false);
@@ -67,7 +67,7 @@ export const Header = (props) => {
                     <div
                       style={{
                         // background: "#2c3342",
-                        background: "red",
+                        background: "#10284a",
                         width: "160px",
                         height: "150px",
                         display: "flex",
@@ -80,7 +80,6 @@ export const Header = (props) => {
                     >
                       <div
                         style={{
-                          background: "green",
                           width: "100px",
                           height: "50px",
                           display: "flex",
@@ -95,7 +94,7 @@ export const Header = (props) => {
                                 border: "none",
                                 width: "100px",
                                 height: "40px",
-                                color: "#484848;",
+                                color: "white",
                               }}
                             >
                               {menul.wishlists}
@@ -105,7 +104,7 @@ export const Header = (props) => {
                                 border: "none",
                                 width: "100px",
                                 height: "40px",
-                                color: "#484848;",
+                                color: "white",
                               }}
                             >
                               {menul.myhost}
@@ -172,6 +171,7 @@ export const Header = (props) => {
                                 border: "none",
                                 width: "100px",
                                 height: "40px",
+                                color:"white",
                               }}
                             >
                               {menu.signup}
@@ -179,6 +179,7 @@ export const Header = (props) => {
                             <li
                               onClick={() => setPopUpLogin(true)}
                               style={{
+                                color:"white",
                                 border: "none",
                                 width: "100px",
                                 height: "40px",
