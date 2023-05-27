@@ -28,6 +28,7 @@ export const Search = () => {
       setClas(0);
     }
   };
+  console.log(card);
   useEffect(() => {
     axios({ method: "GET", url: "http://localhost:8000/searchdetails" }).then(
       (res) => {
@@ -46,7 +47,6 @@ export const Search = () => {
       setName([{ fill: items?.types }]);
     }
   }, []);
-  console.log(card);
   checking = useMemo(() => {
     if ((items?.minval || items?.maxval) && items?.types) {
       return card
@@ -59,8 +59,10 @@ export const Search = () => {
         .filter((e) => e.price <= items?.maxval);
     } else if (items?.types) {
       return card?.filter((e) => e.Placetype === items?.types.toLowerCase());
+    } else {
+      return card;
     }
-  }, [card]);
+  }, [card, items]);
   const GetMore = () => {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
