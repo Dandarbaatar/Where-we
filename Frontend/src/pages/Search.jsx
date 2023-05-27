@@ -1,3 +1,4 @@
+
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import filter from "../assets/Filter.svg";
@@ -11,6 +12,7 @@ import { DualRange } from "../components/dualrangeslider";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { DualRange2 } from "../components/dualrangeslider2";
+import Footer from "../components/footer";
 
 export const Search = () => {
   const [items, setItems] = useState(JSON.parse(localStorage.getItem("items")));
@@ -81,7 +83,11 @@ export const Search = () => {
     };
   }, []);
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "var(--dark-prim-500)",
+      }}
+    >
       <Header />
       <div
         style={{
@@ -254,6 +260,7 @@ export const Search = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

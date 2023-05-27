@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const DetailSchema = new mongoose.Schema({
+
         bedrooms:{
             type:String,
         },
@@ -15,20 +16,20 @@ const DetailSchema = new mongoose.Schema({
             type:String,
             
         },
-        villa:{
+        Placetype:{
             type:String,
             
         },
-        house:{
-            type:String,
-        },
-        ger:{
-            type:String,
-        },
-        apartment:{
-            type:String,
+        // house:{
+        //     type:String,
+        // },
+        // ger:{
+        //     type:String,
+        // },
+        // apartment:{
+        //     type:String,
         
-        },
+        // },
         image:{
             type: Array,
         },
@@ -85,9 +86,11 @@ const DetailSchema = new mongoose.Schema({
             type:String,
         },
 
-        smoke:{
-            type:String,
-        },
+
+
+    smoke:{
+        type:String,
+    },
 
         createdAt: { type: Date, default: Date.now() },
         
@@ -96,3 +99,9 @@ const DetailSchema = new mongoose.Schema({
     const DetailModel = mongoose.model("detail", DetailSchema);
     
     module.exports = DetailModel;
+
+    //ehnii 8
+    // daraagiin 8
+    // daraagiin 4
+    // daraagiin 2
+    // suuliin 1

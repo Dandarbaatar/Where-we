@@ -2,18 +2,24 @@ import React from 'react'
 import "../css/hostpage.css"
 import {Header} from "../components/header.jsx"
 import Footer from "../components/footer.jsx"
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Hostpage() {
+  const username = localStorage.getItem("username")
   const handlesubs = () => {
+    if(username) {
         window.location = "addProducts1"
+    }else{
+      toast("Нэвтэрж орно уу")
+    }
   }
 
   return (
  <div>
        <Header />
       <div className="host_container">
-     
+      <ToastContainer />
         <div className='host_banner'>
                  <div className='host_banner_inside'>
                     <div className='Try_host'>Try Hosting With Us</div>

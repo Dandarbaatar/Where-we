@@ -1,9 +1,10 @@
 /** @format */
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import { Home } from "./pages/Home";
 import { Search } from "./pages/Search";
+import { AboutUs } from "./components/aboutUs";
 import Hostpage from "./pages/Hostpage";
 import AddProductPage1 from "./components/addProductPage1";
 import AddProductPage2 from "./components/addProductPage2";
@@ -15,6 +16,25 @@ import AddProductPage6 from "./components/addProductPage6";
 // import Login from "./components/loginPopUp";
 import { Detail } from "./pages/Detail";
 import Addimage from "./components/addImage";
+import { Account } from "./components/account";
+
+import TeamMember from "./components/TeamMembers";
+
+const teamMembers = [
+  {
+    id: 1,
+    name: "John Doe",
+    position: "CEO",
+    bio: "John Doe is the CEO of our company. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    position: "CTO",
+    bio: "Jane Smith is the CTO of our company. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  // Add more team members here
+];
 
 function App() {
   return (
@@ -31,6 +51,8 @@ function App() {
         <Route path="/addproducts5" element={<AddProductPage5 />} />
         <Route path="/addproducts6" element={<AddProductPage6 />} />
         <Route path="/addimage" element={<Addimage />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/account" element={<Account />} />
         {/* <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} /> */}
       </Routes>

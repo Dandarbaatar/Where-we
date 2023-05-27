@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 // import "react-calendar/dist/Calendar.css";
 // import Calendar from "react-calendar";
@@ -74,6 +75,7 @@ export const SearchBar = ({ types }) => {
         <div
           className="search_bartext"
           style={{ fontSize: "1vw", fontWeight: "600" }}
+
         >
           Price Range
         </div>
@@ -106,7 +108,7 @@ export const SearchBar = ({ types }) => {
           width: "3.2vw",
           height: "3.2vw",
           borderRadius: "10vw",
-          backgroundColor: "#484848",
+          backgroundColor: "var(--dark-sec-500)",
           border: "none",
           display: "flex",
           alignItems: "center",
