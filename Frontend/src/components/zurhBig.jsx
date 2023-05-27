@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import likedHeart from "../assets/likedHeart.svg";
-import heart from "../assets/Heart.svg";
+import likedHeart from "../assets/likedHeartBig.svg";
+import heart from "../assets/heartBig.svg";
 import "../App.css";
-const Zurh = (props) => {
+const ZurhBig = (props) => {
   const [like, setLike] = useState(false);
   return (
     <div className="zurh-big">
@@ -13,4 +13,4 @@ const Zurh = (props) => {
   );
 };
 
-export default Zurh;
+export default ZurhBig;

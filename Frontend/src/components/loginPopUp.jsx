@@ -66,7 +66,7 @@ function LoginPopUp({ hey, onClose }) {
                 <input
                   onChange={(e) => setPassword1(e.target.value)}
                   className="signup_inp"
-                  type="text"
+                  type="password"
                   placeholder="Enter your Password"
                 />
               </div>

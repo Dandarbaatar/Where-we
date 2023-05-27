@@ -6,6 +6,7 @@ import Footer from "./footer";
 import Checker from "../assets/ddd.svg";
 import star from "../assets/star.svg";
 export const Account = () => {
+  const username = localStorage.getItem("username");
   return (
     <div className="acc">
       <Header />
@@ -25,7 +26,7 @@ export const Account = () => {
             </div>
           </div>
           <div className="accContent1Text3">
-            <div className="accContent1Text3User">John Doe</div>
+            <div className="accContent1Text3User">{username}</div>
             <div className="accContent1Text3content">
               <div className="accContent1Text3Check1">
                 <img src={Checker} />
@@ -44,7 +45,7 @@ export const Account = () => {
         </div>
         <div className="accContent2">
           <div className="accContent2Text1">
-            <div className="accContent2Text1User">Hello, John Doe</div>
+            <div className="accContent2Text1User">{username}</div>
             <div className="accContent2Text1Date">Joined in 2021</div>
           </div>
           <button className="accContent2Text2Btn">Edit Profile</button>
