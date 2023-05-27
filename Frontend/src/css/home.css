@@ -13,6 +13,7 @@
   flex-direction: column;
   align-items: center;
   gap: 12vh;
+  background-color: var(--dark-prim-500);
 }
 .homePage1 {
   width: 90vw;
@@ -79,6 +80,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+  color: var(--white);
 }
 .homePage2Content1Text {
   width: 18vw;
@@ -88,13 +90,12 @@
   font-weight: 700;
   font-size: 42px;
   line-height: 48px;
-  color: #484848;
 }
 .homePage2Content1Zuras {
   width: 6vw;
   height: 6px;
   border-radius: 10px;
-  background-color: #484848;
+  background-color: var(--white);
 }
 .homePage2Content2Cards {
   display: flex;
@@ -112,22 +113,38 @@
 }
 .homePage4 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   width: 90vw;
   height: 40vh;
-  background-color: #eff0f2;
+  background-image: linear-gradient(
+    to right,
+    var(--dark-sec-500),
+    var(--dark-sec-400)
+  );
   border-radius: 10px;
+  border: 1px solid green;
 }
 .homePage4Content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  width: 80vw;
+  width: 30vw;
   height: 35vh;
   gap: 3vh;
+  /* border: 1px solid red; */
+  padding-left: 100px;
+}
+.homePage4Img {
+  border: 1px solid purple;
+  height: 100%;
+  width: 50%;
+  background-image: url("../assets//asd.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .homePage4ContentText1 {
   width: 18vw;
@@ -137,7 +154,7 @@
   font-weight: 700;
   font-size: 70px;
   line-height: 6vh;
-  color: #484848;
+  color: var(--white);
 }
 .homePage4ContentText2 {
   width: 23vw;
@@ -147,7 +164,7 @@
   font-weight: 500;
   font-size: 28px;
   line-height: 52px;
-  color: #9a9a9a;
+  color: var(--gray);
 }
 .homePage4ContentBtn {
   font-family: "arial";
@@ -157,14 +174,16 @@
   line-height: 17px;
   width: 14vw;
   height: 6vh;
-  background-color: #484848;
+  background-color: var(--dark-sec-500);
   color: #ffffff;
   border-radius: 35px;
   border: none;
 }
 .homePage5 {
   width: 90vw;
+
   height: 1100px;
+
   display: flex;
   flex-direction: column;
   gap: 7vh;

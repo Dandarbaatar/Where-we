@@ -1,35 +1,29 @@
-import { Button } from "react-bootstrap";
 import SearchButton from "../assets/SearchButton.svg";
-import axios from "axios";
 import { useEffect, useState } from "react";
 // import "react-calendar/dist/Calendar.css";
 // import Calendar from "react-calendar";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { DualRange } from "./dualrangeslider";
 
 export const SearchBar = ({ types }) => {
-  let period = "";
-  let location = "";
-  let guests = 0;
-  const Period = (e) => {
-    period = e.target.value;
-  };
+  const navigate = useNavigate();
+  const [request, setRequest] = useState([]);
+  // const Period = (e) => {
+  //   period = e.target.value;
+  // };
   const Location = (e) => {
-    location = e.target.value;
+    let value = e.target.value;
+    setRequest({ ...request, [e.target.name]: value });
   };
-  const Guests = (e) => {
-    guests = Number(e.target.value);
-  };
+  // const Guests = (e) => {
+  //   guests = Number(e.target.value);
+  // };
+  useEffect(() => {
+    setRequest({ ...request, types });
+  }, [types]);
   const Searching = () => {
-    axios({
-      method: "POST",
-      url: "http://localhost:8000/searchdetails",
-      data: {
-        period: period,
-        location: location,
-        guests: guests,
-        placetype: types,
-      },
-    });
+    localStorage.setItem("items", JSON.stringify(request));
+    navigate("/search");
   };
   return (
     <div
@@ -47,8 +41,13 @@ export const SearchBar = ({ types }) => {
         paddingRight: "0.8vw",
       }}
     >
-      <div>
-        <div style={{ fontSize: "0.8vw", fontWeight: "600" }}>Location</div>
+      {/* <div>
+        <div
+          className="search_bartext"
+          style={{ fontSize: "0.8vw", fontWeight: "600" }}
+        >
+          Location
+        </div>
         <input
           placeholder="Which city do you prefer?"
           style={{
@@ -58,34 +57,12 @@ export const SearchBar = ({ types }) => {
             height: "1.3vw",
             outline: "none",
           }}
+          name="location"
+          value={request.location}
           onChange={Location}
         ></input>
-      </div>
-      <hr
-        style={{
-          backgroundColor: "grey",
-          width: "0.08vw",
-          height: "1.7vw",
-          border: "none",
-        }}
-      />
-      {/* <div>
-        <div style={{ fontSize: "0.8vw", fontWeight: "600" }}>Check In</div>
-        <button
-          style={{
-            fontSize: "0.8vw",
-            border: "none",
-            width: "5vw",
-            height: "1.3vw",
-            outline: "none",
-            backgroundColor: "transparent",
-          }}
-          onClick={createCalendar}
-        >
-          Add Dates
-        </button>
-      </div>
-      <hr
+      </div> */}
+      {/* <hr
         style={{
           backgroundColor: "grey",
           width: "0.08vw",
@@ -93,9 +70,15 @@ export const SearchBar = ({ types }) => {
           border: "none",
         }}
       /> */}
-      <div>
-        <div style={{ fontSize: "0.8vw", fontWeight: "600" }}>Period</div>
-        <input
+      <div style={{ paddingBottom: "1vw" }}>
+        <div
+          className="search_bartext"
+          style={{ fontSize: "0.8vw", fontWeight: "600" }}
+        >
+          Price Range
+        </div>
+        <DualRange request={request} setRequest={setRequest} />
+        {/* <input
           placeholder="Add Dates"
           style={{
             fontSize: "0.8vw",
@@ -104,8 +87,10 @@ export const SearchBar = ({ types }) => {
             height: "1.3vw",
             outline: "none",
           }}
-          onChange={Period}
-        ></input>
+          name="period"
+          value={request.period}
+          onChange={Location}
+        ></input> */}
       </div>
       <hr
         style={{
@@ -116,7 +101,12 @@ export const SearchBar = ({ types }) => {
         }}
       />
       <div>
-        <div style={{ fontSize: "0.8vw", fontWeight: "600" }}>Guests</div>
+        <div
+          className="search_bartext"
+          style={{ fontSize: "0.8vw", fontWeight: "600" }}
+        >
+          Guests
+        </div>
         <input
           placeholder="Add Guests"
           style={{
@@ -126,15 +116,16 @@ export const SearchBar = ({ types }) => {
             height: "1.3vw",
             outline: "none",
           }}
-          onChange={Guests}
+          name="guests"
+          onChange={Location}
         ></input>
       </div>
-      <Link
+      <button
         style={{
           width: "3.2vw",
           height: "3.2vw",
           borderRadius: "10vw",
-          backgroundColor: "#484848",
+          backgroundColor: "var(--dark-sec-500)",
           border: "none",
           display: "flex",
           alignItems: "center",
@@ -148,7 +139,7 @@ export const SearchBar = ({ types }) => {
           style={{ width: "1.2vw", height: "1.2vw" }}
           src={SearchButton}
         ></img>
-      </Link>
+      </button>
     </div>
   );
 };

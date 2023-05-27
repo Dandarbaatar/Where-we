@@ -5,7 +5,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function AddProductPage5(props) {
-  let FullData = [];
   let obj1 = {};
   let obj2 = {};
   let obj3 = {};
@@ -30,7 +29,6 @@ function AddProductPage5(props) {
   props.data6.forEach((elem, i) => {
     obj6[`zurag${i}`] = elem;
   });
-  
     // console.log(dataFather)
 console.log(props.data1)
   // console.log(FullData[0); 
@@ -92,12 +90,7 @@ console.log(props.data1)
       })
       .then((res) => toast(res?.data))
       .catch((err) => console.log(err));
-    
-    // window.location = "/";
   };
-console.log("saadd")
-
-
   return (
     <div>
       <ToastContainer />

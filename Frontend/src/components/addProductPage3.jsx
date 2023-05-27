@@ -17,7 +17,7 @@ function AddProductPage3(props) {
       // delete checkedItems[value]; // Remove the unchecked item from the object
     }
   };
-  console.log(checkedList, props.data1, props.data2);
+  // console.log(checkedList, props.data1, props.data2);
   return (
     <div>
       {click ? (

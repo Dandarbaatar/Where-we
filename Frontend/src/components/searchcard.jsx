@@ -2,15 +2,21 @@
 import Like from "../assets/homeCardLike.svg";
 
 export const SearchCard = ({
-  name,
-  location,
-  number,
-  rent,
-  time,
-  lister,
+  users,
+  userId,
+  placetype,
+  bathrooms,
+  bedrooms,
+  description,
+  parkings,
   price,
-  liked,
 }) => {
+  let name;
+  users?.forEach((e) => {
+    if (e._id === userId) {
+      name = e.username;
+    }
+  });
   return (
     <div
       style={{
@@ -47,7 +53,7 @@ export const SearchCard = ({
               marginTop: "1.7vw",
             }}
           >
-            <img alt="" style={{ width: "2.5vw" }} src={Like}></img>
+            <img alt="" style={{ width: "2.5vw" }}></img>
           </button>
         </div>
         <div
@@ -83,10 +89,8 @@ export const SearchCard = ({
               }}
             >
               <div style={{ fontSize: "1vw" }}>Listed by:</div>
-              <div style={{ fontSize: "1.3vw", fontWeight: "700" }}>
-                {lister}
-              </div>
-              <div style={{ fontSize: "1.1vw" }}>For: {price}</div>
+              <div style={{ fontSize: "1.3vw", fontWeight: "700" }}>{name}</div>
+              <div style={{ fontSize: "1.1vw" }}>For:{price}$</div>
             </div>
           </div>
           <button
@@ -120,8 +124,10 @@ export const SearchCard = ({
         }}
       >
         <div>
-          <div style={{ fontSize: "1.2vw", fontWeight: "700" }}>{name}</div>
-          <div style={{ color: "#9A9A9A", fontSize: "0.9vw" }}>{location}</div>
+          <div style={{ fontSize: "1.2vw", fontWeight: "700" }}>
+            {description}
+          </div>
+          <div style={{ color: "#9A9A9A", fontSize: "0.9vw" }}>{placetype}</div>
         </div>
         <div
           style={{
@@ -133,19 +139,19 @@ export const SearchCard = ({
         >
           <div style={{ display: "flex", flexDirection: "row", gap: "0.4vw" }}>
             <img style={{ width: "1.3vw" }} alt="" src="bed.svg"></img>
-            <div style={{ fontSize: "1vw" }}>{number.bed}</div>
+            <div style={{ fontSize: "1vw" }}>{bedrooms}</div>
           </div>
           <div style={{ display: "flex", flexDirection: "row", gap: "0.4vw" }}>
             <img style={{ width: "1.1vw" }} alt="" src="bath.svg"></img>
-            <div style={{ fontSize: "1vw" }}>{number.bath}</div>
+            <div style={{ fontSize: "1vw" }}>{bathrooms}</div>
           </div>
           <div style={{ display: "flex", flexDirection: "row", gap: "0.4vw" }}>
             <img style={{ width: "1.5vw" }} alt="" src="car.svg"></img>
-            <div style={{ fontSize: "1vw" }}>{number.car}</div>
+            <div style={{ fontSize: "1vw" }}>{parkings}</div>
           </div>
           <div style={{ display: "flex", flexDirection: "row", gap: "0.4vw" }}>
             <img style={{ width: "1.2vw" }} alt="" src="pet.svg"></img>
-            <div style={{ fontSize: "1vw" }}>{number.dog}</div>
+            <div style={{ fontSize: "1vw" }}></div>
           </div>
         </div>
         <div
@@ -160,9 +166,7 @@ export const SearchCard = ({
         >
           <div
             style={{ color: "#9A9A9A", fontSize: "0.8vw", fontWeight: "600" }}
-          >
-            {rent}
-          </div>
+          ></div>
           <hr
             style={{
               backgroundColor: "grey",
@@ -173,9 +177,7 @@ export const SearchCard = ({
           />
           <div
             style={{ color: "#9A9A9A", fontSize: "0.8vw", fontWeight: "600" }}
-          >
-            {time}
-          </div>
+          ></div>
         </div>
       </div>
     </div>

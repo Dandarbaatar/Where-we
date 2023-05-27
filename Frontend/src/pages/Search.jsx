@@ -1,5 +1,4 @@
 /** @format */
-
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import filter from "../assets/Filter.svg";
@@ -11,10 +10,21 @@ import Map from "../assets/result-map.svg";
 import "../css/filter.css";
 import { DualRange } from "../components/dualrangeslider";
 import axios from "axios";
+import Footer from "../components/footer";
 
 export const Search = () => {
-  const [search, setSearch] = useState("");
+  let items = JSON.parse(localStorage.getItem("items"));
+  const [filt, setFilt] = useState("");
+  const [search, setSearch] = useState(["price"]);
+  const [users, setUsers] = useState("");
   const [clas, setClas] = useState(0);
+  const [name, setName] = useState([
+    { fill: items.types },
+    { fill: items.guests },
+    { fill: `${items.minval}-${items.maxval} ` },
+  ]);
+  console.log(items.minval);
+  const [card, setCard] = useState([]);
   const Clas = () => {
     if (clas === 0) {
       setClas(1);
@@ -25,60 +35,42 @@ export const Search = () => {
   useEffect(() => {
     axios({ method: "GET", url: "http://localhost:8000/searchdetails" }).then(
       (res) => {
-        setSearch(res);
+        setCard(res.data.result[0]);
+        setUsers(res.data.result[1]);
       }
     );
   }, []);
+  const GetMore = () => {
+    const bottom =
+      Math.ceil(window.innerHeight + window.scrollY) >=
+      document.documentElement.scrollHeight;
+    if (bottom) {
+      console.log("bottom");
+    }
+  };
+  console.log(card);
   useEffect(() => {
-    console.log(search);
-  }, [search]);
-  const [name, setName] = useState([
-    { fill: "100 Smart Street" },
-    { fill: "12 Mar 2021" },
-    { fill: "Short Period" },
-  ]);
-  const [card, setCard] = useState([
-    {
-      lister: "John Doberman",
-      price: "$ 1000 - $ 5000",
-      name: "Well Furnished Apartment",
-      location: "100 Smart Street, LA, USA",
-      number: { bed: 3, bath: 1, car: 2, dog: 0 },
-      rent: "Apartment on Rent",
-      time: "For Long Period: 1 - 2 Years",
-      liked: false,
-    },
-    {
-      lister: "John Doberman",
-      price: "$ 1000 - $ 5000",
-      name: "Well Furnished Apartment",
-      location: "100 Smart Street, LA, USA",
-      number: { bed: 3, bath: 1, car: 2, dog: 0 },
-      rent: "Apartment on Rent",
-      time: "For Long Period: 1 - 2 Years",
-      liked: false,
-    },
-    {
-      lister: "John Doberman",
-      price: "$ 1000 - $ 5000",
-      name: "Well Furnished Apartment",
-      location: "100 Smart Street, LA, USA",
-      number: { bed: 3, bath: 1, car: 2, dog: 0 },
-      rent: "Apartment on Rent",
-      time: "For Long Period: 1 - 2 Years",
-      liked: false,
-    },
-  ]);
+    window.addEventListener("scroll", GetMore, {
+      passive: true,
+    });
 
+    return () => {
+      window.removeEventListener("scroll", GetMore);
+    };
+  }, []);
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "var(--dark-prim-500)",
+      }}
+    >
       <Header />
       <div
         style={{
           width: "100vw",
           display: "flex",
           justifyContent: "center",
-          backgroundColor: "#F5F5F5",
+          backgroundColor: "var(--dark-prim-500)",
         }}
       >
         <div style={{ width: "90%", display: "flex", flexDirection: "row" }}>
@@ -90,9 +82,10 @@ export const Search = () => {
                   fontWeight: "700",
                   marginBottom: "0.7vw",
                   marginTop: "1vw",
+                  color: "var(--white)",
                 }}
               >
-                10 Results Found
+                Results
               </div>
               <div
                 style={{
@@ -117,18 +110,20 @@ export const Search = () => {
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
-                    backgroundColor: "white",
-                    border: "solid black 1px",
+                    backgroundColor: "var(--dark-prim-500)",
+                    color: "white",
+                    border: "solid white 1px",
                     borderRadius: "10vw",
                     height: "3vw",
                     width: "7vw",
                     justifyContent: "space-evenly",
-                    borderColor: "#9A9A9A",
                   }}
                   onClick={Clas}
                 >
                   <img style={{ width: "1.1vw" }} alt="" src={filter}></img>
-                  <div style={{ color: "black", fontSize: "1vw" }}>Filters</div>
+                  <div style={{ color: "var(--white)", fontSize: "1vw" }}>
+                    Filters
+                  </div>
                 </Button>
               </div>
             </div>
@@ -164,7 +159,7 @@ export const Search = () => {
               <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Price</div>
                 <hr style={{ width: "90%", height: "0.1vw" }}></hr>
-                <DualRange />
+                {/* <DualRange /> */}
               </div>
               <div className="search_choise">
                 <div style={{ fontSize: "1.5vw" }}>Rooms</div>
@@ -187,6 +182,7 @@ export const Search = () => {
                     border: "none",
                     backgroundColor: "#0080EA",
                     borderRadius: "0.5vw",
+                    fontSize: "1vw",
                   }}
                 >
                   Done
@@ -198,6 +194,8 @@ export const Search = () => {
                     border: "solid grey 1px",
                     backgroundColor: "#8E9799",
                     borderRadius: "0.5vw",
+                    fontSize: "1vw",
+                    paddingLeft: "0.1vw",
                   }}
                 >
                   Cancel
@@ -206,6 +204,8 @@ export const Search = () => {
             </div>
             <div
               style={{
+                minHeight: "100vh",
+                width: "90vw",
                 backgroundColor: "#F5F5F5",
                 marginTop: "-1vw",
                 display: "flex",
@@ -215,21 +215,25 @@ export const Search = () => {
               }}
             >
               <div>
-                {card.map((el, key) => {
-                  return (
-                    <SearchCard
-                      key={key}
-                      name={el.name}
-                      location={el.location}
-                      number={el.number}
-                      rent={el.rent}
-                      time={el.time}
-                      lister={el.lister}
-                      price={el.price}
-                      liked={el.liked}
-                    />
-                  );
-                })}
+                {card
+                  ?.filter((e) => e.price >= items.minval)
+                  .filter((e) => e.price <= items.maxval)
+                  .filter((e) => e.placetype != items.types)
+                  .map((el, key) => {
+                    return (
+                      <SearchCard
+                        key={key}
+                        users={users}
+                        userId={el.userId}
+                        placetype={el.apartment}
+                        bathrooms={el.bathrooms}
+                        bedrooms={el.bedrooms}
+                        description={el.description}
+                        parkings={el.parkings}
+                        price={el.price}
+                      />
+                    );
+                  })}
               </div>
               <div
                 style={{
@@ -237,13 +241,12 @@ export const Search = () => {
                   marginLeft: "14vw",
                   marginTop: "3vw",
                 }}
-              >
-                <img alt="" style={{ width: "45vw" }} src={Map}></img>
-              </div>
+              ></div>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
