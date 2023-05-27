@@ -1,6 +1,6 @@
 /** @format */
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import { Home } from "./pages/Home";
 import { Search } from "./pages/Search";
@@ -17,6 +17,24 @@ import AddProductPage6 from "./components/addProductPage6";
 import { Detail } from "./pages/Detail";
 import Addimage from "./components/addImage";
 import { Account } from "./components/account";
+
+import TeamMember from "./components/TeamMembers";
+
+const teamMembers = [
+  {
+    id: 1,
+    name: "John Doe",
+    position: "CEO",
+    bio: "John Doe is the CEO of our company. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    position: "CTO",
+    bio: "Jane Smith is the CTO of our company. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  // Add more team members here
+];
 
 function App() {
   return (

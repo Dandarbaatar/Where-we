@@ -124,7 +124,6 @@
     var(--dark-sec-400)
   );
   border-radius: 10px;
-  border: 1px solid green;
 }
 .homePage4Content {
   display: flex;
@@ -134,11 +133,9 @@
   width: 30vw;
   height: 35vh;
   gap: 3vh;
-  /* border: 1px solid red; */
   padding-left: 100px;
 }
 .homePage4Img {
-  border: 1px solid purple;
   height: 100%;
   width: 50%;
   background-image: url("../assets//asd.jpeg");
