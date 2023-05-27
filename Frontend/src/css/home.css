@@ -7,6 +7,9 @@
   display: flex;
   flex-direction: column;
 }
+.homeCardBtn {
+  background: none;
+}
 .Home {
   width: 100vw;
   display: flex;

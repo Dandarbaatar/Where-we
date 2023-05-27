@@ -19,103 +19,100 @@ import { ReviewTexts } from "../components/reviewTexts";
 import Logo from "../assets/Logo.svg";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Zurh from "../components/zurh";
+import ZurhBig from "../components/zurhBig";
 
 export const Detail = () => {
   const [data, setData] = useState([]);
-  const [id,setId] = useState([])
-  let split
-  let split1
-  split = (window.location.search);
-  split1 = (split.split("?"))
+  const [id, setId] = useState([]);
+  let split;
+  let split1;
+  split = window.location.search;
+  split1 = split.split("?");
   useEffect(() => {
     axios
       .get(`http://localhost:8000/detail/${split1[1]}`)
       .then((response) => setData(response?.data?.data));
-      axios.get(`http://localhost:8000/user/${data.userId}`).then((response) => setId(response?.data?.data))
-     
+    axios
+      .get(`http://localhost:8000/user/${data.userId}`)
+      .then((response) => setId(response?.data?.data));
   }, []);
-  let image = data.image?.zurag0
-  console.log(data)
-  console.log(id)
-
-  
+  let image = data.image?.zurag0;
+  console.log(data);
+  console.log(id);
 
   return (
-    
     <div className="detailContainer">
-    
       <Header />
-     
+
       <div className="detailHeroDad">
-        {
-          data.image?.map((e)=>{
-            console.log(e.zurag0);
-            return (<>
-             <div className="detailHero">
-              <div
-            className="heroPicMain"
-            style={{
-              backgroundImage: `url("${e.zurag0}")`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition:"center"
-            }}
-          >
-            <div className="hostInfoDad">
-              <div className="hostImg"></div>
-              <div className="hostInfo">
-                <div className="listedBy">Listed By:</div>
-                <div className="hostName">  </div>
-                <div className="hostMoney">For: {data.price}</div>
-              </div>
-            </div>
-          </div>
-
-
-          <div className="detailHeroSon">
-            <div className="detailHeroSon1">
-              <div
-                className="heroPic"
-                style={{
-                  backgroundImage: `url("${e.zurag1}")`,
-                }}
-              ></div>
-              <div
-                className="heroPic"
-                style={{
-                  backgroundImage: `url("${e.zurag2}")`,
-                }}
-              ></div>
-            </div>
-            <div className="detailHeroSon1">
-              <div
-                className="heroPic"
-                style={{
-                  backgroundImage: `url("${e.zurag3}")`,
-                }}
-              ></div>
-              <div
-                className="heroPic"
-                style={{
-                  backgroundImage: `url(${e.zurag4})`,
-                }}
-              >
-                <div className="morePhotos">
-                  <div className="plus">+2</div>
-                  <div className="more">
-                    More <div className="photos">Photos</div>
-</div>
-</div>
+        {data.image?.map((e) => {
+          console.log(e.zurag0);
+          return (
+            <>
+              <div className="detailHero">
+                <div
+                  className="heroPicMain"
+                  style={{
+                    backgroundImage: `url("${e.zurag0}")`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <div className="hostInfoDad">
+                    <div className="hostImg"></div>
+                    <div className="hostInfo">
+                      <div className="listedBy">Listed By:</div>
+                      <div className="hostName"> </div>
+                      <div className="hostMoney">For: {data.price}</div>
+                    </div>
                   </div>
                 </div>
-                 </div>
-        </div>
-            </>)
-          })
-        }
-       
+
+                <div className="detailHeroSon">
+                  <div className="detailHeroSon1">
+                    <div
+                      className="heroPic"
+                      style={{
+                        backgroundImage: `url("${e.zurag1}")`,
+                      }}
+                    ></div>
+                    <div
+                      className="heroPic"
+                      style={{
+                        backgroundImage: `url("${e.zurag2}")`,
+                      }}
+                    ></div>
+                  </div>
+                  <div className="detailHeroSon1">
+                    <div
+                      className="heroPic"
+                      style={{
+                        backgroundImage: `url("${e.zurag3}")`,
+                      }}
+                    ></div>
+                    <div
+                      className="heroPic"
+                      style={{
+                        backgroundImage: `url(${e.zurag4})`,
+                      }}
+                    >
+                      <div className="morePhotos">
+                        <div className="plus">+2</div>
+                        <div className="more">
+                          More <div className="photos">Photos</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </>
+          );
+        })}
       </div>
-    
+
       <div className="detailDesc">
         <div className="descHeader">
           <div className="descHeaderLeft">
@@ -130,7 +127,8 @@ export const Detail = () => {
                 </div>
               </div>
               <div className="descHeaderRight">
-                <img src={love} alt="Heart" className="colorBlack" />
+                {/* <img src={love} alt="Heart" className="colorBlack" /> */}
+                <ZurhBig />
                 {/* <img src={redHeart} alt="Heart" className="colorBlack" /> */}
                 <img src={share} alt="Heart" className="colorBlack" />
               </div>
@@ -140,14 +138,25 @@ export const Detail = () => {
               return (                      key={item?.id}
                 number={item?.facilities} */}
             <div className="descBoxes">
-              <Boxes number={data.bedrooms} text=" Bedrooms" imgSource={bedroom} />
-              <Boxes  number={data.bathrooms} text=" Bathrooms" imgSource={bathroom} />
-              <Boxes  number={data.parkings} text=" Cars/2 Bikes" imgSource={car} />
+              <Boxes
+                number={data.bedrooms}
+                text=" Bedrooms"
+                imgSource={bedroom}
+              />
+              <Boxes
+                number={data.bathrooms}
+                text=" Bathrooms"
+                imgSource={bathroom}
+              />
+              <Boxes
+                number={data.parkings}
+                text=" Cars/2 Bikes"
+                imgSource={car}
+              />
               <Boxes number={data.rooms} text=" Rooms" imgSource={pet} />
             </div>
             {/* //   );
             // })} */}
-
           </div>
 
           <div className="descBoxDad">
@@ -176,7 +185,7 @@ export const Detail = () => {
         <DetailDescription
           mainClass="detailDescription"
           headerClass="detailDescHeader"
-          header= {data.Placetype} 
+          header={data.Placetype}
           textClass="detailDescText"
           text={data.description}
         />
@@ -201,9 +210,9 @@ export const Detail = () => {
           headerClass="detailDescHeader"
           header="Safety and Hygiene"
           amenities2="detailDescAmenities"
-          cleaning = {data.daily }
-          sanitizers = {data.sanitizers}
-          smoke = {data.smoke}
+          cleaning={data.daily}
+          sanitizers={data.sanitizers}
+          smoke={data.smoke}
         />
         <DetailDescription
           mainClass="detailDescriptionService"

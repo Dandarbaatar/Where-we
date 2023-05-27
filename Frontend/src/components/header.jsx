@@ -73,9 +73,8 @@ export const Header = (props) => {
                   {open && (
                     <div
                       style={{
-
-                        // background: "#2c3342",
-                        background: "#10284a",
+                        background: "#2c3342",
+                        // background: "#10284a",
 
                         width: "160px",
                         height: "150px",
@@ -97,8 +96,24 @@ export const Header = (props) => {
                         }}
                       >
                         {LoggedInMenu.map((menul) => (
-                          <ul ref={butRef} key={menul}>
-                            <li
+                          <div
+                            ref={butRef}
+                            key={menul}
+                            style={{
+                              // background: "#2c3342",
+                              background: "#10284a",
+                              width: "160px",
+                              height: "150px",
+                              display: "flex",
+                              flexDirection: "column",
+                              justifyContent: "flex-start",
+                              alignItems: "center",
+                              position: "absolute",
+                              borderRadius: "6px",
+                              boxShadow: "0px 0px 8px rgba(194, 198, 204, 0.6)",
+                            }}
+                          >
+                            <div
                               style={{
                                 border: "none",
                                 width: "100px",
@@ -107,8 +122,8 @@ export const Header = (props) => {
                               }}
                             >
                               {menul.wishlists}
-                            </li>
-                            <li
+                            </div>
+                            <div
                               style={{
                                 border: "none",
                                 width: "100px",
@@ -117,7 +132,7 @@ export const Header = (props) => {
                               }}
                             >
                               {menul.myhost}
-                            </li>
+                            </div>
                             <div
                               style={{
                                 border: "1px solid #E0E2E6",
@@ -126,7 +141,7 @@ export const Header = (props) => {
                                 color: "#9A9A9A",
                               }}
                             ></div>
-                            <li
+                            <div
                               onClick={logout}
                               style={{
                                 border: "none",
@@ -136,8 +151,8 @@ export const Header = (props) => {
                               }}
                             >
                               {menul.logout}
-                            </li>
-                          </ul>
+                            </div>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -156,7 +171,7 @@ export const Header = (props) => {
                         alignItems: "center",
                         position: "absolute",
                         borderRadius: "6px",
-                        boxShadow: "0px 0px 8px rgba(194, 198, 204, 0.6)",
+                        // boxShadow: "0px 0px 8px rgba(194, 198, 204, 0.6)",
                         color: "white",
                         top: "78px",
                         right: "48px",
@@ -180,7 +195,7 @@ export const Header = (props) => {
                                 border: "none",
                                 width: "100px",
                                 height: "40px",
-                                color:"white",
+                                color: "white",
                               }}
                             >
                               {menu.signup}
@@ -188,7 +203,7 @@ export const Header = (props) => {
                             <li
                               onClick={() => setPopUpLogin(true)}
                               style={{
-                                color:"white",
+                                color: "white",
                                 border: "none",
                                 width: "100px",
                                 height: "40px",

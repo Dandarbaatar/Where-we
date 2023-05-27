@@ -3,7 +3,9 @@ import { HomeCard } from "../components/homeCard.jsx";
 import { HomeCard2 } from "../components/homeCard2";
 import Footer from "../components/footer.jsx";
 import { useEffect, useState } from "react";
-import Zurh from "../assets/homeCardLike.svg";
+import userDefPro from "../assets/userDefPro.svg";
+// import Zurh from "../assets/homeCardLike.svg";
+import Zurh from "../components/zurh";
 import axios from "axios";
 import "../App.css";
 
@@ -90,14 +92,15 @@ export const Home = () => {
                     borderRadius: "8px",
                   }}
                 >
-                  <div className="homeCardDiv">
+                  <div clzassName="homeCardDiv">
                     <button className="homeCardBtn">
-                      <img alt="" className="homeCardImg1" src={Zurh} />
+                      {/* <img alt="" className="homeCardImg1" src={Zurh} /> */}
+                      <Zurh />
                     </button>
                   </div>
                   <div className="homeCardContent1">
                     <div className="homeCardContent">
-                      <img className="homeCardContentImg" />
+                      <img className="homeCardContentImg" src={userDefPro} />
                       <div className="homeCardContentText1">
                         Well Furnished {e.Placetype}
                       </div>
@@ -136,12 +139,13 @@ export const Home = () => {
                 >
                   <div className="homeCardDiv">
                     <button className="homeCardBtn">
-                      <img alt="" className="homeCardImg1" src={Zurh} />
+                      {/* <img alt="" className="homeCardImg1" src={Zurh} /> */}
+                      <Zurh />
                     </button>
                   </div>
                   <div className="homeCardContent1">
                     <div className="homeCardContent">
-                      <img className="homeCardContentImg" />
+                      <img className="homeCardContentImg" src={userDefPro} />
                       <div className="homeCardContentText1">
                         Well Furnished {e.Placetype}
                       </div>
@@ -195,7 +199,8 @@ export const Home = () => {
                 >
                   <div className="homeCard2TopContent">
                     <div className="homeCard2TopContentImg">
-                      <img className="zurh" src={Zurh} />
+                      {/* <img className="zurh" src={Zurh} /> */}
+                      <Zurh />
                     </div>
                     <div className="homeCard2TopContentPrice">
                       <div className="homeCard2TopContentPrices">
