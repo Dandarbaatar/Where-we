@@ -38,7 +38,7 @@ function Hostpage() {
             <div className="host_row">
               <div className="host_card"></div>
               <div className="host_paraghs">
-                <div className="Try_host">Some Title Herse</div>
+                <div className="Try_host">Some Title Here</div>
                 <div className="host_paragh">
                   At vero eos et accusamus et iusto odio dignissimos ducimus qui
                   blanditiis praesentium voluptatum deleniti atque corrupti quos

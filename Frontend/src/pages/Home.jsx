@@ -11,15 +11,15 @@ import { SearchBar } from "../components/searchbar";
 export const Home = () => {
   const [details, setDetails] = useState([]);
   const [types, setTypes] = useState("");
-  const [data , setData ] = useState([]);
-  const [images, setImages] = useState("")
- useEffect(()=>{
-  axios.get("http://localhost:8000/details/").then((response) => setData(response?.data.data)).catch((error) =>console.log(error))
-  
- }, []) 
- data.map((e) =>
- setImages(e?.image)
- )
+  const [data, setData] = useState([]);
+  const [images, setImages] = useState("");
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/details/")
+      .then((response) => setData(response?.data.data))
+      .catch((error) => console.log(error));
+  }, []);
+  data.map((e) => setImages(e?.image));
   const arr = [1, 3, 4, 5, 6, 3, 4, 5, 6];
   useEffect(() => {
     axios
@@ -75,7 +75,7 @@ export const Home = () => {
         </div>
         <div className="homePage2Content2Cards">
           {data.map((e) => {
-            return <HomeCard name={e?.apartment}  image={e?.image}/>;
+            return <HomeCard name={e?.apartment} image={e?.image} />;
           })}
         </div>
       </div>
@@ -124,6 +124,7 @@ export const Home = () => {
           })}
         </div>
       </div>
+
       <Footer />
     </div>
   );
