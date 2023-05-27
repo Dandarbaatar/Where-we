@@ -10,14 +10,14 @@ export const AddProductPage1 = () => {
   const handlechange = (event) => {
     const { value, checked } = event.target;
     if (checked === true) {
-      setData1([...data1, value]);
+      setData1([value]);
     }
     if (!checked) {
       setData1(data1.filter((e) => e !== value));
       // delete checkedItems[value]; // Remove the unchecked item from the object
     }
   };
-
+  console.log(data1)
   return (
     <div>
       <Header />

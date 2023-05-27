@@ -21,81 +21,99 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export const Detail = () => {
-  const [details, setDetails] = useState([]);
- 
-   useEffect(() => {
+  const [data, setData] = useState([]);
+  const [id,setId] = useState([])
+  let split
+  let split1
+  split = (window.location.search);
+  split1 = (split.split("?"))
+  useEffect(() => {
     axios
-      .get("http://localhost:8000/details")
-      .then((response) => setDetails(response?.data?.data));
-  
+      .get(`http://localhost:8000/detail/${split1[1]}`)
+      .then((response) => setData(response?.data?.data));
+      axios.get(`http://localhost:8000/user/${data.userId}`).then((response) => setId(response?.data?.data))
+     
   }, []);
-  console.log(details)
+  let image = data.image?.zurag0
+  console.log(data)
+  console.log(id)
 
   
 
   return (
+    
     <div className="detailContainer">
+    
       <Header />
      
       <div className="detailHeroDad">
-        <div className="detailHero">
-          <div
+        {
+          data.image?.map((e)=>{
+            console.log(e.zurag0);
+            return (<>
+             <div className="detailHero">
+              <div
             className="heroPicMain"
             style={{
-              backgroundImage: `url(${sad})`,
+              backgroundImage: `url("${e.zurag0}")`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
+              backgroundPosition:"center"
             }}
           >
             <div className="hostInfoDad">
               <div className="hostImg"></div>
               <div className="hostInfo">
                 <div className="listedBy">Listed By:</div>
-                <div className="hostName">Dandarbaatar</div>
-                <div className="hostMoney">For: $1000-$5000</div>
+                <div className="hostName">  </div>
+                <div className="hostMoney">For: {data.price}</div>
               </div>
             </div>
           </div>
-         
-            
-                  <div className="detailHeroSon">
-                  <div className="detailHeroSon1">
-                  <div
-                    className="heroPic"
-                    style={{
-                      backgroundImage: `url(${sad})`,
-                    }}
-                  ></div>
-                  <div
-                    className="heroPic"
-                    style={{
-                      backgroundImage: `url(${sad}})`,
-                    }}
-                  ></div>
-                </div>
-                <div className="detailHeroSon1">
-                  <div
-                    className="heroPic"
-                    style={{
-                      backgroundImage: `url(${sad})`,
-                    }}
-                  ></div>
-                  <div
-                    className="heroPic"
-                    style={{
-                      backgroundImage: `url(${sad})`,
-                    }}
-                  >
-                    <div className="morePhotos">
-                      <div className="plus">+2</div>
-                      <div className="more">
-                        More <div className="photos">Photos</div>
-                      </div>
-                    </div>
+
+
+          <div className="detailHeroSon">
+            <div className="detailHeroSon1">
+              <div
+                className="heroPic"
+                style={{
+                  backgroundImage: `url("${e.zurag1}")`,
+                }}
+              ></div>
+              <div
+                className="heroPic"
+                style={{
+                  backgroundImage: `url("${e.zurag2}")`,
+                }}
+              ></div>
+            </div>
+            <div className="detailHeroSon1">
+              <div
+                className="heroPic"
+                style={{
+                  backgroundImage: `url("${e.zurag3}")`,
+                }}
+              ></div>
+              <div
+                className="heroPic"
+                style={{
+                  backgroundImage: `url(${e.zurag4})`,
+                }}
+              >
+                <div className="morePhotos">
+                  <div className="plus">+2</div>
+                  <div className="more">
+                    More <div className="photos">Photos</div>
+</div>
+</div>
                   </div>
                 </div>
                  </div>
         </div>
+            </>)
+          })
+        }
+       
       </div>
     
       <div className="detailDesc">
@@ -105,7 +123,7 @@ export const Detail = () => {
               <div className="descHeaderLeftSonLeft">
                 {" "}
                 <div className="descHeaderLeftMain">
-                  Well Furnished Apartment
+                  Well Furnished {data.Placetype}
                 </div>
                 <div className="descHeaderLeftLocation">
                   100 Smart Street, LA, USA
@@ -118,22 +136,23 @@ export const Detail = () => {
               </div>
             </div>
 
-          
-   {/* <div className="descBoxes" key={el}>
-              <Boxes text={el?.bedrooms + " bedrooms"}imgSource={bedroom} />
-              <Boxes text={el?.bathrooms + " bathrooms"} imgSource={bathroom} />
-              <Boxes text={el?.parkings + " parkings"} imgSource={car} />
-              <Boxes text={el?.rooms + " rooms"} imgSource={pet} />
-            </div>  */}
-        
-         
-            
-            
+            {/* {data.map((item) => {
+              return (                      key={item?.id}
+                number={item?.facilities} */}
+            <div className="descBoxes">
+              <Boxes number={data.bedrooms} text=" Bedrooms" imgSource={bedroom} />
+              <Boxes  number={data.bathrooms} text=" Bathrooms" imgSource={bathroom} />
+              <Boxes  number={data.parkings} text=" Cars/2 Bikes" imgSource={car} />
+              <Boxes number={data.rooms} text=" Rooms" imgSource={pet} />
+            </div>
+            {/* //   );
+            // })} */}
+
           </div>
 
           <div className="descBoxDad">
             <div className="descBox">
-              <div className="descBoxPrice">$ 1000 - $ 2000</div>
+              <div className="descBoxPrice">{data.price}</div>
               <div className="line"></div>
               <div className="descBoxPeriod">
                 <div className="periodShort">Short Period: $ 1000</div>
@@ -157,12 +176,9 @@ export const Detail = () => {
         <DetailDescription
           mainClass="detailDescription"
           headerClass="detailDescHeader"
-          header="Apartment Description"
+          header= {data.Placetype} 
           textClass="detailDescText"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat."
+          text={data.description}
         />
         <DetailDescription
           mainClass="detailDescription"
@@ -171,12 +187,23 @@ export const Detail = () => {
           amenities1="detailDescAmenities"
           buttonClass="amenitiesButton"
           button="Show All Amenities"
+          television="television"
+          wifi="wifi"
+          washer="washer"
+          balcony="balcony"
+          cleaner="cleaner"
+          radio="radio"
+          lift="lift"
+          airConditioner="airConditioner"
         />
         <DetailDescription
           mainClass="detailDescription"
           headerClass="detailDescHeader"
           header="Safety and Hygiene"
           amenities2="detailDescAmenities"
+          cleaning = {data.daily }
+          sanitizers = {data.sanitizers}
+          smoke = {data.smoke}
         />
         <DetailDescription
           mainClass="detailDescriptionService"
@@ -337,9 +364,9 @@ export const Detail = () => {
 }
 {
   /* <div className="detailDescription">
-          <div className="detailDescHeader">Nearby Services</div>
+          <div className="detailDescHeader">Nearby Services</div> 
           <ServicesBox
-            header="Grill Restro & Bar"
+            header="Grill Restro & Bar" 
             location="100 meters away"
             star1="displayFlex"
             star2="displayFlex"
