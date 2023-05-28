@@ -92,11 +92,11 @@ export const Home = () => {
                     borderRadius: "8px",
                   }}
                 >
-                  <div clzassName="homeCardDiv">
-                    <button className="homeCardBtn">
-                      {/* <img alt="" className="homeCardImg1" src={Zurh} /> */}
-                      <Zurh />
-                    </button>
+                  <div className="homeCardDiv">
+                    {/* <button className="homeCardBtn"> */}
+                    {/* <img alt="" className="homeCardImg1" src={Zurh} /> */}
+                    <Zurh />
+                    {/* </button> */}
                   </div>
                   <div className="homeCardContent1">
                     <div className="homeCardContent">
@@ -138,10 +138,10 @@ export const Home = () => {
                   }}
                 >
                   <div className="homeCardDiv">
-                    <button className="homeCardBtn">
-                      {/* <img alt="" className="homeCardImg1" src={Zurh} /> */}
-                      <Zurh />
-                    </button>
+                    {/* <button className="homeCardBtn"> */}
+                    {/* <img alt="" className="homeCardImg1" src={Zurh} /> */}
+                    <Zurh />
+                    {/* </button> */}
                   </div>
                   <div className="homeCardContent1">
                     <div className="homeCardContent">

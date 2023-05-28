@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/loginsignup.css";
 import "../css/constants.css";
 import Xbutt from "../assets/Vector (2).svg";
@@ -36,6 +36,19 @@ function LoginPopUp({ hey, onClose }) {
       toast(err.message);
     }
   };
+  // // const useKeyPress = async (targetKey) => {
+  // //   const downHandler = async ({ key }) => {
+  // //     if (key === "Enter") {
+  // //       await loginUser();
+  // //     }
+  // //   };
+  // //   useEffect(() => {
+  // //     window.addEventListener("keydown", downHandler);
+  // //     return () => {
+  // //       window.removeEventListener("keydown", downHandler);
+  // //     };
+  // //   }, []);
+  // };
   if (!hey) return null;
 
   return (

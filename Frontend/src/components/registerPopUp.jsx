@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/loginsignup.css";
 import Xbutt from "../assets/Vector (2).svg";
 import axios from "axios";
@@ -9,6 +9,10 @@ function RegisterPopUp({ ok, onClick, hey }) {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [username, setUsername] = useState("");
+  // const enterPress = useKeyPress("Enter");
+  // const sadPress = useKeyPress("s");
+  // const robotPress = useKeyPress("r");
+  // const foxPress = useKeyPress("f");
 
   if (!ok) {
     return null;
@@ -28,7 +32,22 @@ function RegisterPopUp({ ok, onClick, hey }) {
       .catch((err) => console.log(err));
   };
   const displayLogin = () => {
+    // <Link to={"/loginPopUp"}></Link>;
+    console.log("change to login");
   };
+  // const useKeyPress = async (targetKey) => {
+  //   const downHandler = async ({ key }) => {
+  //     if (key === "Enter") {
+  //       await postData();
+  //     }
+  //   };
+  //   useEffect(() => {
+  //     window.addEventListener("keydown", downHandler);
+  //     return () => {
+  //       window.removeEventListener("keydown", downHandler);
+  //     };
+  //   }, []);
+  // };
   return (
     <div className="overlay">
       <ToastContainer />

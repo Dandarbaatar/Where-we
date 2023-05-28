@@ -67,14 +67,27 @@ function Addimage(props) {
                 Upload Image
               </button>
             </div>
-
-            <button onClick={() => setClick(true)} className="host_button_s">
-              Next
-            </button>
           </div>
           {imageUrls.map((url) => {
             return <img alt="" className="img123" src={url} />;
+            // return (
+            //   <div
+            //     className="img321"
+            //     style={{ backgroundImage: (url = { url }) }}
+            //   >
+            //     <button
+            //       onClick={() => setClick(true)}
+            //       className="host_button_s"
+            //     >
+            //       Next
+            //     </button>
+            //   </div>
+            // );
           })}
+          <button onClick={() => setClick(true)} className="host_button_s">
+            Next
+          </button>
+          ;
         </div>
       )}
     </div>

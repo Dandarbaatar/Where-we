@@ -47,9 +47,9 @@ export const Header = (props) => {
             </div>
           </Link>
           <div className="headerContent">
-            <div className="darkLight">
+            {/* <div className="darkLight">
               <Darklighbttn />
-            </div>
+            </div> */}
             <Link to={"/hostpage"}>
               <button className="headerHostBtn">Become A Host</button>
             </Link>
@@ -75,7 +75,8 @@ export const Header = (props) => {
                       style={{
                         background: "#2c3342",
                         // background: "#10284a",
-
+                        right: "60px",
+                        top: "70px",
                         width: "160px",
                         height: "150px",
                         display: "flex",
@@ -100,8 +101,8 @@ export const Header = (props) => {
                             ref={butRef}
                             key={menul}
                             style={{
-                              // background: "#2c3342",
-                              background: "#10284a",
+                              background: "#2c3342",
+                              // background: "#10284a",
                               width: "160px",
                               height: "150px",
                               display: "flex",
@@ -109,30 +110,37 @@ export const Header = (props) => {
                               justifyContent: "flex-start",
                               alignItems: "center",
                               position: "absolute",
+                              left: "0px",
                               borderRadius: "6px",
+                              paddingTop: "10px",
+                              // border: "1px solid red",
                               boxShadow: "0px 0px 8px rgba(194, 198, 204, 0.6)",
                             }}
                           >
-                            <div
-                              style={{
-                                border: "none",
-                                width: "100px",
-                                height: "40px",
-                                color: "white",
-                              }}
-                            >
-                              {menul.wishlists}
-                            </div>
-                            <div
-                              style={{
-                                border: "none",
-                                width: "100px",
-                                height: "40px",
-                                color: "white",
-                              }}
-                            >
-                              {menul.myhost}
-                            </div>
+                            <Link to={"/"}>
+                              <div
+                                style={{
+                                  border: "none",
+                                  width: "100px",
+                                  height: "40px",
+                                  color: "white",
+                                }}
+                              >
+                                {menul.wishlists}
+                              </div>
+                            </Link>
+                            <Link to={"/hostpage"}>
+                              <div
+                                style={{
+                                  border: "none",
+                                  width: "100px",
+                                  height: "40px",
+                                  color: "white",
+                                }}
+                              >
+                                {menul.myhost}
+                              </div>
+                            </Link>
                             <div
                               style={{
                                 border: "1px solid #E0E2E6",

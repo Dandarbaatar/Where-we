@@ -75,6 +75,9 @@ function AddProductPage2(props) {
                     width: "10vw",
                     justifyContent: "space-evenly",
                     alignItems: "center",
+                    color: "var(--white)",
+                    fontWeight: "600",
+                    fontSize: "23px",
                   }}
                 >
                   {bedrooms} <div className="fontsss">bedrooms</div>{" "}
@@ -94,6 +97,9 @@ function AddProductPage2(props) {
                     width: "10vw",
                     justifyContent: "space-evenly",
                     alignItems: "center",
+                    color: "var(--white)",
+                    fontWeight: "600",
+                    fontSize: "23px",
                   }}
                 >
                   {bathrooms} <div className="fontsss">bathrooms</div>{" "}
@@ -113,6 +119,9 @@ function AddProductPage2(props) {
                     width: "10vw",
                     justifyContent: "space-evenly",
                     alignItems: "center",
+                    color: "var(--white)",
+                    fontWeight: "600",
+                    fontSize: "23px",
                   }}
                 >
                   {parkings} <div className="fontsss">parkings</div>{" "}
@@ -132,6 +141,9 @@ function AddProductPage2(props) {
                     width: "10vw",
                     justifyContent: "space-evenly",
                     alignItems: "center",
+                    color: "var(--white)",
+                    fontWeight: "600",
+                    fontSize: "23px",
                   }}
                 >
                   {rooms} <div className="fontsss">rooms</div>{" "}
