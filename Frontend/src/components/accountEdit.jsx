@@ -5,6 +5,7 @@ import Footer from "../components/footer";
 import Checker from "../assets/ddd.svg";
 import Acc from "../assets/acc.svg";
 import cancel from "../assets/cancel.svg";
+import { Link } from "react-router-dom";
 export const AccEdit = () => {
   const username = localStorage.getItem("username");
   return (
@@ -67,10 +68,12 @@ export const AccEdit = () => {
               All the required user information can be added here...
             </div>
             <div className="accEditBtns">
-              <button className="accEditBtn1">
-                <img src={cancel} />
-                <div className="accEditBtnCancel">cancel</div>
-              </button>
+              <Link to={"/account"}>
+                <button className="accEditBtn1">
+                  <img src={cancel} />
+                  <div className="accEditBtnCancel">cancel</div>
+                </button>
+              </Link>
               <button className="accEditBtn2">save</button>
             </div>
           </div>
