@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getStorage} from "firebase/storage";
+import { getStorage } from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -11,7 +11,7 @@ const firebaseConfig = {
   projectId: "uploadimage-9c55e",
   storageBucket: "uploadimage-9c55e.appspot.com",
   messagingSenderId: "838195918056",
-  appId: "1:838195918056:web:f2695bb21ae32e9503c55d"
+  appId: "1:838195918056:web:f2695bb21ae32e9503c55d",
 };
 
 // Initialize Firebase

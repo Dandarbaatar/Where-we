@@ -275,29 +275,29 @@ export const Detail = () => {
             <div className="revTextsSon">
               <ReviewTexts
                 imgSrc={Logo}
-                username="John Doberman"
+                username="Baldanpurev"
                 date="Mar 12 2023"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                text="Ochihod ih goy baisan Golden geed nohoi ni bas hoorhon yr ni taalagdsaan ."
               />
               <ReviewTexts
                 imgSrc={Logo}
-                username="John Doberman"
+                username="Suhbat"
                 date="Mar 12 2023"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                text="Dakgu tseverhen orchintoi gazar bainalee BEST"
               />
             </div>
             <div className="revTextsSon">
               <ReviewTexts
                 imgSrc={Logo}
-                username="John Doberman"
+                username="Chingun"
                 date="Mar 12 2023"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                text="Noil ni joohon hol ym bainalee busdaar bol goy gazar"
               />
               <ReviewTexts
                 imgSrc={Logo}
-                username="John Doberman"
+                username="Orgil"
                 date="Mar 12 2023"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                text="Davgu gazar :)"
               />
             </div>
           </div>

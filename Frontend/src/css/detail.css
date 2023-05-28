@@ -298,14 +298,13 @@ body {
   align-items: center;
   width: 90%;
   height: 15%;
-  /* border: 1px solid black; */
   margin-top: 25px;
 }
 .descBoxProperty {
   width: 50%;
   height: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   /* border: 1px solid black; */
   align-items: center;
   flex-direction: row;
@@ -321,13 +320,14 @@ body {
   height: max-content;
   flex-direction: column;
   /* border: 1px solid black; */
+  margin-top: 100px;
 }
 .detailDescHeader {
   color: var(--white);
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 40px;
   /* margin-bottom: 40px; */
   display: flex;
   align-items: center;
@@ -339,7 +339,7 @@ body {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 25px;
   width: 68%;
   height: 80px;
@@ -535,7 +535,7 @@ body {
   display: flex;
   /* border: 1px solid black; */
   width: 55%;
-  height: 50vh;
+  height: 40vh;
   justify-content: space-between;
   flex-direction: column;
   margin-top: 80px;
@@ -543,7 +543,9 @@ body {
 .revTextsSon {
   display: flex;
   /* border: 1px solid black; */
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
 }
 .reviewButton {
   width: 240px;
