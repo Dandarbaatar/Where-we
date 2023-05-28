@@ -1,42 +1,48 @@
 /* host add page 1 css */
-.host_add_question{
-            width:26vw;
-            height:8vh;
-            font-family: "Montserrat";
-            font-style: normal;
-            font-weight: 700;
-            font-size: 36px;
-            line-height: 48px;
-            color: #484848
+.hostAddProd1Dad {
+  background-color: var(--dark-prim-500);
 }
-.host_add_answer{
-        width:8vw;
-        height:6vh;
-        background-color:#EFF0F2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+.host_add_question {
+  width: 26vw;
+  height: 8vh;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: var(--white);
 }
-input[type="checkbox"]{
-    -webkit-appearance: none;
-    appearance: none;
-    border: none;
-    background-color: #C2C6CC;
-    border-radius: 4px;
-    width:4vw;
-     height:6vh;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-    outline: none;
-    cursor: pointer;
+.host_add_answer {
+  width: 8vw;
+  height: 6vh;
+  background-color: var(--dark-sec-500);
+  display: flex;
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
 }
-.host_add_checkbox_father{
-    display: flex;
-    flex-direction: row;
-    width: 56vw;
-    justify-content: space-between;
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background-color: #c2c6cc;
+  border-radius: 4px;
+  width: 4vw;
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+}
+.host_add_checkbox_father {
+  display: flex;
+  flex-direction: row;
+  width: 65vw;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 }
 /* input[type="checkbox"]::after{
     font-family: 'Font Awesome 5 Free';
@@ -47,133 +53,180 @@ input[type="checkbox"]{
     display: "none";
 
     } */
-    .host_checkbox{
-        display: inline-block;
-        background:#fff;
-    }
-.host_button_s{
-    width: 119px;
-    height: 56px;
-    border: none;
-    color: #FFFFFF;
-    background: #9A9A9A;
-    border-radius: 28px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.host_checkbox {
+  display: inline-block;
+  background: var(--dark-sec-200);
 }
-.host_button_s1{
-    width: 119px;
-    height: 56px;
-    border: none;
-    color: #FFFFFF;
-    background: none;
+.host_button_s {
+  width: 119px;
+  height: 56px;
+  border: none;
+  color: #ffffff;
+  background: var(--dark-prim-500);
+  border: 1px solid white;
+  border-radius: 28px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.host_button_s1 {
+  width: 119px;
+  height: 56px;
+  border: none;
+  color: #ffffff;
+  background: none;
 }
 
-input[type="checkbox"]:hover{
-    background-color:#9A9A9A ;
+/* input[type="checkbox"]:hover {
+  background-color: #9a9a9a;
+} */
+input[type="checkbox"]:checked {
+  background-color: var(--dark-sec-400);
 }
-input[type="checkbox"]:checked{
-    background-color: #4f4f4f
+input[type="checkbox"]:checked:after {
+  display: block;
 }
-input[type="checkbox"]:checked:after{
-    display: block;
+.host_add_container_l {
+  width: 90vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.host_add_container_l{
-    width: 90vw;
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.host_add_container_l_s {
+  width: 40vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.host_add_container_l_s{
-    width: 40vw;
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.host_add_container{
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.host_add_container {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* host add page 2 css */
 
-.host_add2_buttons{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 10vw;
-    justify-content: space-between;
+.host_add2_buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 10vw;
+  justify-content: space-between;
 }
-.host_add2_plus_minus{
-    width: 1.5vw;
-    height: 2.8vh;
-    border: none;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-
+.host_add2_plus_minus {
+  /* width: 5vh;
+  height: 5vh; */
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  background-color: var(--dark-sec-500);
+  color: var(--white);
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
 }
-.fontsss{
-    
-width: 106px;
-height: 20px;
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 20px;
-
-color: #484848;
-
+.fontsss {
+  width: 106px;
+  height: 20px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--white);
 }
 /* host add page 3 css */
 
-.host_add_checkbox_father3{
-    display: flex;
-    flex-wrap: wrap;
-    width: 58vw;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 20vh
+.host_add_checkbox_father3 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 58vw;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 20vh;
 }
-.host_add_question_3{
-    width:26vw;
-    height:10vh;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 48px;
-    color: #484848
+.host_add_question_3 {
+  width: 26vw;
+  height: 10vh;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: var(--white);
 }
 /* host add page 5 css */
-.host_button_s3{
-    width: 150px;
-    height: 56px;
-    border: none;
-    color: #FFFFFF;
-    background: #9A9A9A;
-    border-radius: 28px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 18px;
+.host_button_s3 {
+  width: 300px;
+  height: 56px;
+  border: none;
+  color: #ffffff;
+  background: var(--dark-prim-500);
+  border: 1px solid white;
+  border-radius: 28px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 18px;
 }
-.host_add_hav{
-    width: 50vh;
-    height: 14vh;
-    display: flex;
-    
+.host_add_hav {
+  width: 50vh;
+  height: 14vh;
+  display: block;
+  background: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 30px;
+  padding: 2%;
+  box-shadow: 0px 0px 20px white;
+}
+/* host add image css */
+
+.app_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App1 {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+}
+.butka {
+  color: var(--white);
+  background-color: var(--dark-sec-500);
+  /* border: 1px solid white;    */
+}
+.add_img1 {
+  color: white;
+}
+.img123 {
+  max-width: 40vw;
+  max-height: 40vh;
+  display: flex;
+  flex-direction: row;
+}
+.img321 {
+  max-width: 40vw;
+  max-height: 40vh;
+  display: flex;
+  flex-direction: row;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

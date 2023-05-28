@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../css/addProduct.css";
 import { Header } from "../components/header.jsx";
 import AddProductPage2 from "./addProductPage2";
+import Footer from "./footer";
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 // import {faCheck} from '@fortawesome/free-solid-svg-icons'
 export const AddProductPage1 = () => {
@@ -17,9 +18,9 @@ export const AddProductPage1 = () => {
       // delete checkedItems[value]; // Remove the unchecked item from the object
     }
   };
-  console.log(data1)
+  console.log(data1);
   return (
-    <div>
+    <div className="hostAddProd1Dad">
       <Header />
       {click ? (
         <AddProductPage2 data1={data1} />
@@ -69,6 +70,7 @@ export const AddProductPage1 = () => {
           </div>
         </div>
       )}
+      <Footer />
     </div>
   );
 };

@@ -37,7 +37,7 @@ function AddProductPage6(props) {
               </button>
             </div>
           </div>
-          <div className="host_add_container_l_s">
+          {/* <div className="host_add_container_l_s">
             <div className="host_add_question">Add price to your place</div>
             <div className="host_add_checkbox_father">
               <input
@@ -50,7 +50,7 @@ function AddProductPage6(props) {
             <div>
               <button className="host_button_s1">Next</button>
             </div>
-          </div>
+          </div> */}
         </div>
       )}
     </div>
